@@ -4,6 +4,12 @@ Adding pre- and post-steps to your template allow users to execute
 additional steps before and after the main steps of the template if required,
 such as setting up environment variables, or cleaning up resources.
 
+Markdown to reference this guideline:
+
+```plaintext
+[CONSIDER: adding pre- and post-steps to your template](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/jobs/consider-pre-and-post-steps.md)
+```
+
 ## Example
 
 ```yaml
