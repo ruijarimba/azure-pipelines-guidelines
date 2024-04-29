@@ -1,8 +1,4 @@
-# CONSIDER: adding pre- and post-steps to your template
-
-✅ **Consider**: Adding pre- and post-steps to your job template.
-
-## Reason
+# ✅ CONSIDER: adding pre- and post-steps to your template
 
 Adding pre- and post-steps to your template allow users to execute
 additional steps before and after the main steps of the template if required,
