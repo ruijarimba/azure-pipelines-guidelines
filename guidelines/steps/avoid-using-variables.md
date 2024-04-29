@@ -67,5 +67,5 @@ steps:
     displayName: 'Greet'
 ```
 
-But as mentioned above, this approach can make the template less reusable due to
-the dependency on the variable.
+But as mentioned above, this approach can make the template slightly less
+reusable due to the dependency on the variable.
