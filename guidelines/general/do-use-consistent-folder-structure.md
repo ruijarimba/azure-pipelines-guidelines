@@ -1,6 +1,6 @@
 # DO: use a consistent folder structure
 
-✔️ **Do** use a consistent folder structure for the pipelines and templates in
+✅ **Do** use a consistent folder structure for the pipelines and templates in
 different projects and repositories.
 
 Markdown to reference this guideline:

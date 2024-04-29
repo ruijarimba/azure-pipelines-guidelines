@@ -1,6 +1,6 @@
 # DO: document pipelines and templates
 
-✔️ **Do**: add comments to the top of all pipelines and templates in order to
+✅ **Do**: add comments to the top of all pipelines and templates in order to
 describe its purpose, usage and other relevant information.
 
 Markdown to reference this guideline:

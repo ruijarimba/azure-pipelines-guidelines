@@ -1,6 +1,6 @@
 # DO: Keep sensitive information in variable groups
 
-✔️ **Do**: Keep sensitive information like passwords, tokens, and keys in
+✅ **Do**: Keep sensitive information like passwords, tokens, and keys in
 [variable groups](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml).
 
 Markdown to this guideline:

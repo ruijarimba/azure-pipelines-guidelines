@@ -1,6 +1,6 @@
 # CONSIDER: Grouping related parameters
 
-✔️ **Consider**: Grouping related parameters together, such as username and password.
+✅ **Consider**: Grouping related parameters together, such as username and password.
 
 Markdown to reference this guideline:
 
