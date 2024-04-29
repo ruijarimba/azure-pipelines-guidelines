@@ -2,6 +2,12 @@
 
 ✔️ **Consider**: Grouping related parameters together, such as username and password.
 
+Markdown to reference this guideline:
+
+```plaintext
+[CONSIDER: Grouping related parameters](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/parameters/consider-grouping-related-parameters.md)
+```
+
 ## Reason
 
 Grouping related parameters offers several benefits:
