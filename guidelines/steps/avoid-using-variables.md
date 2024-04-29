@@ -23,7 +23,9 @@ the variable.
 - **Readability**: The inputs to the template become less explicit, making it
 harder to understand what values are needed to run the template.
 
-For these reasons, it's generally recommended to pass values to the template as
+## Recommended Approach
+
+It's generally recommended to pass values to the template as
 parameters, rather than using variables. This approach improves the modularity,
 readability, and reusability of the code.
 

@@ -11,3 +11,7 @@ Markdown to reference this guideline:
 ## Reason
 
 Hardcoding values in pipelines and templates is a bad practice because it makes the pipeline less flexible and harder to maintain. Instead, use variables and templates to define values that can be reused across different pipelines and templates.
+
+## Recommended Approach
+
+bla bla bla

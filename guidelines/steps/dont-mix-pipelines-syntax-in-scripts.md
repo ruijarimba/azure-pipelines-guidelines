@@ -13,6 +13,8 @@ Markdown to reference this guideline:
 Directly using pipeline parameters in the middle of a script task can make the
 script harder to read, maintain and test.
 
+## Recommended Approach
+
 If you need to use the value of a pipeline variable or parameter in a script
 task, assign it to a script variable at the beginning of the script instead.
 
