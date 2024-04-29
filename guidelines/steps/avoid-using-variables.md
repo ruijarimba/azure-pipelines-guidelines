@@ -26,8 +26,9 @@ harder to understand what values are needed to run the template.
 ## Recommended Approach
 
 It's generally recommended to pass values to the template as
-parameters, rather than using variables. This approach improves the modularity,
-readability, and reusability of the code.
+parameters, rather than using variables.
+
+This approach improves the readability and reusability of the code.
 
 ## Example
 
