@@ -6,7 +6,7 @@
 Markdown to this guideline:
 
 ```markdown
-[DO: Keep sensitive information in variable groups](../../guidelines/keep-sensitive-information-in-variable-groups.md)
+[DO: Keep sensitive information in variable groups](../../do/keep-sensitive-information-in-variable-groups.md)
 ```
 
 ## Why
