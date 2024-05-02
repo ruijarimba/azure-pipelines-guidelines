@@ -1,4 +1,7 @@
-# DO: job must do one and only one thing
+# DO: jobs must do one and only one thing (single responsibility)
+
+Jobs must adhere to the single responsibility principle, i.e. they must do one
+and only one thing.
 
 ## Reason
 

@@ -31,7 +31,8 @@ never do.
 
 ## Folder structure
 
-The guidelines are organized in the following folders:
+The guidelines can be found in the `/guidelines` folder and are organized into
+the following subfolders:
 
 - `/general`: General recommendations that apply to more than one category.
 - `/jobs`: Jobs-related recommendations.
@@ -49,8 +50,8 @@ The guidelines can be used in different ways:
 - As a learning resource to understand good practices for YAML pipelines.
 - As a reference when creating new pipelines, helping to standardize the
 structure and ensure consistency across different pipelines and templates.
-- As a reference during code reviews and pull requests to ensure consistency
-and quality.
+- As a reference during code reviews and pull requests to ensure consistency and
+quality (copy/paste the markdown code in each guideline when reviewing pull requests!).
 
 ## Contributing
 
@@ -83,7 +84,7 @@ VS Code extensions:
 
 This repository and its content are not sponsored or supported by Microsoft
 Corporation. The guidelines are based solely on the author's
-experience and opinions. They are not official Microsoft guidelines.
+(limited) experience and opinions. They are not official Microsoft guidelines.
 
 The author is not responsible for any misuse of these guidelines or any damage
 that may result from their use. Use them at your own responsibility.
