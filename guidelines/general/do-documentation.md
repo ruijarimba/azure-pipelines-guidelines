@@ -3,13 +3,13 @@
 Markdown to reference this guideline:
 
 ```plaintext
-[DO: document pipelines and templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-document-pipelines-templates.md)
+[DO: document pipelines and templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-documentation.md)
 ```
 
 Document pipelines and templates by adding comments to the top of the corresponding
 files describing its purpose, usage, and other relevant information.
 
-Consider documenting parameters and variables as well, if necessary.
+Consider documenting parameters and even variables as well, if necessary.
 
 ## Reason
 
