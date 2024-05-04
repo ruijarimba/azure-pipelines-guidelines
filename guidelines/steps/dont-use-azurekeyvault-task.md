@@ -6,7 +6,7 @@ Using the AzureKeyVault task in pipelines is a bad practice because it makes the
 
 ## Recommended Approach
 
-## Related
+## Related guidelines
 
 - [DO: Keep sensitive information in variable groups](../../do/keep-sensitive-information-in-variable-groups.md)
 - [DO: Use parameters instead of variables in steps templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/avoid-using-variables.md)
