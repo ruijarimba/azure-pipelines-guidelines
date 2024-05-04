@@ -1,6 +1,6 @@
-# DO NOT: Mix pipelines syntax in script tasks
+# ❌ DO NOT: Mix pipelines syntax in script tasks
 
-❌ Do not: Use `$(...)` or `${{ ... }}` syntax in the middle of a script task.
+Do not use `$(...)` or `${{ ... }}` syntax in the middle of a script task.
 
 Markdown to reference this guideline:
 

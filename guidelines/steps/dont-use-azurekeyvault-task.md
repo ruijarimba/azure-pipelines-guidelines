@@ -1,4 +1,8 @@
-# DO NOT: use AzureKeyVault task
+# ❌ DO NOT: use AzureKeyVault task
+
+Do not use the AzureKeyVault task in pipelines.
+
+Use variable groups and variable templates instead.
 
 ## Reason
 

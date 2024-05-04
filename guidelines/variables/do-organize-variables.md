@@ -1,4 +1,4 @@
-# DO: organize variables by component and environment
+# ✅ DO: organize variables by component and environment
 
 Create a folder structure to organize your variables by functionality,
 environment or any other logical grouping that makes sense for your project.

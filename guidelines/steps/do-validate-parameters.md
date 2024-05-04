@@ -1,4 +1,4 @@
-# DO: Validate steps parameters
+# ✅ DO: Validate steps parameters
 
 Markdown to reference this guideline:
 

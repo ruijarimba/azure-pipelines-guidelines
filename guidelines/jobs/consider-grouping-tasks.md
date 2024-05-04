@@ -1,4 +1,4 @@
-# CONSIDER: Grouping job tasks into a single template
+# ✅ CONSIDER: Grouping job tasks into a single template
 
 Instead of:
 

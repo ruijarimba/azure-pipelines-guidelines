@@ -1,4 +1,4 @@
-# CONSIDER: Adding a validation flag to your job
+# ✅ CONSIDER: Adding a validation flag to your job
 
 Consider adding a `boolean` parameter to your job to run it in
 _validation mode_, i.e. without actually deploying or executing any changes.

@@ -1,4 +1,4 @@
-# AVOID: Using variables in steps templates
+# ❌ AVOID: Using variables in steps templates
 
 Markdown to reference this guideline:
 

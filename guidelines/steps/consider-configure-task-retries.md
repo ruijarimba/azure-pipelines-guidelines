@@ -1,8 +1,12 @@
-# CONSIDER: configuring retries for your tasks
+# ✅ CONSIDER: configuring retries for your tasks
 
 When you run a task in a pipeline, you can configure the number of times that
-the task should be retried if it fails. This is useful when you have tasks that
-might fail due to transient issues, such as network problems or timeouts.
+the task should be retried if it fails.
+
+## Reason
+
+Retries are useful when you have tasks that might fail due to transient issues,
+such as network problems or timeouts.
 
 Examples of tasks where you might want to configure retries:
 

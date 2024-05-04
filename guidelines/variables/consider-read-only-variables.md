@@ -1,4 +1,4 @@
-# CONSIDER: declaring variables as read-only
+# ✅ CONSIDER: declaring variables as read-only
 
 Consider declaring variables as read-only when the variable is not intended to be
 modified after initialization.

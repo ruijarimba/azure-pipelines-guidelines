@@ -1,4 +1,4 @@
-# DO: Reduce variable scope
+# ✅ DO: Reduce variable scope
 
 Global variables are accessible from anywhere in your pipeline, which can lead to unintended side effects. To prevent this, reduce the scope of your variables as much as possible - ideally at the job level.
 
