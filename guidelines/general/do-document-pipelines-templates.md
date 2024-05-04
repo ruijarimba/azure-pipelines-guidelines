@@ -1,7 +1,4 @@
-# DO: document pipelines and templates
-
-✅ **Do**: add comments to the top of all pipelines and templates in order to
-describe its purpose, usage and other relevant information.
+# ✅ DO: document pipelines and templates
 
 Markdown to reference this guideline:
 
@@ -9,9 +6,14 @@ Markdown to reference this guideline:
 [DO: document pipelines and templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-document-pipelines-templates.md)
 ```
 
+Document pipelines and templates by adding comments to the top of the corresponding
+files describing its purpose, usage, and other relevant information.
+
+Consider documenting parameters and variables as well, if necessary.
+
 ## Reason
 
-Comments help to understand the purpose of the pipeline or
+Comments at the top of the file help to understand the purpose of the pipeline or
 template and the context in which it is used at a glance, without the need to
 read the entire file.
 
@@ -20,8 +22,8 @@ read the entire file.
 Pipelines documentation should ideally include:
 
 - A brief description of what the pipeline does
-- Name and URL of the published pipeline in Azure DevOps portal (don't make me
-search for the pipeline in the Azure DevOps portal)
+- The name and URL of the published pipeline in Azure DevOps portal (to avoid
+having to search for the pipeline in the Azure DevOps portal)
 - Context in which the pipeline is used, including but not limited to:
   - Pull request validation
   - Scheduled execution or trigger
@@ -115,9 +117,9 @@ variables:
     value: $(Pipeline.Workspace)/myself/iac/stacks/azure/storage-account/westeurope/prod
 ```
 
-## Documenting template parameters
+## Documenting parameters
 
-Template parameters should ideally include:
+Pipeline or template parameters should ideally include:
 
 - A brief description of what the parameter is used for, using the `displayName`
 property
