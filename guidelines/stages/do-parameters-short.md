@@ -1,3 +1,5 @@
 # ✅ DO: Keep stage parameters short
 
-When defining stages in Azure DevOps pipelines, keep the number of parameters short.
+
+
+See [DO: Minimize the number of parameters in job templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/jobs/do-parameters-short.md)
