@@ -6,9 +6,9 @@ Markdown to this guideline:
 [DO: Create configurable and extensible jobs](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/jobs/do-create-entensible-jobs.md)
 ```
 
-When creating job templates to be reused across several stages or pipelines,
-consider adding some or all of the following parameters to make them more
-flexible and easier to reuse:
+When creating job templates to be reused by different people and/or across
+several stages or pipelines, consider adding some or all of the following
+parameters:
 
 - Name and display name
 - Agent pool

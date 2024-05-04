@@ -6,9 +6,8 @@ Markdown to this guideline:
 [DO: Create configurable and extensible steps](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/do-create-extensible-steps.md)
 ```
 
-When creating steps templates to be reused across several jobs, consider adding
-some or all of the following parameters to make them more flexible and easier to
-reuse:
+When creating steps templates to be reused by different people and/or across
+several jobs, consider adding some or all of the following parameters:
 
 - condition: condition expression to determine whether to run the steps
 - continueOnError: Continue running even on failure?
