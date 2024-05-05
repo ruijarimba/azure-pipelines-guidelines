@@ -7,7 +7,7 @@ Markdown to this guideline:
 ```
 
 Set job timeouts or add parameters to shared job templates to allow users to
-configure them. 
+configure them.
 
 Provide reasonable default values, depending on the job's purpose.
 
