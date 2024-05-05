@@ -55,6 +55,10 @@ quality (copy/paste the markdown code in each guideline when reviewing pull requ
 
 ## Contributing
 
+The guidelines in this repository provide recommendations for creating more
+effective Azure YAML pipelines and templates. Guidelines that are not directly
+related to coding, such as security best practices, are not included.
+
 Generally speaking, guidelines should be generic and applicable to a wide range
 of scenarios - no matter if you are building a web app, deploying infrastructure
 into a cloud provider, deploying a Helm chart or doing something else.
