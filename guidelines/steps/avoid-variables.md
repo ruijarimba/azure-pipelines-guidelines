@@ -74,4 +74,5 @@ steps:
 ```
 
 But as mentioned above, this approach can make the template slightly less
-reusable due to the dependency on the variable.
+reusable due to the dependency on the variable (in case the parameter is not
+set).

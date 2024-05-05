@@ -1,7 +1,4 @@
-# DO: use a consistent folder structure
-
-✅ **Do** use a consistent folder structure for the pipelines and templates in
-different projects and repositories.
+# ✅ DO: use a consistent folder structure
 
 Markdown to reference this guideline:
 
@@ -9,10 +6,13 @@ Markdown to reference this guideline:
 [DO: use a consistent folder structure](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-use-consistent-folder-structure.md)
 ```
 
-## Why
+Use a consistent and logical folder structure for the pipelines and templates
+in different projects and repositories.
 
-Using a consistent folder structureh helps to organize the pipeline files in a
-logical way, in this case by template type. This makes it easier to navigate the
+## Reason
+
+Using a consistent folder structure helps to organize the pipeline files in a
+logical way, such as by template type. This makes it easier to navigate the
 project and understand the structure at a glance.
 
 Also, it ensures consistency across different projects and repositories. This

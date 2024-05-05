@@ -6,7 +6,7 @@ Markdown to reference this guideline:
 [CONSIDER: Grouping related parameters](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/parameters/consider-grouping-related-parameters.md)
 ```
 
-Consider grouping related parameters together, such as username and password.
+Consider grouping related parameters, such as username and password.
 
 ## Reason
 
@@ -64,7 +64,7 @@ Group the related parameters together:
 
 ```yaml
 parameters:
-  # An object containing the authentication details for the terraform azurerm provider
+  # An object containing the authentication details for the Terraform azurerm provider
   #
   # Properties:
   # azureClientId: The client ID of the Service Principal.

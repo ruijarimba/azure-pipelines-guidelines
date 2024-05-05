@@ -7,13 +7,13 @@ Markdown to this guideline:
 ```
 
 When defining job templates in Azure DevOps pipelines, keep the number of
-**environment-related** parameters as minimal as possible.
+**environment-related** parameters as short as possible.
 
 Environment-related parameters might include, but are not limited to:
 
-- Environment name (e.g., 'dev', 'qa', 'prod')
-- Deployment type (e.g., 'blue' or 'green')
-- Region (e.g., 'westeurope', 'northeurope')
+- Environment name (e.g., `dev`, `qa`, `prod`)
+- Deployment type (e.g., `blue` or `green`)
+- Region (e.g., `westeurope`, `northeurope`)
 
 ## Reason
 

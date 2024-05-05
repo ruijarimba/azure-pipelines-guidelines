@@ -1,4 +1,4 @@
-# DO NOT: hardcode values in pipelines and templates
+# ❌ DO NOT: hardcode values in pipelines and templates
 
 Markdown to reference this guideline:
 

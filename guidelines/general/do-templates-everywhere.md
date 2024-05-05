@@ -11,8 +11,8 @@ directly in your pipelines or templates.
 
 ## Reason
 
-Don't repeat yourself - use templates to reuse **logic** and
-**configuration** within or across pipelines.
+Don't repeat yourself - use templates to reuse logic and configuration within or
+across pipelines.
 
 Logic (aka functionality) templates:
 

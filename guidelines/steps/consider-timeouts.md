@@ -1,3 +1,37 @@
-# ✅ CONSIDER: configuring the timeout for your task
+# ✅ CONSIDER: Set task timeouts
 
-When you run a task in a pipeline, you can configure the maximum amount of time that the task can run before it times out. This is useful when you have tasks that might take longer than the default timeout of 60 minutes.
+Markdown to this guideline:
+
+```plaintext
+[CONSIDER: Set task timeouts](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/consider-timeouts.md)
+```
+
+Consider setting tasks timeouts.
+
+Provide reasonable timeout values, depending on the task's purpose.
+
+## Reason
+
+To avoid taking up resources when your task is unresponsive or waiting too long,
+ it's a good idea to set a limit on how long your task is allowed to run.
+
+Note:
+
+- Don't set timeouts too aggressively, as it may lead to premature task cancellations.
+- As an alternative, consider configuring the timeout for the job that contains
+the task, rather than for the task itself.
+
+## Example
+
+Using the `timeoutInMinutes` for a task that runs integration tests:
+
+```yaml
+steps:
+  - task: DotNetCoreCLI@2
+    displayName: 'Run integration tests'
+    timeoutInMinutes: 30 # Time to wait before the task is cancelled
+    inputs:
+      command: test
+      projects: '**/*IntegrationTests/*.csproj'
+      arguments: '--configuration $(buildConfiguration)'
+```
