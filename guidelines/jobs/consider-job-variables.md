@@ -6,7 +6,7 @@ Markdown to reference this guideline:
 [CONSIDER: Declaring variables at the job level](../../guidelines/jobs/consider-variables-scope.md)
 ```
 
-Consider declaring variables at the job level instead of the stage or pipeline level.
+Consider declaring variables at the job level instead of the stage or root level.
 
 ## Reason
 
@@ -71,4 +71,8 @@ jobs:
 
 ## Related guidelines
 
-TODO: Add related guidelines
+- [DO: Reduce variable scope](../../variables/do-reduce-variable-scope.md)
+- [DO: Use templates everywhere](../../general/do-templates-everywhere.md)
+- [DO: Use a consistent folder structure](../../general/do-folder-structure.md)
+- [DO: Separate configuration from logic](../../variables/do-separate-configuration.md)
+- [DO: Use variables templates](../../variables/do-use-variables-templates.md)

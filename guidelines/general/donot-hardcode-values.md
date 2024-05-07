@@ -26,3 +26,9 @@ values) to make your pipelines cleaner and easier to reuse.
 Use variables templates to define and group values by environment, region,
 functionality or any other criteria that makes sense for your scenario and
 reference them in your pipelines and templates.
+
+## Related guidelines
+
+- [DO: Separate configuration from logic](../variables/do-separate-configuration.md)
+- [DO: Use templates everywhere](../general/do-templates-everywhere.md)
+- [DO: use a consistent folder structure](../general/do-folder-structure.md)

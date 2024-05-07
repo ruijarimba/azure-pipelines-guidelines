@@ -58,3 +58,9 @@ jobs:
 Where `/pipelines/steps/terraform/plan-apply.yml` contains the tasks for
 installing Terraform, initializing Terraform, performing validation, running the
 plan, and applying the changes.
+
+## Related guidelines
+
+- [DO: Use templates everywhere](../general/do-templates-everywhere.md)
+- [DO: Use a consistent folder structure](../general/do-folder-structure.md)
+- [DO: Ensure jobs have a single responsibility](../jobs/do-single-responsibility.md)

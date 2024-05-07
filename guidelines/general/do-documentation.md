@@ -162,3 +162,7 @@ parameters:
       kubeconfig: ''
     }
 ```
+
+## Related guidelines
+
+- [DO: Use templates everywhere](./do-templates-everywhere.md)

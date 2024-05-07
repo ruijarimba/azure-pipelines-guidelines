@@ -1,7 +1,8 @@
 # Azure YAML pipelines guidelines
 
-A set of guidelines to help you create Azure YAML pipelines and related
-templates that are easy to understand, maintain, and extend.
+A set of guidelines to help you create
+[Azure YAML pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/key-pipelines-concepts)
+and related templates that are easy to understand, maintain, extend and reuse.
 
 - [Types of recommendations](#types-of-recommendations)
 - [Folder structure](#folder-structure)
