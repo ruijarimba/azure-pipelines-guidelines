@@ -15,8 +15,9 @@ Consider organizing related jobs into stages in order to:
 ## Reason
 
 A stage is a logical boundary in the pipeline. It can be used to mark separation
-of concerns (for example, Build, QA, and production) or to pause the pipeline
-and perform various checks or approvals before proceeding to the next stage.
+of concerns or environments (for example, Build, QA, and production) or to pause
+the pipeline and perform various checks or approvals before proceeding to the
+next stage.
 
 Also, you can rerun a stage (successful or not) without rerunning the entire pipeline.
 

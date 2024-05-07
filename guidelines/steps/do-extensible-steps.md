@@ -9,12 +9,12 @@ Markdown to this guideline:
 When creating steps templates to be reused by different people and/or across
 several jobs, consider adding some or all of the following parameters:
 
-- condition: condition expression to determine whether to run the steps
-- continueOnError: Continue running even on failure?
-- enabled: Run this task when the job runs?
-- timeoutInMinutes: Time to wait for this task to complete before the server
+- `condition`: condition expression to determine whether to run the steps
+- `continueOnError`: Continue running even on failure?
+- `enabled`: Run this task when the job runs?
+- `timeoutInMinutes`: Time to wait for this task to complete before the server
 kills it
-- retryCountOnTaskFailure: Number of retries if the task fails
+- `retryCountOnTaskFailure`: Number of retries if the task fails
 
 ## Reason
 

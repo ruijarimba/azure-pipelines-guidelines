@@ -11,9 +11,8 @@ is invalid.
 
 ## Reason
 
-Fail fast: detecting and reporting errors as soon as they occur, rather than
-allowing them to propagate and potentially cause more significant issues later
-in the pipeline.
+Detect and report errors as soon as they occur, rather than allowing them to
+propagate and potentially cause more significant issues later in the pipeline.
 
 ## Example
 
@@ -60,9 +59,8 @@ parameters:
     displayName: 'An array of key-value pairs of input data to validate'
     type: object
 
-  # A boolean value that specifies whether to print the values of the inputs
-  # Use it for troubleshooting purposes.
-  # Be careful not to print sensitive information.
+  # A boolean value that specifies whether to print the values of the inputs.
+  # Use it for troubleshooting purposes only, as it may expose sensitive information.
   - name: printValues
     displayName: 'A boolean value that specifies whether to print the values of the inputs'
     type: boolean

@@ -1,7 +1,7 @@
 # Azure YAML pipelines guidelines
 
-This repository contains a set of guidelines to help you create Azure YAML
-pipelines and related templates that are easy to understand, maintain, and extend.
+A set of guidelines to help you create Azure YAML pipelines and related
+templates that are easy to understand, maintain, and extend.
 
 - [Types of recommendations](#types-of-recommendations)
 - [Folder structure](#folder-structure)

@@ -1,22 +1,28 @@
 # ❌ DO NOT: use AzureKeyVault task
 
-Do not use the AzureKeyVault task in pipelines.
+Markdown to this guideline:
 
-Use variable groups and variable templates instead.
+```plaintext
+[DO NOT: Use AzureKeyVault task](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/dont-use-azurekeyvault-task.md)
+```
+
+Do not use the `AzureKeyVault` task in pipelines.
 
 ## Reason
 
-Using the AzureKeyVault task in pipelines is a bad practice because it makes the pipeline less flexible and harder to maintain. Instead, use variables and templates to define values that can be reused across different pipelines and templates.
+The `AzureKeyVault` is used to fetch the values of secrets from the vault and
+set them as **pipeline variables** that can be used in subsequent tasks, which
+creates a coupling between the steps and the variables.
+
+See [DO: Avoid using variables](../steps/avoid-variables.md).
 
 ## Recommended Approach
 
+Use variable groups linked to an Azure Keyvault.
+
+Reference them within
+variables templates and pass them as parameters to the steps templates.
+
 ## Related guidelines
 
-- [DO: Keep sensitive information in variable groups](../../do/keep-sensitive-information-in-variable-groups.md)
-- [DO: Use parameters instead of variables in steps templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/avoid-using-variables.md)
-
-
-- [DO NOT: hardcode values in pipelines and templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/donot-hardcode-values.md)
-- [DO NOT: Mix pipelines syntax in script tasks](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/dont-mix-pipelines-syntax-in-scripts.md)
-- [DO: Create templates for everything](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-create-templates-for-everything.md)
-- [DO: Use parameters instead of variables in steps templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/avoid-using-variables.md)
+TODO: Add related guidelines

@@ -1,6 +1,6 @@
 # ✅ DO: Use service connections when possible
 
-Use Service Connections when possible to connect to external services,
+Use Service Connections when possible to connect to external services
 like Azure, GitHub, Docker, Kubernetes, and many other services.
 
 ## Reason

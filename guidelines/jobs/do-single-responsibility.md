@@ -1,20 +1,22 @@
-# ✅ DO: jobs must do one and only one thing (single responsibility)
+# ✅ DO: Ensure Jobs Have a Single Responsibility
 
-Jobs must adhere to the single responsibility principle, i.e. they must do one
-and only one thing well.
+Each job should be focused on performing a single, well-defined responsibility.
 
 ## Reason
 
-Single responsibility principle is a software design principle that states that
-a class should have only one reason to change. This principle can be applied to
-jobs in Azure DevOps pipelines as well. A job should have only one reason to
-change, which means it should do one and only one thing.
+Jobs with a clear, well-defined purpose are easier to understand, maintain and
+reuse.
 
-Advantages of following this principle include:
+## Example
 
-- **Readability**: It's easier to understand what the job does.
-- **Maintainability**: It's easier to maintain the job because it's focused on
-  doing one thing.
-- **Reusability**: The job can be reused in other pipelines without having to
-  change it.
+Examples of jobs with a single responsibility include:
 
+- Build job: Responsible for building an application.
+- Deploy job: Responsible for deploying an application to a specific environment.
+- Docker job: Responsible for building and pushing a Docker image.
+- Terraform job: Responsible for applying Terraform configuration.
+- Test job: Responsible for running tests (smoke tests, integration tests, etc.).
+
+Please note that single responsibility does not mean that a job should have only
+one step. A job can have multiple steps as long as they are related to the same
+responsibility, e.g. building and pushing a Docker image.

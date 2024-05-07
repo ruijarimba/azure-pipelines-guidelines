@@ -51,8 +51,8 @@ Using the template:
 jobs:
   - template: hello-world.yml
     parameters:
-      agentPool: 'MyAgentPool'
-      personName: 'Alice'
+      # Ommited for brevity
+      # ...
       preSteps:
         - script: echo 'Setting up environment'
           displayName: 'Setup'
