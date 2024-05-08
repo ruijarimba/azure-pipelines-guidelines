@@ -47,8 +47,8 @@ steps:
     displayName: 'Set KUBECONFIG variable'
 ```
 
-Declare a script variable at the beginning of the script, assign the parameter
-to it, and use the variable in the rest of the script:
+Assign the pipeline parameter to a script variable at the beginning of the
+script:
 
 ```yaml
 steps:

@@ -1,9 +1,12 @@
 # ✅ DO: organize variables by component and environment
 
 Create a folder structure to organize your variables by functionality,
-environment or any other logical grouping that makes sense for your project.
+environment or any other logical grouping that makes sense for your pipelines.
 
-This will help you to keep your variables organized, easy to manage and reuse.
+## Reason
+
+Using a folder strucure with a good naming convention will help you to keep your
+variables organized, easy to manage and reuse.
 
 ## Example
 

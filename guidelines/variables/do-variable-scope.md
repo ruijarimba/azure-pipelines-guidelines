@@ -32,9 +32,6 @@ root or stage level - example:
 - `$(defaultAgentPool)`
 - `$(azureDevOpsEnvironment)`
 
-Please note that the variable names are for illustrative purposes only - these
-should be defined in variables templates instead.
-
 ## Related guidelines
 
 - [DO: Use templates everywhere](../general/do-templates-everywhere.md)

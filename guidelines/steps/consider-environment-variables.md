@@ -8,8 +8,8 @@ Setting environment variables at the task level restricts the scope of these
 variables, ensuring they are only accessible within the task.
 
 Additionally, several tools like Terraform, Azure CLI, Azure DevOps CLI, and
-others allow you to use environment variables, which can simplify the
-corresponding tasks/scripts.
+others support the use of environment variables that simplify the execution of
+the corresponding tasks/scripts.
 
 For example:
 

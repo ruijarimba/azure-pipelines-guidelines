@@ -1,4 +1,4 @@
-# DO: Use templates everywhere
+# ✅ DO: Use templates everywhere
 
 Markdown for this guideline:
 
