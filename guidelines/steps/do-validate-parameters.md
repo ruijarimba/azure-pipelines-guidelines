@@ -115,3 +115,7 @@ additional validation rules, such as:
 - Validating an URL
 
 And so on.
+
+## Related guidelines
+
+TODO: Add related guidelines

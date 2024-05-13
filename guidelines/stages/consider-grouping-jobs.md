@@ -23,3 +23,7 @@ Also, you can rerun a stage (successful or not) without rerunning the entire pip
 
 Finally, it allows you to skip the execution of one or more stages, which can be
 useful when you want to run only a subset of the pipeline.
+
+## Related guidelines
+
+TODO: Add related guidelines.

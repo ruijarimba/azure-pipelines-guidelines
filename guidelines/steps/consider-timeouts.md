@@ -33,5 +33,5 @@ steps:
     inputs:
       command: test
       projects: '**/*IntegrationTests/*.csproj'
-      arguments: '--configuration $(buildConfiguration)'
+      arguments: '--configuration ${{ parameters.buildConfiguration }}'
 ```

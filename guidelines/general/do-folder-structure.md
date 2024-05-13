@@ -84,3 +84,7 @@ You can optionally add subfolders to the `/jobs`, `/stages`, `/steps`, and
           qa-variables.yml
           prod-variables.yml
 ```
+
+## Related guidelines
+
+TODO: Add related guidelines here

@@ -165,4 +165,4 @@ parameters:
 
 ## Related guidelines
 
-- [DO: Use templates everywhere](./do-templates-everywhere.md)
+TODO: Add related guidelines

@@ -41,3 +41,7 @@ Terraform-related variables by provider, resource, region and environment:
 
 Other templates are used to group common variables that are used across multiple
 components, such as `provider-variables.yml` and `remote-state-variables.yml`.
+
+## Related guidelines
+
+TODO: Add related guidelines

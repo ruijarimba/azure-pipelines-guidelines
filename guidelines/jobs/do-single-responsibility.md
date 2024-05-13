@@ -20,3 +20,7 @@ Examples of jobs with a single responsibility include:
 Please note that single responsibility does not mean that a job should have only
 one step. A job can have multiple steps as long as they are related to the same
 responsibility, e.g. building and pushing a Docker image.
+
+## Related guidelines
+
+TODO: Add related guidelines.

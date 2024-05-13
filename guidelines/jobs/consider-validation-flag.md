@@ -63,3 +63,7 @@ jobs:
 Template `/pipelines/steps/terraform/plan-apply-steps.yaml` would then use the
 `applyChanges` parameter to decide whether to run the `terraform apply` command
 or not.
+
+## Related guidelines
+
+TODO: Add related guidelines.

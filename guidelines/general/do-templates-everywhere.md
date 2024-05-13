@@ -66,7 +66,7 @@ stages:
                     dockerVersion: '17.09.0-ce'
 
                 - task: Docker@2
-                  displayName: Build and publish image to Azure Container Registry
+                  displayName: Build and publish image to Container Registry
                   inputs:
                     command: buildAndPush
                     containerRegistry: $(containerRegistryServiceConnection)
@@ -193,7 +193,7 @@ steps:
       dockerVersion: '${{ parameters.dockerVersion }}'
 
   - task: Docker@2
-    displayName: Build and publish image to Azure Container Registry
+    displayName: Build and publish image to Container Registry
     inputs:
       command: buildAndPush
       containerRegistry: '${{ parameters.serviceConnection }}'

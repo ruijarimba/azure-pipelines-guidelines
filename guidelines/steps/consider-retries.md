@@ -28,9 +28,13 @@ to specify the number of retries if a task fails:
 steps:
   - task: NuGetRestore@1
     inputs:
-      solution: '**/*.sln'
-      nugetConfigPath: $(System.DefaultWorkingDirectory)/nuget.config
+      solution: ${{ parameters.solution }}
+      nugetConfigPath: ${{ parameters.nugetConfigPath }}
     retryCountOnTaskFailure: 3
 ```
 
 In this example, the `NuGetRestore@1` task will be retried up to 3 times if it fails.
+
+## Related guidelines
+
+TODO: Add related guidelines.

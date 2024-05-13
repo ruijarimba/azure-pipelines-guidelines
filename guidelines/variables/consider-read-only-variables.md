@@ -19,3 +19,7 @@ variables:
     value: myValue
     readonly: true
 ```
+
+## Related guidelines
+
+TODO: add related guidelines

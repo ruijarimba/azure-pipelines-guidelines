@@ -20,7 +20,7 @@ Also, secret variables in variable groups are
 . You can add combinations of approvals, checks, and pipeline permissions to
 limit access to secret variables in a variable group.
 
-## Note for Azure users
+### Note for Azure users
 
 If your Azure DevOps organization is linked to an Azure subscription, store your
 secrets in an Azure key vault and
@@ -30,3 +30,7 @@ instead of storing secrets directly in the variable group.
 Azure Key Vault provides among other things: auditability;
 secret rotation; centralized management; monitoring and alerting (e.g.,
 [using Azure Event Grid and Logic Apps to send notifications when secrets are expiring](https://learn.microsoft.com/en-us/azure/key-vault/general/event-grid-logicapps)).
+
+## Related guidelines
+
+TODO: Add related guidelines

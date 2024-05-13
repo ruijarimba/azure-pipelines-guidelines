@@ -66,3 +66,7 @@ set).
 
 Consider using this approach as a first step to refactor the template, in order
 to remove the variable dependency.
+
+## Related guidelines
+
+TODO: Add related guidelines.

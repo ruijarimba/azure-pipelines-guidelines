@@ -29,6 +29,4 @@ reference them in your pipelines and templates.
 
 ## Related guidelines
 
-- [DO: Separate configuration from logic](../variables/do-separate-configuration.md)
-- [DO: Use templates everywhere](../general/do-templates-everywhere.md)
-- [DO: use a consistent folder structure](../general/do-folder-structure.md)
+TODO: Add related guidelines.

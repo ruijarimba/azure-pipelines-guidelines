@@ -71,3 +71,7 @@ steps:
       exit $EXIT_CODE
     displayName: 'Set KUBECONFIG variable'
 ```
+
+## Related guidelines
+
+TODO: Add related guidelines
