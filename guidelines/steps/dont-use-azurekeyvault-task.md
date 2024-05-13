@@ -21,8 +21,8 @@ See [AVOID: Using variables in steps templates](../steps/avoid-variables.md).
 
 Use variable groups linked to an Azure Keyvault.
 
-Reference them within
-variables templates and pass them as parameters to the steps templates.
+Reference them within variables templates and pass them as parameters to the
+steps templates.
 
 ## Related guidelines
 

@@ -2,6 +2,12 @@
 
 Use the right scope for your variables in Azure DevOps pipelines.
 
+## Markdown to reference this guideline
+
+```plaintext
+[DO: Set the right variable scope](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-variable-scope.md&version=GBfeature/180-initial-guidelines)
+```
+
 ## Reason
 
 In a pipeline, you can set a variable at various scopes:

@@ -31,6 +31,45 @@ Azure Key Vault provides among other things: auditability;
 secret rotation; centralized management; monitoring and alerting (e.g.,
 [using Azure Event Grid and Logic Apps to send notifications when secrets are expiring](https://learn.microsoft.com/en-us/azure/key-vault/general/event-grid-logicapps)).
 
+## Example
+
+The variable template below retrieves sensitive information used to authenticate
+with a Terraform provider (`azurerm`) and access the Terraform remote state.
+
+```yaml
+# /pipelines/variables/terraform/app-gateway/westeurope/prod-variables.yaml
+
+# Terraform stack: application gateway
+# Region: westeurope
+# Environment: prod
+
+variables:
+  # other variables here
+
+  ############################ Terraform remote state
+
+  - group: tf-azure-remote-state-prod
+
+  - name: tf_azureStateAccessKey
+    value: $(terraform-state-storage-access-key-1)
+
+  ############################ Azure authentication
+
+  - group: tf-azure-authentication-prod
+
+  - name: tf_azureClientId
+    value: $(terraform-sp-client-id)
+  
+  - name: tf_azureClientsecret
+    value: $(terraform-sp-client-secret)
+  
+  - name: tf_azureSubscriptionId
+    value: $(terraform-sp-subscription-id)
+  
+  - name: tf_azureTenantId
+    value: $(terraform-sp-tenant-id)
+```
+
 ## Related guidelines
 
 TODO: Add related guidelines

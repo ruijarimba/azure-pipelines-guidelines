@@ -4,6 +4,12 @@ Don't hard-code values in your pipelines or steps, jobs or stages templates.
 
 Instead, create and reference variable templates to store configuration values.
 
+## Markdown to reference this guideline
+
+```plaintext
+[DO: Separate configuration from logic](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-separate-configuration.md&version=GBfeature/180-initial-guidelines)
+```
+
 ## Reason
 
 When deploying applications, it's a good practice to separate application

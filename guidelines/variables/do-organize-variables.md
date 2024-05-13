@@ -3,6 +3,12 @@
 Create a folder structure to organize your variables by functionality,
 environment or any other logical grouping that makes sense for your pipelines.
 
+## Markdown to reference this guideline
+
+```plaintext
+[DO: Organize variables by component and environment](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-organize-variables.md&version=GBfeature/180-initial-guidelines)
+```
+
 ## Reason
 
 Using a folder strucure with a good naming convention will help you to keep your
