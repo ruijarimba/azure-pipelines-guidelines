@@ -6,7 +6,7 @@ directly in your pipelines or templates.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Use templates everywhere](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-use-templates-everywhere.md)
+[DO: Use templates everywhere](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/do-templates-everywhere.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason

@@ -3,31 +3,11 @@
 Consider adding a `boolean` parameter to your job to run it in
 _validation mode_, i.e. without actually deploying or executing any changes.
 
+## Markdown to reference this guideline
+
 ```plaintext
-[CONSIDER: Adding a validation flag to your job](../../guidelines/jobs/consider-validation-flag.md)
+[CONSIDER: Adding a validation flag to your job](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-validation-flag.md&version=GBfeature/180-initial-guidelines)
 ```
-
-Example 1 - building and pushing a Docker image:
-
-- `validationMode: false` - the pipeline builds and pushes the Docker image to
-the registry.
-- `validationMode: true` - the pipeline builds the Docker image but doesn't push
-it to the registry (or, as an alternative, pushes it to the registry using a
-_dummy_ tag).
-
-Example 2 - upgrading a Helm chart:
-
-- `validationMode: false` - the pipeline runs `helm upgrade` command to install
-or upgrade the Helm chart.
-- `validationMode: true` - the pipeline runs `helm upgrade --dry-run` command,
-simulating the install or upgrade of the Helm chart
-
-Example 3 - running Terraform plan and applying changes:
-
-- `validationMode: false` - the pipeline runs the plan and applies the changes
-to the infrastructure.
-- `validationMode: true` - the pipeline runs the plan but doesn't apply any
-changes to the infrastructure.
 
 ## Reason
 
@@ -40,6 +20,13 @@ Scenarios include (but are not limited to):
 - Validating the pipeline in pull requests
 
 ## Example
+
+Example - running Terraform plan and applying changes:
+
+- `applyChanges: false` - the pipeline runs the plan but doesn't apply any
+changes to the infrastructure.
+- `applyChanges: true` - the pipeline runs the plan and applies the changes
+to the infrastructure.
 
 Using a validation parameter (`applyChanges`) in a Terraform job:
 

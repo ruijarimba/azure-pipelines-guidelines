@@ -1,16 +1,16 @@
 # ✅ DO: Set job timeouts
 
-Markdown to this guideline:
-
-```plaintext
-[DO: Configure job timeouts](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/jobs/do-configure-job-timeouts.md)
-```
-
 Set job timeouts or add parameters to shared job templates to allow users to
 configure them.
 
 Provide reasonable default values, depending on the job's purpose and the
 expected or average run time.
+
+## Markdown to reference this guideline
+
+```plaintext
+[DO: Set job timeouts](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/do-job-timeouts.md&version=GBfeature/180-initial-guidelines)
+```
 
 ## Reason
 
