@@ -2,6 +2,8 @@
 
 Do not hard-code values in Azure DevOps pipelines and templates.
 
+## Markdown to reference this guideline
+
 ```plaintext
 [DO NOT: hard-code values in pipelines and templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/donot-hard-code-values.md)
 ```

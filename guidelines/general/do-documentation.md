@@ -5,6 +5,8 @@ files describing its purpose, usage, and other relevant information.
 
 Consider documenting parameters and even variables as well, if necessary.
 
+## Markdown to reference guideline
+
 ```plaintext
 [DO: document pipelines and templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-documentation.md)
 ```
