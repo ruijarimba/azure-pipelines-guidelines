@@ -1,6 +1,6 @@
 # Azure YAML pipelines guidelines
 
-A set of guidelines to help you create
+A set of coding guidelines to create
 [Azure YAML pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/key-pipelines-concepts)
 and related templates that are easy to understand, maintain, extend and reuse.
 
@@ -11,6 +11,7 @@ and related templates that are easy to understand, maintain, extend and reuse.
 - [Motivation](#motivation)
 - [Tools and extensions](#tools-and-extensions)
 - [Disclaimer](#disclaimer)
+- [Buy me a coffee](#buy-me-a-coffee)
 
 ## Types of recommendations
 
@@ -94,3 +95,17 @@ has used official Microsoft documentation as a reference.
 
 The author is not responsible for any misuse of these guidelines or any damage
 that may result from their use. Use them at your own responsibility.
+
+## Buy me a coffee
+
+The work in this repository was done in the author's spare time and is provided
+free of charge.
+
+Anyway, if you like this repository and find it useful, please consider
+[purchasing a book 📖](https://www.amazon.co.uk/hz/wishlist/ls/2YS09B7YPFWAJ?ref_=wl_share)
+or
+[making a small donation 💰](https://www.paypal.com/donate?hosted_button_id=LEA579SCNQ426)
+to the author. Or, as an alternative, help make the world a better place by
+supporting your local charity or helping someone in need.
+
+Your support is greatly appreciated!
