@@ -1,12 +1,10 @@
 # ✅ CONSIDER: Declare variables at the job level
 
-Markdown to reference this guideline:
+Consider declaring variables at the job level instead of the stage or root level.
 
 ```plaintext
 [CONSIDER: Declaring variables at the job level](../../guidelines/jobs/consider-variables-scope.md)
 ```
-
-Consider declaring variables at the job level instead of the stage or root level.
 
 ## Reason
 

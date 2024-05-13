@@ -1,13 +1,11 @@
 # ✅ DO: use a consistent folder structure
 
-Markdown to reference this guideline:
+Use a consistent and logical folder structure for the pipelines and templates
+in different projects and repositories.
 
 ```plaintext
 [DO: use a consistent folder structure](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-use-consistent-folder-structure.md)
 ```
-
-Use a consistent and logical folder structure for the pipelines and templates
-in different projects and repositories.
 
 ## Reason
 

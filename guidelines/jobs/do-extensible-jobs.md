@@ -1,11 +1,5 @@
 # ✅ DO: Create configurable and extensible jobs
 
-Markdown to this guideline:
-
-```plaintext
-[DO: Create configurable and extensible jobs](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/jobs/do-create-entensible-jobs.md)
-```
-
 When creating job templates to be reused by different teams and/or across
 several stages or pipelines, consider adding some or all of the following
 parameters:
@@ -16,6 +10,12 @@ parameters:
 - Dependencies
 - Condition
 - pre- and post-steps
+
+## Markdown to this guideline
+
+```plaintext
+[DO: Create configurable and extensible jobs](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/jobs/do-create-entensible-jobs.md)
+```
 
 ## Reason
 

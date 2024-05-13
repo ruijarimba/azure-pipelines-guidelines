@@ -1,22 +1,21 @@
-# ❌ DO NOT: hardcode values in pipelines and templates
+# ❌ DO NOT: hard-code values in pipelines and templates
 
-Markdown to reference this guideline:
+Do not hard-code values in Azure DevOps pipelines and templates.
 
 ```plaintext
-[DO NOT: hardcode values in pipelines and templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/donot-hardcode-values.md)
+[DO NOT: hard-code values in pipelines and templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/donot-hard-code-values.md)
 ```
-
-Do not hardcode values in Azure DevOps pipelines and templates.
 
 ## Reason
 
-Just like in a regular application, hardcoding values in pipelines and templates
+Just like in a regular application, hard-coding values in pipelines and templates
 is not a good practice for several reasons:
 
 - If a value needs to be changed, it must be changed in multiple places.
-- Hardcoded values make the templates less reusable e.g. it might not be
-possible to use the same template for different environments.
-- Hardcoded values decrease readability. It might not be clear what the value represents.
+- Hard-coded values make the templates less reusable e.g. it might not be
+possible to use the same template in different contexts, e.g. different
+environments
+- Hard-coded values decrease readability. It might not be clear what the value represents.
 
 ## Recommended Approach
 

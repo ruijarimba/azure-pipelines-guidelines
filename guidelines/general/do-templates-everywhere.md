@@ -1,13 +1,11 @@
 # ✅ DO: Use templates everywhere
 
-Markdown for this guideline:
+Create and reference templates instead of defining logic or configuration
+directly in your pipelines or templates.
 
 ```plaintext
 [DO: Use templates everywhere](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-use-templates-everywhere.md)
 ```
-
-Create and reference templates instead of defining logic or configuration
-directly in your pipelines or templates.
 
 ## Reason
 

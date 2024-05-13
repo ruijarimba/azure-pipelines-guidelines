@@ -3,6 +3,10 @@
 Consider adding a `boolean` parameter to your job to run it in
 _validation mode_, i.e. without actually deploying or executing any changes.
 
+```plaintext
+[CONSIDER: Adding a validation flag to your job](../../guidelines/jobs/consider-validation-flag.md)
+```
+
 Example 1 - building and pushing a Docker image:
 
 - `validationMode: false` - the pipeline builds and pushes the Docker image to
