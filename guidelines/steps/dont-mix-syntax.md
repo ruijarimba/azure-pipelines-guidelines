@@ -2,10 +2,10 @@
 
 Do not use `$(...)` or `${{ ... }}` syntax in the middle of a script task.
 
-Markdown to reference this guideline:
+## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Mix pipelines syntax in script tasks](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/dont-mix-pipelines-syntax-in-scripts.md)
+[DO NOT: Mix pipelines syntax in script tasks](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/dont-mix-syntax.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason

@@ -1,7 +1,13 @@
 # ✅ CONSIDER: configuring retries for your tasks
 
-When you run a task in a pipeline, you can configure the number of times that
-the task should be retried if it fails.
+Consider configuring the number of times that the task should be retried, if it
+fails.
+
+## Markdown to reference this guideline
+
+```plaintext
+[CONSIDER: Configuring retries for your tasks](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/consider-retries.md&version=GBfeature/180-initial-guidelines)
+```
 
 ## Reason
 

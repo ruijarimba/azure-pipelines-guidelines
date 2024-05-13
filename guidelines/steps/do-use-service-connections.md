@@ -3,6 +3,12 @@
 Use Service Connections when possible to connect to external services
 like Azure, GitHub, Docker, Kubernetes, and many other services.
 
+## Markdown to reference this guideline
+
+```plaintext
+[DO: Use service connections when possible](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/do-use-service-connections.md&version=GBfeature/180-initial-guidelines)
+```
+
 ## Reason
 
 Service connections provide a secure mechanism to connect to external services

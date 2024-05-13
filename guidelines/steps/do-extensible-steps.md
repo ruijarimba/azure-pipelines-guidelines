@@ -1,11 +1,5 @@
 # ✅ DO: Create configurable and extensible steps
 
-Markdown to this guideline:
-
-```plaintext
-[DO: Create configurable and extensible steps](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/do-create-extensible-steps.md)
-```
-
 When creating steps templates to be reused by different people and/or across
 several jobs, consider adding some or all of the following parameters:
 
@@ -15,6 +9,12 @@ several jobs, consider adding some or all of the following parameters:
 - `retryCountOnTaskFailure`: Number of retries if the task fails
 - `timeoutInMinutes`: Time to wait for this task to complete before the server
 kills it
+
+## Markdown to reference this guideline
+
+```plaintext
+[DO: Create configurable and extensible steps](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/do-extensible-steps.md&version=GBfeature/180-initial-guidelines)
+```
 
 ## Reason
 

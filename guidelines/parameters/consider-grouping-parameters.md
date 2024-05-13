@@ -1,12 +1,12 @@
 # ✅ CONSIDER: Grouping related parameters
 
-Markdown to reference this guideline:
+Consider grouping related parameters, such as username and password.
+
+## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Grouping related parameters](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/parameters/consider-grouping-related-parameters.md)
+[CONSIDER: Grouping related parameters](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/parameters/consider-grouping-parameters.md&version=GBfeature/180-initial-guidelines)
 ```
-
-Consider grouping related parameters, such as username and password.
 
 ## Reason
 

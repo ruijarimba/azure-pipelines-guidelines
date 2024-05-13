@@ -1,12 +1,12 @@
 # ❌ AVOID: Using variables in tasks or steps templates
 
-Markdown to reference this guideline:
+Avoid using variables in steps templates. Use parameters instead.
+
+## Markdown to reference this guideline
 
 ```plaintext
-[DO: Use parameters instead of variables in steps templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/avoid-using-variables.md)
+[AVOID: Using variables in tasks or steps templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/avoid-variables.md&version=GBfeature/180-initial-guidelines)
 ```
-
-Avoid using variables in steps templates. Use parameters instead.
 
 ## Reason
 

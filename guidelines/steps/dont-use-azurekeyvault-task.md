@@ -1,12 +1,13 @@
 # ❌ DO NOT: use AzureKeyVault task
 
-Markdown to this guideline:
+Do not use the `AzureKeyVault` task in pipelines to retrieve sensitive
+information.
+
+## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Use AzureKeyVault task](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/dont-use-azurekeyvault-task.md)
+[DO NOT: Use AzureKeyVault task](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/dont-use-azurekeyvault-task.md&version=GBfeature/180-initial-guidelines)
 ```
-
-Do not use the `AzureKeyVault` task in pipelines.
 
 ## Reason
 

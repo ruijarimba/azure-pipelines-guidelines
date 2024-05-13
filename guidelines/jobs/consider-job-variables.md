@@ -1,11 +1,11 @@
-# ✅ CONSIDER: Declare variables at the job level
+# ✅ CONSIDER: Declaring variables at the job level
 
 Consider declaring variables at the job level instead of the stage or root level.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Declare variables at the job level](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-job-variables.md&version=GBfeature/180-initial-guidelines)
+[CONSIDER: Declaring variables at the job level](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-job-variables.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason

@@ -1,13 +1,13 @@
 # ✅ DO: Validate steps parameters
 
-Markdown to reference this guideline:
-
-```plaintext
-[DO: Validate steps parameters](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/do-validate-parameters.md)
-```
-
 Steps templates should validate their parameters and fail the pipeline if any
 is invalid.
+
+## Markdown to reference this guideline
+
+```plaintext
+[DO: Validate steps parameters](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/do-validate-parameters.md&version=GBfeature/180-initial-guidelines)
+```
 
 ## Reason
 
