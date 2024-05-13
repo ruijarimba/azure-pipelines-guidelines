@@ -9,7 +9,7 @@ Consider organizing related jobs into stages in order to:
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Grouping related jobs into stages](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/stages/consider-grouping-jobs.md)
+[CONSIDER: Grouping related jobs into stages](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/stages/consider-grouping-jobs.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
