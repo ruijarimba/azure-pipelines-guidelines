@@ -9,7 +9,8 @@ Markdown to this guideline:
 Set job timeouts or add parameters to shared job templates to allow users to
 configure them.
 
-Provide reasonable default values, depending on the job's purpose.
+Provide reasonable default values, depending on the job's purpose and the
+expected or average run time.
 
 ## Reason
 
