@@ -38,7 +38,6 @@ the following subfolders:
 
 - `/general`: General recommendations that apply to more than one category.
 - `/jobs`: Jobs-related recommendations.
-- `/other`: Recommendations that don't fit in any of the other categories.
 - `/parameters`: Parameters-related recommendations.
 - `/pipelines`: Pipelines-related recommendations.
 - `/stages`: Stages-related recommendations.
