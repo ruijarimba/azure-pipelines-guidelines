@@ -9,7 +9,7 @@ Encapsulating tasks into a single steps template provides a better abstraction
 and makes the job easier to read and maintain.
 
 Additionally, this approach facilitates the reuse of the steps template across
-multiple jobs.
+multiple jobs if needed.
 
 ## Example
 
