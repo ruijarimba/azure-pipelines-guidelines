@@ -6,7 +6,7 @@ Markdown to reference this guideline:
 [DO: Use parameters instead of variables in steps templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/avoid-using-variables.md)
 ```
 
-Avoid using variables in steps template. Use parameters instead.
+Avoid using variables in steps templates. Use parameters instead.
 
 ## Reason
 

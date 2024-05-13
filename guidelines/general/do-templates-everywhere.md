@@ -203,4 +203,5 @@ steps:
 
 ## Related guidelines
 
-TODO: Add related guidelines.
+- [DO NOT: hard-code values in pipelines and templates](/guidelines/general/donot-hard-code-values.md)
+- [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)

@@ -35,3 +35,7 @@ steps:
       projects: '**/*IntegrationTests/*.csproj'
       arguments: '--configuration ${{ parameters.buildConfiguration }}'
 ```
+
+## Related guidelines
+
+- [DO: Create configurable and extensible steps](./do-extensible-steps.md)

@@ -163,4 +163,4 @@ parameters:
 
 ## Related guidelines
 
-TODO: Add related guidelines
+- [DO: Use templates everywhere](/guidelines/general/do-use-templates.md)

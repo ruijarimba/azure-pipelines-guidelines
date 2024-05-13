@@ -28,4 +28,5 @@ reference them in your pipelines and templates.
 
 ## Related guidelines
 
-TODO: Add related guidelines.
+- [DO: Separate configuration from logic](../variables/do-separate-configuration.md)
+- [DO: Use templates everywhere](../general/do-use-templates-everywhere.md)

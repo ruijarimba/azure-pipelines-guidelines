@@ -37,4 +37,4 @@ In this example, the `NuGetRestore@1` task will be retried up to 3 times if it f
 
 ## Related guidelines
 
-TODO: Add related guidelines.
+- [DO: Create configurable and extensible steps](./do-extensible-steps.md)
