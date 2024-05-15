@@ -114,4 +114,5 @@ jobs:
 
 ## Related guidelines
 
-TODO: Add related guidelines.
+- [DO: Create Configurable and Extensible Steps](/guidelines/steps/do-extensible-steps.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)

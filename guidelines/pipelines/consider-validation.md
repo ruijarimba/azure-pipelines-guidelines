@@ -70,3 +70,7 @@ stages:
               parameters:
                 # ...
 ```
+
+## Related guidelines
+
+- [CONSIDER: Adding a Validation Flag to Your Job](/guidelines/jobs/consider-validation-flag.md)

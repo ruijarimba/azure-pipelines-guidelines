@@ -165,4 +165,4 @@ parameters:
 
 ## Related guidelines
 
-- [DO: Use Templates Everywhere](./do-templates-everywhere.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)

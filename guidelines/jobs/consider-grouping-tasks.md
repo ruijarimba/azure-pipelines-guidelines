@@ -67,6 +67,5 @@ plan, and applying the changes.
 
 ## Related guidelines
 
-- [DO: Use Templates Everywhere](../general/do-templates-everywhere.md)
-- [DO: Use a Consistent Folder Structure](../general/do-folder-structure.md)
-- [DO: Ensure jobs have a single responsibility](../jobs/do-single-responsibility.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Ensure jobs have a single responsibility](/guidelines/jobs/do-single-responsibility.md)

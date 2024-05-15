@@ -29,4 +29,6 @@ responsibility, e.g. building and pushing a Docker image.
 
 ## Related guidelines
 
-TODO: Add related guidelines.
+- [CONSIDER: Adding a Validation Flag to Your Job](/guidelines/jobs/consider-validation-flag.md)
+- [CONSIDER: Grouping related jobs into stages](/guidelines/stages/consider-grouping-jobs.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-template-everywhere.md)

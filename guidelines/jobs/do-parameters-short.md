@@ -128,7 +128,7 @@ jobs:
   # Other job specific parameters such as environment, etc
 ```
 
-The above template can be refactored in order to use just less environment-related
+The above template can be refactored in order to use less environment-related
 parameters instead - `stackName`, `environment` and `region` are enough to
 identify the context in which the job is running.
 
@@ -196,7 +196,7 @@ jobs:
     variables:
       # Consumers of this job are expected to provide a variables template 
       # using the following folder structure:
-      # /pipelines/variables/terraform/{stackName}/{region}/{environment}-variables.yaml
+      # /pipelines/variables/terraform/{stack}/{region}/{environment}-variables.yaml
       - template: /pipelines/variables/terraform/${{ parameters.stackName }}/${{ parameters.region }}/${{ parameters.environment }}-variables.yaml@self
     steps:
       - template: /pipelines/steps/terraform/plan-apply-steps.yaml
@@ -213,4 +213,6 @@ jobs:
 
 ## Related guidelines
 
-TODO: Add related guidelines.
+- [CONSIDER: Declaring Variables at the Job Level](/guidelines/jobs/consider-job-variables.md)
+- [DO: Reduce variable scope](/guidelines/variables/do-variable-scope.md)
+- [AVOID: Using Variables in Tasks or Steps Templates](/guidelines/steps/avoid-variables.md)

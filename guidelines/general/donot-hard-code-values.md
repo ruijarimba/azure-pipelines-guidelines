@@ -30,5 +30,5 @@ reference them in your pipelines and templates.
 
 ## Related guidelines
 
-- [DO: Separate Configuration From Logic](../variables/do-separate-configuration.md)
-- [DO: Use Templates Everywhere](../general/do-use-templates-everywhere.md)
+- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)

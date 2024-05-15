@@ -71,8 +71,5 @@ jobs:
 
 ## Related guidelines
 
-- [DO: Reduce variable scope](../../variables/do-reduce-variable-scope.md)
-- [DO: Use Templates Everywhere](../../general/do-templates-everywhere.md)
-- [DO: Use a Consistent Folder Structure](../../general/do-folder-structure.md)
-- [DO: Separate Configuration From Logic](../../variables/do-separate-configuration.md)
-- [DO: Use variables templates](../../variables/do-use-variables-templates.md)
+- [DO: Reduce variable scope](/guidelines/variables/do-variable-scope.md)
+- [AVOID: Using Variables in Tasks or Steps Templates](/guidelines/steps/avoid-variables.md)

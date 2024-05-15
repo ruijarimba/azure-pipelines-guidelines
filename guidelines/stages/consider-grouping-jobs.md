@@ -27,4 +27,4 @@ stages. For example, you can run only the build stage when validating a pull req
 
 ## Related guidelines
 
-TODO: Add related guidelines.
+- [DO: Run stages in parallel when possible](/guidelines/stages/do-parallel-stages.md)

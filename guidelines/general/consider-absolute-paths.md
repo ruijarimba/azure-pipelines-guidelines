@@ -47,5 +47,5 @@ jobs:
 
 ## Related guidelines
 
-- [DO: Use a Consistent Folder Structure](./do-folder-structure.md)
-- [DO: Use Templates Everywhere](./do-templates-everywhere.md)
+- [DO: Use a Consistent Folder Structure](/guidelines/general/do-folder-structure.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)

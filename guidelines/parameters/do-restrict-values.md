@@ -52,3 +52,7 @@ parameters:
       - 'westus'
       - 'westeurope'
 ```
+
+## Related guidelines
+
+- [DO: Validate Steps Parameters](/guidelines/steps/do-validate-parameters.md)

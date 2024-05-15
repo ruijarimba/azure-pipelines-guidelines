@@ -87,5 +87,5 @@ You can optionally add subfolders to the `/jobs`, `/stages`, `/steps`, and
 
 ## Related guidelines
 
-- [DO: Use Templates Everywhere](./do-templates-everywhere.md)
-- [DO: Separate Configuration From Logic](../variables/do-separate-configuration.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)

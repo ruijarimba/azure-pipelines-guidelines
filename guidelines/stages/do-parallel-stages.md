@@ -31,3 +31,7 @@ stages:
       - job:
         ...
 ```
+
+## Related guidelines
+
+- [CONSIDER: Grouping related jobs into stages](/guidelines/stages/consider-grouping-jobs.md)
