@@ -62,3 +62,4 @@ DevOps CLI:
 
 - [DO: Validate Steps Parameters](/guidelines/steps/do-validate-parameters.md)
 - [DO NOT: Mix pipelines syntax in script tasks](/guidelines/steps/donot-mix-syntax.md)
+- [AVOID: Using Pipeline Variables in Tasks or Steps Templates](/guidelines/steps/avoid-variables.md)

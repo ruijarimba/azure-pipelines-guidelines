@@ -72,4 +72,4 @@ jobs:
 ## Related guidelines
 
 - [DO: Reduce variable scope](/guidelines/variables/do-variable-scope.md)
-- [AVOID: Using Variables in Tasks or Steps Templates](/guidelines/steps/avoid-variables.md)
+- [AVOID: Using Pipeline Variables in Tasks or Steps Templates](/guidelines/steps/avoid-variables.md)

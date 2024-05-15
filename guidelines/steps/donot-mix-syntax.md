@@ -76,4 +76,4 @@ steps:
 ## Related guidelines
 
 - [DO: Validate Steps Parameters](/guidelines/steps/do-validate-parameters.md)
-- [AVOID: Using Variables in Tasks or Steps Templates](/guidelines/steps/avoid-variables.md)
+- [AVOID: Using Pipeline Variables in Tasks or Steps Templates](/guidelines/steps/avoid-variables.md)
