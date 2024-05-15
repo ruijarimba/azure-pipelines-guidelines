@@ -60,4 +60,5 @@ DevOps CLI:
 
 ## Related guidelines
 
-TODO: Add related guidelines.
+- [DO: Validate Steps Parameters](/guidelines/steps/do-validate-parameters.md)
+- [DO NOT: Mix pipelines syntax in script tasks](/guidelines/steps/donot-mix-syntax.md)

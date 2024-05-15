@@ -43,4 +43,4 @@ In this example, the `NuGetRestore@1` task will be retried up to 3 times if it f
 
 ## Related guidelines
 
-- [DO: Create Configurable and Extensible Steps](./do-extensible-steps.md)
+- [DO: Create Configurable and Extensible Steps](/guidelines/steps/do-configurable-steps.md)

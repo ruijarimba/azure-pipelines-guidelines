@@ -75,4 +75,5 @@ steps:
 
 ## Related guidelines
 
-TODO: Add related guidelines
+- [DO: Validate Steps Parameters](/guidelines/steps/do-validate-parameters.md)
+- [AVOID: Using Variables in Tasks or Steps Templates](/guidelines/steps/avoid-variables.md)

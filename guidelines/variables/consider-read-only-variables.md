@@ -28,4 +28,5 @@ variables:
 
 ## Related guidelines
 
-TODO: add related guidelines
+- [DO: Organize Variables by Component and Environment](/guidelines/variables/do-organize-variables.md)
+- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)

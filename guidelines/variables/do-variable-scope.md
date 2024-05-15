@@ -42,5 +42,5 @@ Some generic variables can be set at the root or stage level - example:
 
 ## Related guidelines
 
-- [DO: Use Templates Everywhere](../general/do-templates-everywhere.md)
-- [CONSIDER: Declaring Variables at the Job Level](../../guidelines/jobs/consider-variables-scope.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
+- [CONSIDER: Declaring Variables at the Job Level](/guidelines/jobs/consider-job-variables.md)

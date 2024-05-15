@@ -72,4 +72,7 @@ variables:
 
 ## Related guidelines
 
-TODO: Add related guidelines
+- [DO NOT: Use AzureKeyVault Task](/guidelines/steps/donot-use-azurekeyvault-task.md)
+- [DO: Organize Variables by Component and Environment](/guidelines/variables/do-organize-variables.md)
+- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
+- [AVOID: Using variables in steps templates](/guidelines/steps/avoid-variables.md)

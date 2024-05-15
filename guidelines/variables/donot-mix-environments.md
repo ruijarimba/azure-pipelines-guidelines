@@ -145,3 +145,10 @@ variables:
   - name: tf_azureTenantId
     value: $(terraform-sp-tenant-id)
 ```
+
+## Related guidelines
+
+- [DO: Organize Variables by Component and Environment](/guidelines/variables/do-organize-variables.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Use a Consistent Folder Structure](/guidelines/general/do-folder-structure.md)
+- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)

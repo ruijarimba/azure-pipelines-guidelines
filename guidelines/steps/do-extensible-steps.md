@@ -96,4 +96,5 @@ steps:
 
 TODO: Add related guidelines
 
-- guidelines\jobs\do-create-extensible-jobs.md
+- [DO: Create Configurable and Extensible Jobs](/guidelines/jobs/do-extensible-jobs.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)

@@ -20,13 +20,13 @@ to authenticate with the services.
 ## Example
 
 The following example lists the version of Azure CLI and gets the details of the
-subscription, using the `dev-subscription` service connection.
+subscription, using the service connection provided as a parameter.
 
 ```yaml
 - task: AzureCLI@2
   displayName: Azure CLI
   inputs:
-    azureSubscription: dev-subscription
+    azureSubscription: ${{ parameters.azureSubscription }}
     scriptType: ps
     scriptLocation: inlineScript
     inlineScript: |
@@ -36,4 +36,5 @@ subscription, using the `dev-subscription` service connection.
 
 ## Related guidelines
 
-TODO: Add related guidelines
+- [DO: Validate Steps Parameters](/guidelines/steps/do-validate-parameters.md)
+- [AVOID: Using Variables in Tasks or Steps Templates](/guidelines/steps/avoid-variables.md)

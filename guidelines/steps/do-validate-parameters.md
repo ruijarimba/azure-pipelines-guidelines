@@ -118,4 +118,6 @@ And so on.
 
 ## Related guidelines
 
-TODO: Add related guidelines
+- [CONSIDER: Grouping Related Parameters](/guidelines/parameters/consider-grouping.md)
+- [DO: Restrict Parameter Values](/guidelines/parameters/do-restrict-values.md)
+- [AVOID: Using Variables in Scripts](/guidelines/steps/avoid-variables.md)
