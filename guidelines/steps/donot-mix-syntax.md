@@ -6,7 +6,7 @@ assigning the values to script variables.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Mix pipelines syntax in script tasks](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/dont-mix-syntax.md&version=GBfeature/180-initial-guidelines)
+[DO NOT: Mix pipelines syntax in script tasks](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/donot-mix-syntax.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
