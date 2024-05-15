@@ -40,7 +40,7 @@ Creating a task that lists Azure DevOps builds, using the Azure DevOps CLI:
     TOKEN="${{ parameters.azureDevOpsToken }}"
     
     echo "Trying to login to Azure DevOps"
-    echo "$AZURE_DEVOPS_TOKEN" | az devops login --organization $ORG
+    echo "$TOKEN" | az devops login --organization $ORG
 
     echo "Showing the list of builds"
     az pipelines build list
