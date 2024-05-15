@@ -27,26 +27,42 @@ stages. For example, you can run only the build stage when validating a pull req
 
 ## Example
 
+The following example shows a pipeline that builds and deploys an App Service
+to several environments:
+
 ```yaml
 stages:
-  - stage: Infrastructure
+  - stage: Build
     jobs:
-    - job: VNet
-    - job: AppGateway
-      dependsOn: VNet
-    - job: Kubernetes
-      dependsOn: VNet
+      - job: BuildAndPublishDeploymentPackage
 
-  - stage: KubernetesConfig
-    dependsOn: Infrastructure
+  - stage: Dev
+    dependsOn: Build
     jobs:
-    - job: ClusterConfig
-    - job: Prometheus
-      dependsOn: ClusterConfig
-    - job: Grafana
-      dependsOn: ClusterConfig
-  
-  # other stages here
+      - job: DeployToDevStagingSlot
+      - job: RunIntegrationTests
+      - job: SwapDevStagingSlotWithProduction
+      - job: RunSmokeTests
+
+  - stage: QA
+    dependsOn: Dev
+    jobs:
+      - job: DeployToQaStagingSlot
+      - job: RunIntegrationTests
+      - job: SwapQaStagingSlotWithProduction
+      - job: RunSmokeTests
+
+  - stage: ProdStaging
+    dependsOn: QA
+    jobs:
+      - job: DeployToProdStagingSlot
+      - job: RunSmokeTests
+
+  - stage: ProdSwap
+    dependsOn: ProdStaging
+    jobs:
+      - job: SwapProdStagingSlotWithProduction
+      - job: RunSmokeTests
 ```
 
 ## Related guidelines
