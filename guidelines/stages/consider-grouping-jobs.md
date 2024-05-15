@@ -25,6 +25,30 @@ Also, you can rerun a stage (successful or not) without rerunning the entire pip
 Finally, it allows us to run a pipeline partially by skipping one or more
 stages. For example, you can run only the build stage when validating a pull request.
 
+## Example
+
+```yaml
+stages:
+  - stage: Infrastructure
+    jobs:
+    - job: VNet
+    - job: AppGateway
+      dependsOn: VNet
+    - job: Kubernetes
+      dependsOn: VNet
+
+  - stage: KubernetesConfig
+    dependsOn: Infrastructure
+    jobs:
+    - job: ClusterConfig
+    - job: Prometheus
+      dependsOn: ClusterConfig
+    - job: Grafana
+      dependsOn: ClusterConfig
+  
+  # other stages here
+```
+
 ## Related guidelines
 
 - [DO: Run stages in parallel when possible](/guidelines/stages/do-parallel-stages.md)
