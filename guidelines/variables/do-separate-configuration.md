@@ -41,5 +41,4 @@ Use a dedidated folder to store your variables, such as `/pipelines/variables`
 - [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
 - [DO: Use a Consistent Folder Structure](/guidelines/general/do-folder-structure.md)
 - [DO: Organize Variables by Component and Environment](/guidelines/variables/do-organize-variables.md)
-- [DO: Use parameters instead of variables in steps templates](/guidelines/steps/use-parameters.md)
 - [DO NOT: Hard-code Values in Pipelines and Templates](/guidelines/variables/consider-read-only-variables.md)
