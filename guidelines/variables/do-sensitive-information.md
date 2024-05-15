@@ -77,4 +77,4 @@ variables:
 - [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
 - [DO NOT: Use AzureKeyVault Task](/guidelines/steps/donot-use-azurekeyvault-task.md)
 - [DO NOT: Mix Variables from Different Environments](/guidelines/variables/donot-mix-environments.md)
-- [AVOID: Using variables in steps templates](/guidelines/steps/avoid-variables.md)
+- [AVOID: Using variables in steps templates](/guidelines/steps/avoid-pipeline-variables.md)

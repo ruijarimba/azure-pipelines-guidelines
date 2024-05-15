@@ -120,4 +120,4 @@ And so on.
 
 - [DO: Restrict Parameter Values](/guidelines/parameters/do-restrict-values.md)
 - [CONSIDER: Grouping Related Parameters](/guidelines/parameters/consider-grouping.md)
-- [AVOID: Using Variables in Scripts](/guidelines/steps/avoid-variables.md)
+- [AVOID: Using Variables in Scripts](/guidelines/steps/avoid-pipeline-variables.md)

@@ -11,8 +11,8 @@ assigning the values to script variables.
 
 ## Reason
 
-Directly using pipeline parameters in the middle of a script task can make the
-script harder to read, maintain and test.
+Directly using pipeline parameters or variables in the middle of a script task
+can make the script harder to read, maintain and test.
 
 ## Recommended Approach
 
@@ -76,4 +76,4 @@ steps:
 ## Related guidelines
 
 - [DO: Validate Steps Parameters](/guidelines/steps/do-validate-parameters.md)
-- [AVOID: Using Pipeline Variables in Tasks or Steps Templates](/guidelines/steps/avoid-variables.md)
+- [AVOID: Using Pipeline Variables in Tasks or Steps Templates](/guidelines/steps/avoid-pipeline-variables.md)

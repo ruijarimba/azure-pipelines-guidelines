@@ -15,7 +15,7 @@ The `AzureKeyVault` is used to fetch the values of secrets from an Azure Key
 Vault and set them as **pipeline variables** that can be used in subsequent
 tasks. This creates a coupling between the steps and the variables.
 
-See [AVOID: Using variables in steps templates](/guidelines/steps/avoid-variables.md).
+See [AVOID: Using variables in steps templates](/guidelines/steps/avoid-pipeline-variables.md).
 
 ## Recommended Approach
 
@@ -29,4 +29,4 @@ steps templates.
 - [DO: Store Sensitive Information in Variable Groups](/guidelines/variables/do-sensitive-information.md)
 - [DO: Organize Variables by Component and Environment](/guidelines/variables/do-organize-variables.md)
 - [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
-- [AVOID: Using variables in steps templates](/guidelines/steps/avoid-variables.md)
+- [AVOID: Using variables in steps templates](/guidelines/steps/avoid-pipeline-variables.md)
