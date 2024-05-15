@@ -29,6 +29,6 @@ responsibility, e.g. building and pushing a Docker image.
 
 ## Related guidelines
 
-- [DO: Use Templates Everywhere](/guidelines/general/do-template-everywhere.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
 - [CONSIDER: Adding a Validation Flag to Your Job](/guidelines/jobs/consider-validation-flag.md)
 - [CONSIDER: Grouping related jobs into stages](/guidelines/stages/consider-grouping-jobs.md)
