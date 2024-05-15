@@ -5,7 +5,7 @@ Do not mix variables from different environments in the same template.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Mix Variables from Different Environments](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/donot-mix-environments.md&version=GBmain)
+[DO NOT: Mix Variables from Different Environments](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/releases/0.1.0/guidelines/variables/donot-mix-environments.md)
 ```
 
 ## Reason
