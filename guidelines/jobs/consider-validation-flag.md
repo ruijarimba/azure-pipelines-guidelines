@@ -6,7 +6,7 @@ _validation mode_, i.e. without actually deploying or executing any changes.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Adding a Validation Flag to Your Job](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-validation-flag.md&version=GBmain)
+[CONSIDER: Adding a Validation Flag to Your Job](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-validation-flag.md)
 ```
 
 ## Reason

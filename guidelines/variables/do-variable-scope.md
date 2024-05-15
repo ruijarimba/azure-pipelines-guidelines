@@ -5,7 +5,7 @@ Reduce the scope of your variables as much as possible.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: DO: Reduce Variables Scope](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-variable-scope.md&version=GBmain)
+[DO: DO: Reduce Variables Scope](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-variable-scope.md)
 ```
 
 ## Reason

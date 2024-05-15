@@ -7,7 +7,7 @@ Provide reasonable timeout values, depending on the task's purpose.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Set Task Timeouts](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/consider-timeouts.md&version=GBmain)
+[CONSIDER: Set Task Timeouts](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-timeouts.md)
 ```
 
 ## Reason

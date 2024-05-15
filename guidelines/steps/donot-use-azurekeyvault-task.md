@@ -6,7 +6,7 @@ information.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Use AzureKeyVault Task](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/donot-use-azurekeyvault-task.md&version=GBmain)
+[DO NOT: Use AzureKeyVault Task](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/donot-use-azurekeyvault-task.md)
 ```
 
 ## Reason

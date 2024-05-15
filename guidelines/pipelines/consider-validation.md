@@ -6,7 +6,7 @@ _validation mode_, i.e. without actually deploying or executing any changes.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Running Pipelines in Validation Mode](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/pipelines/consider-validation.md&version=GBmain)
+[CONSIDER: Running Pipelines in Validation Mode](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/pipelines/consider-validation.md)
 ```
 
 ## Reason
