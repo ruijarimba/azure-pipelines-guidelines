@@ -41,7 +41,8 @@ stages:
               # ...
 ```
 
-Using a parameter and conditional insertion to dynamically generate the stage:
+Using a parameter and conditional insertion to dynamically generate the
+`Deploy` stage:
 
 ```yaml
 parameters:
