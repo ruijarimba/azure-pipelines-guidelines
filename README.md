@@ -105,6 +105,6 @@ Anyway, if you like this repository and find it useful, please consider
 or
 [making a small donation 💰](https://www.paypal.com/donate?hosted_button_id=LEA579SCNQ426)
 to the author. Or, as an alternative, help make the world a better place by
-supporting your local charity or helping someone in need.
+supporting your local charity or helping someone in need!
 
 Your support is greatly appreciated!
