@@ -39,6 +39,6 @@ Use a dedidated folder to store your variables, such as `/pipelines/variables`
 ## Related guidelines
 
 - [DO: organize variables by component and environment](../variables/do-organize-variables.md)
-- [DO NOT: hard-code values in pipelines and templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/donot-hard-code-values.md)
-- [DO: Use templates everywhere](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-use-templates-everywhere.md)
+- [DO NOT: Hard-code Values in Pipelines and Templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/donot-hard-code-values.md)
+- [DO: Use Templates Everywhere](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-use-templates-everywhere.md)
 - [DO: Use parameters instead of variables in steps templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/avoid-using-variables.md)

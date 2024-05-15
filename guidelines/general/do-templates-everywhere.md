@@ -1,4 +1,4 @@
-# ✅ DO: Use templates everywhere
+# ✅ DO: Use Templates Everywhere
 
 Create and reference templates instead of defining logic or configuration
 directly in your pipelines or templates.
@@ -6,7 +6,7 @@ directly in your pipelines or templates.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Use templates everywhere](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/do-templates-everywhere.md&version=GBfeature/180-initial-guidelines)
+[DO: Use Templates Everywhere](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/do-templates-everywhere.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
@@ -205,5 +205,5 @@ steps:
 
 ## Related guidelines
 
-- [DO NOT: hard-code values in pipelines and templates](/guidelines/general/donot-hard-code-values.md)
+- [DO NOT: Hard-code Values in Pipelines and Templates](/guidelines/general/donot-hard-code-values.md)
 - [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)

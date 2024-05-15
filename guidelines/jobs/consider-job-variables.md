@@ -1,11 +1,11 @@
-# ✅ CONSIDER: Declaring variables at the job level
+# ✅ CONSIDER: Declaring Variables at the Job Level
 
 Consider declaring variables at the job level instead of the stage or root level.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Declaring variables at the job level](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-job-variables.md&version=GBfeature/180-initial-guidelines)
+[CONSIDER: Declaring Variables at the Job Level](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-job-variables.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
@@ -72,7 +72,7 @@ jobs:
 ## Related guidelines
 
 - [DO: Reduce variable scope](../../variables/do-reduce-variable-scope.md)
-- [DO: Use templates everywhere](../../general/do-templates-everywhere.md)
-- [DO: Use a consistent folder structure](../../general/do-folder-structure.md)
+- [DO: Use Templates Everywhere](../../general/do-templates-everywhere.md)
+- [DO: Use a Consistent Folder Structure](../../general/do-folder-structure.md)
 - [DO: Separate configuration from logic](../../variables/do-separate-configuration.md)
 - [DO: Use variables templates](../../variables/do-use-variables-templates.md)

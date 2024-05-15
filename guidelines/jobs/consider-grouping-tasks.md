@@ -1,4 +1,4 @@
-# ✅ CONSIDER: Grouping job tasks into a single template
+# ✅ CONSIDER: Grouping Job Tasks Into a Single Template
 
 Consider grouping job tasks into a single steps template, as opposed to using
 multiple steps templates in a job.
@@ -6,7 +6,7 @@ multiple steps templates in a job.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Grouping job tasks into a single template](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-grouping-tasks.md&version=GBfeature/180-initial-guidelines)
+[CONSIDER: Grouping Job Tasks Into a Single Template](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-grouping-tasks.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
@@ -67,6 +67,6 @@ plan, and applying the changes.
 
 ## Related guidelines
 
-- [DO: Use templates everywhere](../general/do-templates-everywhere.md)
-- [DO: Use a consistent folder structure](../general/do-folder-structure.md)
+- [DO: Use Templates Everywhere](../general/do-templates-everywhere.md)
+- [DO: Use a Consistent Folder Structure](../general/do-folder-structure.md)
 - [DO: Ensure jobs have a single responsibility](../jobs/do-single-responsibility.md)

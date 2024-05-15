@@ -1,4 +1,4 @@
-# ✅ DO: use a consistent folder structure
+# ✅ DO: Use a Consistent Folder Structure
 
 Use a consistent and logical folder structure for the pipelines and templates
 in different projects and repositories.
@@ -6,7 +6,7 @@ in different projects and repositories.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: use a consistent folder structure](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/do-folder-structure.md&version=GBfeature/180-initial-guidelines)
+[DO: Use a Consistent Folder Structure](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/do-folder-structure.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
@@ -87,6 +87,6 @@ You can optionally add subfolders to the `/jobs`, `/stages`, `/steps`, and
 
 ## Related guidelines
 
-- [DO: Use templates everywhere](./do-templates-everywhere.md)
-- [DO NOT: hard-code values in pipelines and templates](./donot-hard-code-values.md)
+- [DO: Use Templates Everywhere](./do-templates-everywhere.md)
+- [DO NOT: Hard-code Values in Pipelines and Templates](./donot-hard-code-values.md)
 - [DO: Separate configuration from logic](../variables/do-separate-configuration.md)

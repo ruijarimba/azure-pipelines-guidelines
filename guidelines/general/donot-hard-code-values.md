@@ -1,11 +1,11 @@
-# ❌ DO NOT: hard-code values in pipelines and templates
+# ❌ DO NOT: Hard-code Values in Pipelines and Templates
 
 Do not hard-code values in Azure DevOps pipelines and templates.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: hard-code values in pipelines and templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/donot-hard-code-values.md&version=GBfeature/180-initial-guidelines)
+[DO NOT: Hard-code Values in Pipelines and Templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/donot-hard-code-values.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
@@ -31,4 +31,4 @@ reference them in your pipelines and templates.
 ## Related guidelines
 
 - [DO: Separate configuration from logic](../variables/do-separate-configuration.md)
-- [DO: Use templates everywhere](../general/do-use-templates-everywhere.md)
+- [DO: Use Templates Everywhere](../general/do-use-templates-everywhere.md)

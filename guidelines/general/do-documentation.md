@@ -1,4 +1,4 @@
-# ✅ DO: document pipelines and templates
+# ✅ DO: Document Pipelines and Templates
 
 Document pipelines and templates by adding comments to the top of the corresponding
 files describing its purpose, usage, and other relevant information.
@@ -8,7 +8,7 @@ Consider documenting parameters and even variables as well, if necessary.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: document pipelines and templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/do-documentation.md&version=GBfeature/180-initial-guidelines)
+[DO: Document Pipelines and Templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/do-documentation.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
@@ -87,7 +87,7 @@ Example:
 # Validates and sets the KUBECONFIG variable for the Kubernetes context.
 #
 # Output variables:
-# - KUBECONFIG is set to the path of the kubeconfig file.
+# - $(setContext.KUBECONFIG) is set to the path of the kubeconfig file.
 
 parameters:
   # ...
@@ -165,4 +165,4 @@ parameters:
 
 ## Related guidelines
 
-- [DO: Use templates everywhere](/guidelines/general/do-use-templates.md)
+- [DO: Use Templates Everywhere](/guidelines/general/do-use-templates.md)

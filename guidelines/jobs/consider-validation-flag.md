@@ -1,4 +1,4 @@
-# ✅ CONSIDER: Adding a validation flag to your job
+# ✅ CONSIDER: Adding a Validation Flag to Your Job
 
 Consider adding a `boolean` parameter to your job to run it in
 _validation mode_, i.e. without actually deploying or executing any changes.
@@ -6,7 +6,7 @@ _validation mode_, i.e. without actually deploying or executing any changes.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Adding a validation flag to your job](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-validation-flag.md&version=GBfeature/180-initial-guidelines)
+[CONSIDER: Adding a Validation Flag to Your Job](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-validation-flag.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason

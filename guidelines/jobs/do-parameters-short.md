@@ -1,4 +1,4 @@
-# ✅ DO: Minimize the number of parameters in job templates
+# ✅ DO: Minimize the Number of Parameters in Job Templates
 
 When defining job templates in Azure DevOps pipelines, keep the number of
 **environment-related** parameters as short as possible.
@@ -12,7 +12,7 @@ Environment-related parameters might include, but are not limited to:
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Minimize the number of parameters in job templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/do-parameters-short.md&version=GBfeature/180-initial-guidelines)
+[DO: Minimize the Number of Parameters in Job Templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/do-parameters-short.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
