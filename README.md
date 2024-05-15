@@ -4,6 +4,10 @@ A set of coding guidelines to create
 [Azure YAML pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/key-pipelines-concepts)
 and related templates that are easy to understand, maintain, extend and reuse.
 
+Current version: `0.1.0` (see the [CHANGELOG](CHANGELOG.md))
+
+## Table of Contents
+
 - [Types of recommendations](#types-of-recommendations)
 - [Folder structure](#folder-structure)
 - [Using the guidelines](#using-the-guidelines)
