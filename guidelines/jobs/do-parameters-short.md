@@ -214,5 +214,6 @@ jobs:
 ## Related guidelines
 
 - [DO: Reduce variable scope](/guidelines/variables/do-variable-scope.md)
+- [CONSIDER: Grouping Related Parameters](/guidelines/parameters/consider-grouping.md)
 - [CONSIDER: Declaring Variables at the Job Level](/guidelines/jobs/consider-job-variables.md)
 - [AVOID: Using Variables in Tasks or Steps Templates](/guidelines/steps/avoid-variables.md)

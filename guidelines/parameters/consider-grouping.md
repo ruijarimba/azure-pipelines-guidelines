@@ -98,3 +98,4 @@ steps:
 ## Related
 
 - [DO: Document Pipelines and Templates](/guidelines/general/do-documentation.md)
+- [DO: Minimize the Number of Parameters in Job Templates](/guidelines/jobs/do-parameters-short.md)
