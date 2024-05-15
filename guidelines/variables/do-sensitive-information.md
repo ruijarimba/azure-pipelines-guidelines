@@ -33,8 +33,9 @@ secret rotation; centralized management; monitoring and alerting (e.g.,
 
 ## Example
 
-The variable template below retrieves sensitive information used to authenticate
-with a Terraform provider (`azurerm`) and access the Terraform remote state.
+The variable template below retrieves sensitive information from variable
+groups, which are used to authenticate with a Terraform provider (`azurerm`) and
+access the Terraform remote state.
 
 ```yaml
 # /pipelines/variables/terraform/app-gateway/westeurope/prod-variables.yaml
@@ -45,13 +46,6 @@ with a Terraform provider (`azurerm`) and access the Terraform remote state.
 
 variables:
   # other variables here
-
-  ############################ Terraform remote state
-
-  - group: tf-azure-remote-state-prod
-
-  - name: tf_azureStateAccessKey
-    value: $(terraform-state-storage-access-key-1)
 
   ############################ Azure authentication
 
@@ -68,6 +62,13 @@ variables:
   
   - name: tf_azureTenantId
     value: $(terraform-sp-tenant-id)
+
+  ############################ Terraform remote state
+
+  - group: tf-azure-remote-state-prod
+
+  - name: tf_azureStateAccessKey
+    value: $(terraform-state-storage-access-key-1)
 ```
 
 ## Related guidelines
