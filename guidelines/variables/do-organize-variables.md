@@ -53,4 +53,4 @@ components, such as `provider-variables.yml` and `remote-state-variables.yml`.
 - [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
 - [DO: Use a Consistent Folder Structure](/guidelines/general/do-folder-structure.md)
 - [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
-- [DO NOT: Mix Variables from Different Environments](/guidelines/variables/do-not-mix-environments.md)
+- [DO NOT: Mix Variables from Different Environments](/guidelines/variables/donot-mix-environments.md)
