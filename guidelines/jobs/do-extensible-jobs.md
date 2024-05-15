@@ -104,8 +104,8 @@ jobs:
       # reference job specific variables here
       # ...
     steps:
-      - ${{ parameters.preSteps }}
       - checkout: ${{ parameters.repository }}
+      - ${{ parameters.preSteps }}
       - template: /pipeline/steps/helm/deploy-chart.yml
         parameters:
           # ....

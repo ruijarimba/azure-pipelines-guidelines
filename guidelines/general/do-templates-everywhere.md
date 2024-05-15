@@ -18,8 +18,8 @@ Logic (aka functionality) templates:
 
 - **Steps**: define a sequence of steps that can be reused across jobs, or
 referenced in another steps template.
-- **Jobs**: define a job that can be reused across stages or pipelines.
-- **Stages**: define a stage that can be reused across pipelines.
+- **Jobs**: define one or more jobs that can be reused across stages or pipelines.
+- **Stages**: define one or more stages that can be reused across pipelines.
 - **Base pipelines** (referenced using the `extends` keyword): define a pipeline
 template which can be used to create new pipelines with a common structure.
 
