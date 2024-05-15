@@ -17,7 +17,7 @@ validation of the pipeline, without actually deploying or executing any changes.
 Scenarios include (but are not limited to):
 
 - Refactoring pipelines and correspondent templates
-- Validating the pipeline in pull requests
+- Validating a pipeline in pull requests
 
 ## Example
 

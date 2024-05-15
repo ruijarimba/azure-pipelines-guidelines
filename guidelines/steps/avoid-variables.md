@@ -15,6 +15,9 @@ creates a dependency on that same variable. It's somehow similar to using global
 variables in a programming language like Java, which can make the template less
 reusable and harder to maintain.
 
+Parameters have the added benefit of being strongly typed, which can help catch
+errors at compile time, rather than at runtime.
+
 ## Recommended Approach
 
 Pass values to the template as parameters, rather than using variables.

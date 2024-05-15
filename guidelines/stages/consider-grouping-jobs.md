@@ -5,6 +5,7 @@ Consider organizing related jobs into stages in order to:
 - Group them by their purpose or function
 - Set dependencies between them
 - Define approvals for each group of jobs (i.e., each stage can have its own approval)
+- Run a pipeline partially by skipping one or more stages
 
 ## Markdown to reference this guideline
 
@@ -21,8 +22,8 @@ next stage.
 
 Also, you can rerun a stage (successful or not) without rerunning the entire pipeline.
 
-Finally, when queueing a new build it allows you to skip the execution of one or
-more stages, which can be useful when you want to run only a subset of the pipeline.
+Finally, it allows us to run a pipeline partially by skipping one or more
+stages. For example, you can run only the build stage when validating a pull request.
 
 ## Related guidelines
 
