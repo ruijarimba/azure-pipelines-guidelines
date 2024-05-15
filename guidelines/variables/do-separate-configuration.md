@@ -1,4 +1,4 @@
-# ✅ DO: Separate configuration from logic
+# ✅ DO: Separate Configuration From Logic
 
 Don't hard-code values in your pipelines or steps, jobs or stages templates.
 
@@ -7,7 +7,7 @@ Instead, create and reference variable templates to store configuration values.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Separate configuration from logic](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-separate-configuration.md&version=GBfeature/180-initial-guidelines)
+[DO: Separate Configuration From Logic](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-separate-configuration.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
@@ -38,7 +38,7 @@ Use a dedidated folder to store your variables, such as `/pipelines/variables`
 
 ## Related guidelines
 
-- [DO: organize variables by component and environment](../variables/do-organize-variables.md)
+- [DO: Organize Variables by Component and Environment](../variables/do-organize-variables.md)
 - [DO NOT: Hard-code Values in Pipelines and Templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/donot-hard-code-values.md)
 - [DO: Use Templates Everywhere](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/general/do-use-templates-everywhere.md)
 - [DO: Use parameters instead of variables in steps templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/avoid-using-variables.md)

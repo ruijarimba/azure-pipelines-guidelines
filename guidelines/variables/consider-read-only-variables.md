@@ -1,4 +1,4 @@
-# ✅ CONSIDER: declaring variables as read-only
+# ✅ CONSIDER: Declaring Variables as Read-only
 
 Consider declaring variables as read-only when these are not intended to be
 modified after initialization.
@@ -6,7 +6,7 @@ modified after initialization.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Declaring variables as read-only](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/consider-read-only-variables.md&version=GBfeature/180-initial-guidelines)
+[CONSIDER: Declaring Variables as Read-only](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/consider-read-only-variables.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason

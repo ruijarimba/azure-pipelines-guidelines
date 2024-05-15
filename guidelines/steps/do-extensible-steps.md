@@ -1,4 +1,4 @@
-# ✅ DO: Create configurable and extensible steps
+# ✅ DO: Create Configurable and Extensible Steps
 
 When creating steps templates to be reused by different people and/or across
 several jobs, consider adding some or all of the following parameters:
@@ -13,7 +13,7 @@ kills it
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Create configurable and extensible steps](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/do-extensible-steps.md&version=GBfeature/180-initial-guidelines)
+[DO: Create Configurable and Extensible Steps](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/do-extensible-steps.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason

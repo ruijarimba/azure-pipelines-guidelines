@@ -206,4 +206,4 @@ steps:
 ## Related guidelines
 
 - [DO NOT: Hard-code Values in Pipelines and Templates](/guidelines/general/donot-hard-code-values.md)
-- [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)
+- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)

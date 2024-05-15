@@ -1,4 +1,4 @@
-# ✅ CONSIDER: configuring retries for your tasks
+# ✅ CONSIDER: configuring retries in tasks
 
 Consider configuring the number of times that the task should be retried, if it
 fails.
@@ -6,7 +6,7 @@ fails.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Configuring retries for your tasks](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/consider-retries.md&version=GBfeature/180-initial-guidelines)
+[CONSIDER: Configuring retries in tasks](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/consider-retries.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
@@ -43,4 +43,4 @@ In this example, the `NuGetRestore@1` task will be retried up to 3 times if it f
 
 ## Related guidelines
 
-- [DO: Create configurable and extensible steps](./do-extensible-steps.md)
+- [DO: Create Configurable and Extensible Steps](./do-extensible-steps.md)

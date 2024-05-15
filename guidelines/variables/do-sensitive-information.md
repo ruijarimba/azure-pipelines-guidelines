@@ -1,18 +1,18 @@
-# ✅ DO: Keep sensitive information in variable groups
+# ✅ DO: Store Sensitive Information in Variable Groups
 
-Keep sensitive information like passwords, tokens, and keys in
+Store sensitive information like passwords, tokens, and keys in
 [variable groups](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml).
 
 Markdown to this guideline:
 
 ```markdown
-[DO: Keep sensitive information in variable groups](../../do/keep-sensitive-information-in-variable-groups.md)
+[DO: Store Sensitive Information in Variable Groups](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-sensitive-information.md&version=GBmaster)
 ```
 
 ## Reason
 
 Sensitive information should not be stored into the source code repository. By
-storing sensitive information in variable groups, you can keep your secrets
+storing sensitive information in variable groups, you can store your secrets
 secure and separate from your code.
 
 Also, secret variables in variable groups are

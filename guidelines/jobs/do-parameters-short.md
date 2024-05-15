@@ -29,6 +29,8 @@ configurations.
 # Pipeline that uses the same set of parameters across different jobs
 
 parameters:
+  # other parameters here (agent pool, job timeout, etc)
+
   - name: environment
     type: string
     displayName: 'Environment'
@@ -40,21 +42,25 @@ parameters:
 jobs:
   - template: /pipelines/jobs/kubernetes/create-cluster-job.yaml
     parameters:
+      # other parameters here (agent pool, job timeout, etc)
       environment: ${{ parameters.environment }}
       region: ${{ parameters.region }}
 
   - template: /pipelines/jobs/kubernetes/configure-cluster-job.yaml
     parameters:
+      # other parameters here (agent pool, job timeout, etc)
       environment: ${{ parameters.environment }}
       region: ${{ parameters.region }}
 
   - template: /pipelines/jobs/kubernetes/deploy-istio-job.yaml
     parameters:
+      # other parameters here (agent pool, job timeout, etc)
       environment: ${{ parameters.environment }}
       region: ${{ parameters.region }}
 
   - template: /pipelines/jobs/kubernetes/deploy-prometheus-job.yaml
     parameters:
+      # other parameters here (agent pool, job timeout, etc)
       environment: ${{ parameters.environment }}
       region: ${{ parameters.region }}
   
@@ -70,7 +76,7 @@ parameters (8 parameters in total):
 # Run Terraform plan for the specified stack, region and environment
 
 parameters:
-  # other parameters here (agent pool, timeout, etc)
+  # other parameters here (agent pool, job timeout, etc)
 
   - name: stackName
     type: string

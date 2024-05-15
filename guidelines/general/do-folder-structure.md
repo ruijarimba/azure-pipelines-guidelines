@@ -89,4 +89,4 @@ You can optionally add subfolders to the `/jobs`, `/stages`, `/steps`, and
 
 - [DO: Use Templates Everywhere](./do-templates-everywhere.md)
 - [DO NOT: Hard-code Values in Pipelines and Templates](./donot-hard-code-values.md)
-- [DO: Separate configuration from logic](../variables/do-separate-configuration.md)
+- [DO: Separate Configuration From Logic](../variables/do-separate-configuration.md)

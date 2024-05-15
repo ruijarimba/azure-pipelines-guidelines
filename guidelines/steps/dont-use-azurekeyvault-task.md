@@ -1,4 +1,4 @@
-# ❌ DO NOT: use AzureKeyVault task
+# ❌ DO NOT: Use AzureKeyVault Task
 
 Do not use the `AzureKeyVault` task in pipelines to retrieve sensitive
 information.
@@ -6,7 +6,7 @@ information.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Use AzureKeyVault task](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/dont-use-azurekeyvault-task.md&version=GBfeature/180-initial-guidelines)
+[DO NOT: Use AzureKeyVault Task](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/dont-use-azurekeyvault-task.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
@@ -26,6 +26,6 @@ steps templates.
 
 ## Related guidelines
 
-- [DO: Keep sensitive information in variable groups](../variables/do-sensitive-info-variable-groups.md)
-- [DO: organize variables by component and environment](../variables/do-organize-variables.md)
+- [DO: Store Sensitive Information in Variable Groups](../variables/do-sensitive-information.md)
+- [DO: Organize Variables by Component and Environment](../variables/do-organize-variables.md)
 - [AVOID: Using variables in steps templates](./avoid-variables.md)

@@ -1,6 +1,7 @@
 # ❌ DO NOT: Mix pipelines syntax in script tasks
 
-Do not use `$(...)` or `${{ ... }}` syntax in the middle of a script task.
+Use `$(...)` or `${{ ... }}` syntax only at the beginning of the script task,
+assigning the values to script variables.
 
 ## Markdown to reference this guideline
 
@@ -24,7 +25,7 @@ script variables assignment, as opposed to replace the values all over the scrip
 
 ## Example
 
-Instead of using the parameter value throughout the script:
+Instead of using parameters values throughout the script:
 
 ```yaml
 steps:
@@ -47,7 +48,7 @@ steps:
     displayName: 'Set KUBECONFIG variable'
 ```
 
-Assign the pipeline parameter to a script variable at the beginning of the
+Assign the pipeline parameters to script variables at the beginning of the
 script:
 
 ```yaml

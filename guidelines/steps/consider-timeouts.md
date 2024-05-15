@@ -1,4 +1,4 @@
-# ✅ CONSIDER: Set task timeouts
+# ✅ CONSIDER: Set Task Timeouts
 
 Consider setting tasks timeouts.
 
@@ -7,7 +7,7 @@ Provide reasonable timeout values, depending on the task's purpose.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Set task timeouts](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/consider-timeouts.md&version=GBfeature/180-initial-guidelines)
+[CONSIDER: Set Task Timeouts](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/consider-timeouts.md&version=GBfeature/180-initial-guidelines)
 ```
 
 ## Reason
@@ -38,4 +38,4 @@ steps:
 
 ## Related guidelines
 
-- [DO: Create configurable and extensible steps](./do-extensible-steps.md)
+- [DO: Create Configurable and Extensible Steps](./do-extensible-steps.md)

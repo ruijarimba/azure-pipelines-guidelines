@@ -74,5 +74,5 @@ jobs:
 - [DO: Reduce variable scope](../../variables/do-reduce-variable-scope.md)
 - [DO: Use Templates Everywhere](../../general/do-templates-everywhere.md)
 - [DO: Use a Consistent Folder Structure](../../general/do-folder-structure.md)
-- [DO: Separate configuration from logic](../../variables/do-separate-configuration.md)
+- [DO: Separate Configuration From Logic](../../variables/do-separate-configuration.md)
 - [DO: Use variables templates](../../variables/do-use-variables-templates.md)

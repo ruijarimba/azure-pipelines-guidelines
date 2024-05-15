@@ -9,6 +9,7 @@ parameters:
 - Timeout and cancel timeout
 - Dependencies
 - Condition
+- Repository to checkout
 - pre- and post-steps
 
 ## Markdown to reference this guideline
@@ -68,6 +69,11 @@ parameters:
     displayName: 'Dependencies'
     default: []
 
+  - name: repository
+    type: string
+    displayName: 'Repository to checkout'
+    default: 'self'
+
   - name: preSteps
     type: stepList
     displayName: 'Pre-steps'
@@ -99,6 +105,7 @@ jobs:
       # ...
     steps:
       - ${{ parameters.preSteps }}
+      - checkout: ${{ parameters.repository }}
       - template: /pipeline/steps/helm/deploy-chart.yml
         parameters:
           # ....

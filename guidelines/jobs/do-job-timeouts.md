@@ -39,4 +39,4 @@ jobs:
 ## Related guidelines
 
 - [DO: Create Configurable and Extensible Jobs](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/jobs/do-create-extensible-jobs.md)
-- [DO: Create configurable and extensible steps](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/do-create-extensible-steps.md)
+- [DO: Create Configurable and Extensible Steps](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/steps/do-create-extensible-steps.md)
