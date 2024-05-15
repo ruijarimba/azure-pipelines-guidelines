@@ -49,8 +49,8 @@ jobs:
 Stage and job templates should ideally include:
 
 - A brief description of what the stage or job does
-- Any information that might be used outside of the context of template, such as
-output variables, artifacts, and other
+- Any information that might be useful outside of the context of the template,
+such as output variables, artifacts, and other
 
 Example:
 
@@ -78,8 +78,8 @@ jobs:
 Step templates should ideally include:
 
 - A brief description of what the step does
-- Any information that might be used outside of the context of template, such
-as output variables, artifacts, and other
+- Any information that might be useful outside of the context of the template,
+such as output variables, artifacts, and other
 
 Example:
   
