@@ -11,11 +11,8 @@ modified after initialization.
 
 ## Reason
 
-Read-only variables can:
-
-- Help prevent accidental modification
-- Make it clear that the value is not supposed to be changed during the
-execution of the pipeline.
+Read-only variables can prevent accidental modification and clearly indicate
+that the value should not change during pipeline execution.
 
 ## Example
 

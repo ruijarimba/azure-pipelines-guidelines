@@ -1,6 +1,6 @@
 # ✅ DO: Create Configurable and Extensible Steps
 
-When creating steps templates to be reused by different people and/or across
+When creating steps templates to be reused by different teams and/or across
 several jobs, consider adding some or all of the following parameters:
 
 - `condition`: condition expression to determine whether to run the steps
