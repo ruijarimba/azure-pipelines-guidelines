@@ -38,4 +38,4 @@ steps:
 
 ## Related guidelines
 
-- [DO: Create Configurable and Extensible Steps](/guidelines/steps/do-configurable-steps.md)
+- [DO: Create Configurable and Extensible Steps](/guidelines/steps/do-extensible-steps.md)
