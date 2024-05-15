@@ -9,7 +9,7 @@ expected or average run time.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Set Job Timeouts](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/do-job-timeouts.md&version=GBmain)
+[DO: Set Job Timeouts](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-job-timeouts.md)
 ```
 
 ## Reason

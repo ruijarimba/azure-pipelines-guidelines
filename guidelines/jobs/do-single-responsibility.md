@@ -5,7 +5,7 @@ Each job should be focused on performing a single, well-defined responsibility.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Ensure Jobs Have a Single Responsibility](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/do-single-responsibility.md&version=GBmain)
+[DO: Ensure Jobs Have a Single Responsibility](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-single-responsibility.md)
 ```
 
 ## Reason

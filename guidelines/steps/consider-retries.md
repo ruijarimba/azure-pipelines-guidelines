@@ -6,7 +6,7 @@ fails.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Configuring retries in tasks](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/consider-retries.md&version=GBmain)
+[CONSIDER: Configuring retries in tasks](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-retries.md)
 ```
 
 ## Reason

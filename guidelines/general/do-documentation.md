@@ -8,7 +8,7 @@ Consider documenting parameters and even variables as well, if necessary.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Document Pipelines and Templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/do-documentation.md&version=GBmain)
+[DO: Document Pipelines and Templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-documentation.md)
 ```
 
 ## Reason
