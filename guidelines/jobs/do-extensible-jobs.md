@@ -15,7 +15,7 @@ parameters:
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Create Configurable and Extensible Jobs](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/do-extensible-jobs.md&version=GBmain)
+[DO: Create Configurable and Extensible Jobs](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/releases/0.1.0/guidelines/jobs/do-extensible-jobs.md)
 ```
 
 ## Reason

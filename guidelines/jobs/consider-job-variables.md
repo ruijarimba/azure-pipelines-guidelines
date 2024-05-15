@@ -5,7 +5,7 @@ Consider declaring variables at the job level instead of the stage or root level
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Declaring Variables at the Job Level](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-job-variables.md&version=GBmain)
+[CONSIDER: Declaring Variables at the Job Level](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/releases/0.1.0/guidelines/jobs/consider-job-variables.md)
 ```
 
 ## Reason

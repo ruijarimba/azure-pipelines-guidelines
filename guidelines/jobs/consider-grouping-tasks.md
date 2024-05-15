@@ -6,7 +6,7 @@ multiple steps templates in a job.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Grouping Job Tasks Into a Single Template](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/jobs/consider-grouping-tasks.md&version=GBmain)
+[CONSIDER: Grouping Job Tasks Into a Single Template](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/releases/0.1.0/guidelines/jobs/consider-grouping-tasks.md)
 ```
 
 ## Reason
