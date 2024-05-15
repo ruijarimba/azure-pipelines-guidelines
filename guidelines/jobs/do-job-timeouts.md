@@ -1,6 +1,6 @@
 # ✅ DO: Set Job Timeouts
 
-Set Job Timeouts or add parameters to shared job templates to allow users to
+Set job timeouts or add parameters to shared job templates to allow users to
 configure them.
 
 Provide reasonable default values, depending on the job's purpose and the

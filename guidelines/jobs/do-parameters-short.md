@@ -129,8 +129,8 @@ jobs:
 ```
 
 The above template can be refactored in order to use less environment-related
-parameters instead - `stackName`, `environment` and `region` are enough to
-identify the context in which the job is running.
+parameters instead - for example, `stackName`, `environment` and `region` are
+enough to identify the context in which the job is running.
 
 Based on these parameters we can reference a variables template that contains
 the rest of the configuration such as:
