@@ -5,7 +5,7 @@ Restrict the values of parameters when these have a well-defined set of values.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Restrict Parameter Values](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/parameters/do-restrict-values.md&version=GBreleases/0.1.0)
+[DO: Restrict Parameter Values](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/releases/0.1.0/guidelines/parameters/do-restrict-values.md)
 ```
 
 ## Reason

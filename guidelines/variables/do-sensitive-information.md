@@ -6,7 +6,7 @@ Store sensitive information like passwords, tokens, and keys in
 Markdown to this guideline:
 
 ```markdown
-[DO: Store Sensitive Information in Variable Groups](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-sensitive-information.md&version=GBreleases/0.1.0)
+[DO: Store Sensitive Information in Variable Groups](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/releases/0.1.0/guidelines/variables/do-sensitive-information.md)
 ```
 
 ## Reason

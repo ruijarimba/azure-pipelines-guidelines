@@ -6,7 +6,7 @@ modified after initialization.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Declaring Variables as Read-only](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/consider-read-only-variables.md&version=GBreleases/0.1.0)
+[CONSIDER: Declaring Variables as Read-only](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/releases/0.1.0/guidelines/variables/consider-read-only-variables.md)
 ```
 
 ## Reason
