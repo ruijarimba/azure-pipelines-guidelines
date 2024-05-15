@@ -114,5 +114,6 @@ jobs:
 
 ## Related guidelines
 
+- [DO: Document Pipelines and Templates](/guidelines/general/do-documentation.md)
 - [DO: Create Configurable and Extensible Steps](/guidelines/steps/do-extensible-steps.md)
 - [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)

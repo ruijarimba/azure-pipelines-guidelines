@@ -73,5 +73,5 @@ to remove the variable dependency.
 ## Related guidelines
 
 - [DO: Validate Steps Parameters](/guidelines/steps/do-validate-parameters.md)
-- [CONSIDER: Grouping Related Parameters](/guidelines/parameters/consider-grouping.md)
 - [DO: Restrict Parameter Values](/guidelines/parameters/do-restrict-values.md)
+- [CONSIDER: Grouping Related Parameters](/guidelines/parameters/consider-grouping.md)

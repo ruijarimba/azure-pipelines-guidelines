@@ -97,4 +97,4 @@ steps:
 
 ## Related
 
-- [DO: Document Pipelines and Templates](/guidelines/general/do-document-pipelines-templates.md)
+- [DO: Document Pipelines and Templates](/guidelines/general/do-documentation.md)

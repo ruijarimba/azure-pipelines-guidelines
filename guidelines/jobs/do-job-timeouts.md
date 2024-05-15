@@ -38,5 +38,5 @@ jobs:
 
 ## Related guidelines
 
+- [DO: Create Configurable and Extensible Jobs](/guidelines/jobs/do-extensible-jobs.md)
 - [CONSIDER: Set Task Timeouts](/guidelines/steps/consider-timeouts.md)
-- [DO: Create Configurable and Extensible Jobs](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines/guidelines/jobs/do-create-extensible-jobs.md)

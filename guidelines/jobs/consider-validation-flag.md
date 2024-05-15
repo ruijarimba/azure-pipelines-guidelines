@@ -57,6 +57,6 @@ or not.
 
 ## Related guidelines
 
-- [CONSIDER: Running Pipelines in Validation Mode](/guidelines/pipelines/consider-validation.md)
 - [DO: Create Configurable and Extensible Jobs](/guidelines/jobs/do-extensible-jobs.md)
 - [DO: Create Configurable and Extensible Steps](/guidelines/steps/do-extensible-steps.md)
+- [CONSIDER: Running Pipelines in Validation Mode](/guidelines/pipelines/consider-validation.md)

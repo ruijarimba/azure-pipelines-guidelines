@@ -28,5 +28,5 @@ steps templates.
 
 - [DO: Store Sensitive Information in Variable Groups](/guidelines/variables/do-sensitive-information.md)
 - [DO: Organize Variables by Component and Environment](/guidelines/variables/do-organize-variables.md)
-- [AVOID: Using variables in steps templates](/guidelines/steps/avoid-variables.md)
 - [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
+- [AVOID: Using variables in steps templates](/guidelines/steps/avoid-variables.md)

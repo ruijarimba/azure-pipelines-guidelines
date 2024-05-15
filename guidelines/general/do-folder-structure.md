@@ -89,3 +89,4 @@ You can optionally add subfolders to the `/jobs`, `/stages`, `/steps`, and
 
 - [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
 - [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
+- [CONSIDER: Using Absolute Paths to Reference Templates](/guidelines/general/consider-absolute-paths.md)

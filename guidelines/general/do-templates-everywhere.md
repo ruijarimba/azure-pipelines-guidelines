@@ -205,5 +205,7 @@ steps:
 
 ## Related guidelines
 
-- [DO NOT: Hard-code Values in Pipelines and Templates](/guidelines/general/donot-hard-code-values.md)
+- [DO: Document Pipelines and Templates](/guidelines/general/do-documentation.md)
 - [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
+- [DO NOT: Hard-code Values in Pipelines and Templates](/guidelines/general/donot-hard-code-values.md)
+- [CONSIDER: Using Absolute Paths to Reference Templates](/guidelines/general/consider-absolute-paths.md)
