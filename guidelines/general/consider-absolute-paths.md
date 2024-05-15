@@ -6,7 +6,7 @@ templates.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Using Absolute Paths to Reference Templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/consider-absolute-paths.md&version=GBfeature/180-initial-guidelines)
+[CONSIDER: Using Absolute Paths to Reference Templates](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/consider-absolute-paths.md&version=GBreleases/0.1.0)
 ```
 
 ## Reason

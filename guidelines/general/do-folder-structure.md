@@ -6,7 +6,7 @@ in different projects and repositories.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Use a Consistent Folder Structure](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/do-folder-structure.md&version=GBfeature/180-initial-guidelines)
+[DO: Use a Consistent Folder Structure](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/general/do-folder-structure.md&version=GBreleases/0.1.0)
 ```
 
 ## Reason

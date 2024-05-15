@@ -5,7 +5,7 @@ Consider setting environment variables at the task level.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Setting Environment Variables at the Task Level](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/consider-environment-variables.md&version=GBfeature/180-initial-guidelines)
+[CONSIDER: Setting Environment Variables at the Task Level](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/consider-environment-variables.md&version=GBreleases/0.1.0)
 ```
 
 ## Reason

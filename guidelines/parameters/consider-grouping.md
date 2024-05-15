@@ -5,7 +5,7 @@ Consider grouping related parameters, such as username and password.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Grouping Related Parameters](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/parameters/consider-grouping.md&version=GBfeature/180-initial-guidelines)
+[CONSIDER: Grouping Related Parameters](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/parameters/consider-grouping.md&version=GBreleases/0.1.0)
 ```
 
 ## Reason

@@ -6,7 +6,7 @@ is invalid.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Validate Steps Parameters](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/do-validate-parameters.md&version=GBfeature/180-initial-guidelines)
+[DO: Validate Steps Parameters](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/do-validate-parameters.md&version=GBreleases/0.1.0)
 ```
 
 ## Reason

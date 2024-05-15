@@ -6,7 +6,7 @@ like Azure, GitHub, Docker, Kubernetes, and many other services.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Use Service Connections When Possible](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/do-use-service-connections.md&version=GBfeature/180-initial-guidelines)
+[DO: Use Service Connections When Possible](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/do-use-service-connections.md&version=GBreleases/0.1.0)
 ```
 
 ## Reason

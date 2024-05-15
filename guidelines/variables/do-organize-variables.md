@@ -6,7 +6,7 @@ environment or any other logical grouping that makes sense for your pipelines.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Organize Variables by Component and Environment](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-organize-variables.md&version=GBfeature/180-initial-guidelines)
+[DO: Organize Variables by Component and Environment](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-organize-variables.md&version=GBreleases/0.1.0)
 ```
 
 ## Reason

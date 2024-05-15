@@ -13,7 +13,7 @@ kills it
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Create Configurable and Extensible Steps](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/do-extensible-steps.md&version=GBfeature/180-initial-guidelines)
+[DO: Create Configurable and Extensible Steps](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/steps/do-extensible-steps.md&version=GBreleases/0.1.0)
 ```
 
 ## Reason

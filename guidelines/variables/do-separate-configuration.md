@@ -7,7 +7,7 @@ Instead, create and reference variable templates to store configuration values.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Separate Configuration From Logic](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-separate-configuration.md&version=GBfeature/180-initial-guidelines)
+[DO: Separate Configuration From Logic](https://ruijarimba.visualstudio.com/ruijarimba/_git/azure-pipelines-guidelines?path=/guidelines/variables/do-separate-configuration.md&version=GBreleases/0.1.0)
 ```
 
 ## Reason
