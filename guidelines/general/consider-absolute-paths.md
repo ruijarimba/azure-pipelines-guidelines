@@ -1,6 +1,7 @@
 # ✅ CONSIDER: Using Absolute Paths to Reference Templates
 
-Consider using absolute paths to reference templates.
+Consider using absolute paths to reference stages, jobs, steps and variables
+templates.
 
 ## Markdown to reference this guideline
 
@@ -43,3 +44,8 @@ jobs:
         parameters:
           # ...
 ```
+
+## Related guidelines
+
+- [DO: Use a Consistent Folder Structure](./do-folder-structure.md)
+- [DO: Use Templates Everywhere](./do-templates-everywhere.md)

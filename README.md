@@ -34,7 +34,7 @@ never do.
 ## Folder structure
 
 The guidelines can be found in the `/guidelines` folder and are organized into
-the following subfolders:
+the following categories:
 
 - `/general`: General recommendations that apply to more than one category.
 - `/jobs`: Jobs-related recommendations.
