@@ -1,46 +1,41 @@
-# ✅ DO: Reduce Variables Scope
+﻿# ✅ DO: Reduce variables scope
 
-Reduce the scope of your variables as much as possible.
+Restrict the scope of variables as much as possible.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: DO: Reduce Variables Scope](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-variable-scope.md)
+[DO: Reduce variables scope](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-variable-scope.md)
 ```
 
 ## Reason
 
-In a pipeline, you can set a variable at various scopes:
+Pipelines let you define variable scopes:
 
-- At the root level, to make it available to all jobs in the pipeline.
-- At the stage level, to make it available only to a specific stage.
-- At the job level, to make it available only to a specific job.
+- Root level (all jobs).
+- Stage level (localized to stage boundaries).
+- Job level (localized to single job boundaries).
 
-Variables set at the root or stage level are accessible from multiple jobs,
-but can make code harder to maintain and lead to unintended side effects, e.g.
-caused by variable conflicts.
+Variables set globally leak state and breed collision conflicts across concurrent jobs.
 
-To prevent such issues, reduce the scope of your environment-related variables
-as much as possible - ideally at the job level. This has the aditional benefit
-of being able to run the same job in parallel with different configurations.
+Scope variables locally by defining them at the job level. This clarifies runtime requirements and scales parallelism efficiently across disparate configurations.
 
-Other generic variables (e.g. pipeline-related variables) can be set at the
-root or stage level, if it makes sense.
+Use globally accessible variables only for shared, structural settings such as default pools or environment selectors.
 
 ## Example
 
-Environment-related variables should be defined at the job level - example:
+Keep environment-related variables at the job level:
 
 - `$(azureSubscriptionId)`
 - `$(kubeconfigPath)`
 - `$(terraformWorkingDirectory)`
 
-Some generic variables can be set at the root or stage level - example:
+Other broad, generic variables can be set at the root or stage level:
 
 - `$(defaultAgentPool)`
 - `$(azureDevOpsEnvironment)`
 
 ## Related guidelines
 
-- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
-- [CONSIDER: Declaring Variables at the Job Level](/guidelines/jobs/consider-job-variables.md)
+- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)
+- [CONSIDER: Declaring variables at the job level](/guidelines/jobs/consider-job-variables.md)

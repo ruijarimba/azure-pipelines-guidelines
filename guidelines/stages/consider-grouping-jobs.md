@@ -1,11 +1,11 @@
-# ✅ CONSIDER: Grouping related jobs into stages
+﻿# ✅ CONSIDER: Grouping related jobs into stages
 
-Consider organizing related jobs into stages in order to:
+Organize related jobs into stages to:
 
-- Group them by their purpose or function
-- Set dependencies between them
-- Define approvals for each group of jobs (i.e., each stage can have its own approval)
-- Run a pipeline partially by skipping one or more stages
+- Group them by purpose or function.
+- Set dependencies between groups.
+- Define approvals for each stage.
+- Run a pipeline partially by skipping stages.
 
 ## Markdown to reference this guideline
 
@@ -15,20 +15,13 @@ Consider organizing related jobs into stages in order to:
 
 ## Reason
 
-A stage is a logical boundary in the pipeline. It can be used to mark separation
-of concerns or environments (for example, Build, QA, and production) or to pause
-the pipeline and perform various checks or approvals before proceeding to the
-next stage.
+A stage provides a logical boundary in the pipeline. Use it to separate concerns or environments (e.g., Build, QA, and Production), or pause the pipeline for checks or approvals.
 
-Also, you can rerun a stage (successful or not) without rerunning the entire pipeline.
-
-Finally, it allows us to run a pipeline partially by skipping one or more
-stages. For example, you can run only the build stage when validating a pull request.
+Stages allow you to rerun a section (successful or not) without rerunning the entire pipeline. You can also run pipelines partially, such as executing only the build stage for a pull request validation.
 
 ## Example
 
-The following example shows a pipeline that builds and deploys an App Service
-to several environments:
+This pipeline builds and deploys an App Service to several environments:
 
 ```yaml
 stages:

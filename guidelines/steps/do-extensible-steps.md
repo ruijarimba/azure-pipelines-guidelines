@@ -1,37 +1,33 @@
-# ✅ DO: Create Configurable and Extensible Steps
+﻿# ✅ DO: Create configurable and extensible steps
 
-When creating steps templates to be reused by different teams and/or across
-several jobs, consider adding some or all of the following parameters:
+When building reusable templates, add these control parameters:
 
-- `condition`: condition expression to determine whether to run the steps
-- `continueOnError`: Continue running even on failure?
-- `enabled`: Run this task when the job runs?
-- `retryCountOnTaskFailure`: Number of retries if the task fails
-- `timeoutInMinutes`: Time to wait for this task to complete before the server
-kills it
+- `condition`: Expression determining if steps should run.
+- `continueOnError`: Continue if failure occurs.
+- `enabled`: Run this task when the job runs.
+- `retryCountOnTaskFailure`: Number of times to retry on failure.
+- `timeoutInMinutes`: Maximum runtime before killing the task.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Create Configurable and Extensible Steps](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-extensible-steps.md)
+[DO: Create configurable and extensible steps](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-extensible-steps.md)
 ```
 
 ## Reason
 
-It's difficult to predict and understand all the scenarios in which a template will
-be used:
+You cannot predict all usages for a shared template:
 
-- Should the steps run only under certain conditions?
-- Should the steps continue running if one of the tasks fails?
-- Should the steps be enabled or disabled?
-- How long should the steps run before they're automatically cancelled?
+- Do steps apply only under certain conditions?
+- Should the pipeline continue if the task fails?
+- Do you need to easily disable a step?
+- How long should the task wait before cancellation?
 
-By configuring some or all of the above parameters, you can make
-your steps templates more flexible and easier to reuse.
+Exposing these controls improves template flexibility.
 
 ## Example
 
-Example of a steps template with configurable parameters:
+Provide default configuration parameters in steps templates:
 
 ```yaml
 # /pipelines/steps/build-push-docker-steps.yaml
@@ -94,7 +90,5 @@ steps:
 
 ## Related guidelines
 
-TODO: Add related guidelines
-
-- [DO: Create Configurable and Extensible Jobs](/guidelines/jobs/do-extensible-jobs.md)
-- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Create configurable and extensible jobs](/guidelines/jobs/do-extensible-jobs.md)
+- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)

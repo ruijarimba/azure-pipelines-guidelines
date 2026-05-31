@@ -1,4 +1,4 @@
-# ✅ DO: Minimize the Number of Parameters in Job Templates
+﻿# ✅ DO: Minimize the number of parameters in job templates
 
 When defining job templates in Azure DevOps pipelines, keep the number of
 **environment-related** parameters as short as possible.
@@ -12,18 +12,14 @@ Environment-related parameters might include, but are not limited to:
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Minimize the Number of Parameters in Job Templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-parameters-short.md)
+[DO: Minimize the number of parameters in job templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-parameters-short.md)
 ```
 
 ## Reason
 
-Limiting the number of environment-related parameters makes the jobs
-easier to manage and understand. It reduces complexity, as there are fewer
-parameters to keep track of and change, in case the job template needs to be refactored.
+Limit environment-related parameters to make jobs easier to manage and understand. Using fewer parameters reduces complexity and simplifies refactoring.
 
-Also, we can ensure consistency across different jobs by using the same set of
-parameters, even if they are used for different purposes and with different
-configurations.
+A standard set of parameters across jobs ensures consistency, even with different purposes and configurations.
 
 ```yaml
 # Pipeline that uses the same set of parameters across different jobs
@@ -214,6 +210,6 @@ jobs:
 ## Related guidelines
 
 - [DO: Reduce variable scope](/guidelines/variables/do-variable-scope.md)
-- [CONSIDER: Grouping Related Parameters](/guidelines/parameters/consider-grouping.md)
-- [CONSIDER: Declaring Variables at the Job Level](/guidelines/jobs/consider-job-variables.md)
-- [AVOID: Using Pipeline Variables in Tasks or Steps Templates](/guidelines/steps/avoid-pipeline-variables.md)
+- [CONSIDER: Grouping related parameters](/guidelines/parameters/consider-grouping.md)
+- [CONSIDER: Declaring variables at the job level](/guidelines/jobs/consider-job-variables.md)
+- [AVOID: Using pipeline variables in tasks or steps templates](/guidelines/steps/avoid-pipeline-variables.md)

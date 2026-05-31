@@ -1,28 +1,25 @@
-# ✅ CONSIDER: Grouping Related Parameters
+﻿# ✅ CONSIDER: Grouping related parameters
 
-Consider grouping related parameters, such as username and password.
+Group related parameters, such as username and password.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Grouping Related Parameters](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/parameters/consider-grouping.md)
+[CONSIDER: Grouping related parameters](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/parameters/consider-grouping.md)
 ```
 
 ## Reason
 
-Grouping related parameters offers several benefits:
+Grouping related parameters offers these benefits:
 
-- **Intuitiveness**: Related parameters are often used together, making the
-template more intuitive when grouped.
-- **Manageability**: It keeps the parameter list shorter and more manageable.
-- **Readability**: It improves the readability of templates, especially those
-with many parameters.
-- **Usability**: It simplifies passing parameters between templates.
+- **Intuitiveness**: Related parameters often run together, making grouped templates more intuitive.
+- **Manageability**: Keep parameter lists shorter and more manageable.
+- **Readability**: Improve the readability of templates with many parameters.
+- **Usability**: Simplify passing parameters between templates.
 
-However, there are also potential drawbacks:
+Potential drawbacks:
 
-- **Documentation**: Grouped parameters must be properly documented to clarify
-their usage.
+- **Documentation**: Properly document grouped parameters to clarify usage.
 
 ## Example
 
@@ -74,12 +71,11 @@ parameters:
   - name: azureAuthentication
     type: object
     displayName: 'azurerm provider authentication details'
-    default: {
-      azureClientId: '',
-      azureClientSecret: '',
-      azureSubscriptionId: '',
+    default:
+      azureClientId: ''
+      azureClientSecret: ''
+      azureSubscriptionId: ''
       azureTenantId: ''
-    }
 
   # Other parameters here
 
@@ -95,7 +91,7 @@ steps:
       ARM_TENANT_ID: ${{ parameters.azureAuthentication.azureTenantId }}
 ```
 
-## Related
+## Related guidelines
 
-- [DO: Document Pipelines and Templates](/guidelines/general/do-documentation.md)
-- [DO: Minimize the Number of Parameters in Job Templates](/guidelines/jobs/do-parameters-short.md)
+- [DO: Document pipelines and templates](/guidelines/general/do-documentation.md)
+- [DO: Minimize the number of parameters in job templates](/guidelines/jobs/do-parameters-short.md)

@@ -1,27 +1,22 @@
-# ✅ DO: Separate Configuration From Logic
+﻿# ✅ DO: Separate configuration from logic
 
-Don't hard-code values in your pipelines or steps, jobs or stages templates.
+Avoid hard-coding configuration values inside pipeline, step, job, or stage templates.
 
-Instead, create and reference variable templates to store configuration values.
+Use independent variable templates to store configuration profiles instead.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Separate Configuration From Logic](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-separate-configuration.md)
+[DO: Separate configuration from logic](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-separate-configuration.md)
 ```
 
 ## Reason
 
-When deploying applications, it's a good practice to separate application
-configuration from the code deployment.
-
-The same applies to pipelines: separate configuration (i.e. variables) from
-logic (steps, jobs, etc) to make your pipelines and related templates easier to
-manage and reuse in different scenarios.
+Isolating configuration variables from core operational logic (steps, scripts, jobs) makes pipelines easier to understand and deploy across numerous varying configurations.
 
 ## Example
 
-Use a dedidated folder to store your variables, such as `/pipelines/variables`
+Allocate an explicit `variables` sub-boundary to group configurations:
 
 ```plaintext
 /pipelines
@@ -38,7 +33,7 @@ Use a dedidated folder to store your variables, such as `/pipelines/variables`
 
 ## Related guidelines
 
-- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
-- [DO: Use a Consistent Folder Structure](/guidelines/general/do-folder-structure.md)
-- [DO: Organize Variables by Component and Environment](/guidelines/variables/do-organize-variables.md)
-- [DO NOT: Hard-code Values in Pipelines and Templates](/guidelines/variables/consider-read-only-variables.md)
+- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Use a consistent folder structure](/guidelines/general/do-folder-structure.md)
+- [DO: Organize variables by component and environment](/guidelines/variables/do-organize-variables.md)
+- [CONSIDER: Declaring variables as read-only](/guidelines/variables/consider-read-only-variables.md)

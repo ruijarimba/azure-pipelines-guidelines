@@ -1,37 +1,26 @@
-# ❌ DO NOT: Mix Variables from Different Environments
+﻿# ❌ DO NOT: Mix variables from different environments
 
-Do not mix variables from different environments in the same template.
+Do not weave multi-environmental configurations identically within a single variable template.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Mix Variables from Different Environments](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/donot-mix-environments.md)
+[DO NOT: Mix variables from different environments](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/donot-mix-environments.md)
 ```
 
 ## Reason
 
-Mixing variables from different environments in the same template makes it
-harder to isolate and manage specific settings for different environments, which
-can lead to confusion and errors and consequently make templates harder to
-maintain.
+Mixing configuration constants inside the same template creates complex conditional maintenance, breeding hidden errors when modifying unrelated states.
 
-## Recommended Approach
+## Recommended approach
 
-Use separate variables templates for each environment instead.
+Use separate variable templates for each environment.
 
-Having dedicated files for each environment makes it easier to understand and
-manage configurations. Developers can quickly identify which settings are
-specific to each environment, reducing confusion and making maintenance more
-straightforward.
-
-Also, keeping environment-specific settings separate allows for better version
-control management. Changes to configurations in one environment won't
-inadvertently affect others, leading to cleaner version history and easier
-rollback if needed.
+This keeps environment settings clear and prevents one environmentâ€™s variables from affecting another.
 
 ## Example
 
-Instead of mixing variables from different environments:
+Instead of mixing variables from different environments inline:
 
 ```yaml
 # /pipelines/variables/terraform/azure/provider-variables.yml
@@ -87,7 +76,7 @@ variables:
       value: $(terraform-sp-tenant-id)
 ```
 
-Use separate variables templates for each environment:
+Extract the templates using explicit configurations:
 
 ```yaml
 # /pipelines/variables/terraform/azure/provider-variables-development.yml
@@ -148,7 +137,7 @@ variables:
 
 ## Related guidelines
 
-- [DO: Organize Variables by Component and Environment](/guidelines/variables/do-organize-variables.md)
-- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
-- [DO: Use a Consistent Folder Structure](/guidelines/general/do-folder-structure.md)
-- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
+- [DO: Organize variables by component and environment](/guidelines/variables/do-organize-variables.md)
+- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Use a consistent folder structure](/guidelines/general/do-folder-structure.md)
+- [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)

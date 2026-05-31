@@ -1,23 +1,21 @@
-# ✅ CONSIDER: Using Absolute Paths to Reference Templates
+﻿# ✅ CONSIDER: Use absolute paths to reference templates
 
-Consider using absolute paths to reference stages, jobs, steps and variables
+Use absolute paths to reference stages, jobs, steps and variables
 templates.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Using Absolute Paths to Reference Templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/consider-absolute-paths.md)
+[CONSIDER: Use absolute paths to reference templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/consider-absolute-paths.md)
 ```
 
 ## Reason
 
-Using absolute paths ensures that the template references are always resolved
-correctly when moving pipelines or templates to different folders, without the
-need to update the paths.
+When you use absolute paths, Azure Pipelines resolves template references correctly if you move pipelines or templates to different folders. You do not need to update the paths.
 
 ## Example
 
-Using absolute paths to reference templates:
+The following example uses absolute paths to reference templates:
 
 ```yaml
 parameters:
@@ -47,5 +45,5 @@ jobs:
 
 ## Related guidelines
 
-- [DO: Use a Consistent Folder Structure](/guidelines/general/do-folder-structure.md)
-- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Use a consistent folder structure](/guidelines/general/do-folder-structure.md)
+- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)

@@ -1,34 +1,24 @@
-# ✅ CONSIDER: Declaring Variables at the Job Level
+﻿# ✅ CONSIDER: Declaring variables at the job level
 
-Consider declaring variables at the job level instead of the stage or root level.
+Declare variables at the job level instead of the stage or root level.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Declaring Variables at the Job Level](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-job-variables.md)
+[CONSIDER: Declaring variables at the job level](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-job-variables.md)
 ```
 
 ## Reason
 
-Declaring variables at the job level reduces the scope of the variables, making
-them accessible only within the job. This helps to avoid conflicts with other
-variables declared elsewhere, ensuring that your jobs run in isolation.
-Additionally, you can run the same job in parallel with different configurations
-without affecting each other.
+Declaring variables at the job level reduces scope, making variables accessible only within the job. This prevents conflicts with variables declared elsewhere, ensuring your jobs run in isolation. You can run the same job in parallel with different configurations without conflict.
 
-From a maintenance perspective, it's also easier to understand which variables
-or templates are required for a specific job. Also, you can use the same job
-template in different stages or pipelines without
-worrying about which variables or templates need to be referenced, as they are
-declared within the job.
+It is easier to understand which variables or templates a specific job requires. You can use the same job template in different stages or pipelines without tracking external variable requirements, as the job declares them internally.
 
 ## Example
 
-The below job template references a variables template that contains the
-configuration required for the job to run.
+The below job template references a variables template that contains the configuration required for the job to run.
 
-The variables template is based on the stack, region, and environment, which
-allows you to run the same job template with different configurations.
+The variables template is based on the stack, region, and environment, which allows you to run the same job template with different configurations.
 
 ```yaml
 # Run Terraform plan for the specified stack, region and environment
@@ -72,4 +62,4 @@ jobs:
 ## Related guidelines
 
 - [DO: Reduce variable scope](/guidelines/variables/do-variable-scope.md)
-- [AVOID: Using Pipeline Variables in Tasks or Steps Templates](/guidelines/steps/avoid-pipeline-variables.md)
+- [AVOID: Using pipeline variables in tasks or steps templates](/guidelines/steps/avoid-pipeline-variables.md)

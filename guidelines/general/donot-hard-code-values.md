@@ -1,25 +1,22 @@
-# ❌ DO NOT: Hard-code Values in Pipelines and Templates
+﻿# ❌ DO NOT: Hard-code values in pipelines and templates
 
 Do not hard-code values in Azure DevOps pipelines and templates.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Hard-code Values in Pipelines and Templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/donot-hard-code-values.md)
+[DO NOT: Hard-code values in pipelines and templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/donot-hard-code-values.md)
 ```
 
 ## Reason
 
-Just like in a regular application, hard-coding values in pipelines and templates
-is not a good practice for several reasons:
+Just like in a regular application, hard-coding values in pipelines and templates causes several issues:
 
-- If a value needs to be changed, it must be changed in multiple places.
-- Hard-coded values make the templates less reusable e.g. it might not be
-possible to use the same template in different contexts, e.g. different
-environments
-- Hard-coded values decrease readability. It might not be clear what the value represents.
+- If you need to change a value, you must change it in multiple places.
+- Hard-coded values make the templates less reusable. For example, you might not be able to use the same template across different environments.
+- Hard-coded values decrease readability. Readers might not understand what the value represents.
 
-## Recommended Approach
+## Recommended approach
 
 Separate logic (steps, jobs, stages) from configuration (environment-specific
 values) to make your pipelines cleaner and easier to reuse.
@@ -77,5 +74,5 @@ jobs:
 
 ## Related guidelines
 
-- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
-- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)
+- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)

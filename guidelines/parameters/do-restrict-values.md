@@ -1,22 +1,20 @@
-# ✅ DO: Restrict Parameter Values
+﻿# ✅ DO: Restrict parameter values
 
-Restrict the values of parameters when these have a well-defined set of values.
+Restrict the values of parameters when they have a well-defined set.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Restrict Parameter Values](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/parameters/do-restrict-values.md)
+[DO: Restrict parameter values](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/parameters/do-restrict-values.md)
 ```
 
 ## Reason
 
-Restricting the values of a parameter ensures that only valid values are used
-in a pipeline or template.
+Restricting a parameter's values ensures pipelines or templates only use valid data.
 
 ## Example
 
-Instead of allowing a user to enter any value for the `environment` and `region`
-parameters in a pipeline:
+Instead of allowing any value for the `environment` and `region` parameters:
 
 ```yaml
 parameters:
@@ -29,8 +27,7 @@ parameters:
     displayName: 'Azure region'
 ```
 
-Restrict the values of the `environment` and `region` parameters to a
-well-defined set of values:
+Restrict the parameters to a well-defined set of values:
 
 ```yaml
 parameters:
@@ -55,4 +52,4 @@ parameters:
 
 ## Related guidelines
 
-- [DO: Validate Steps Parameters](/guidelines/steps/do-validate-parameters.md)
+- [DO: Validate steps parameters](/guidelines/steps/do-validate-parameters.md)

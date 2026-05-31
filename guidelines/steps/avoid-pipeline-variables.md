@@ -1,30 +1,22 @@
-# ❌ AVOID: Using Pipeline Variables in Tasks or Steps Templates
+﻿# ❌ AVOID: Using pipeline variables in tasks or steps templates
 
-Avoid using pipeline variables in steps templates. Use parameters instead.
+Avoid pipeline variables in steps templates. Use parameters instead.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[AVOID: Using Pipeline Variables in Tasks or Steps Templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/avoid-pipeline-variables.md)
+[AVOID: Using pipeline variables in tasks or steps templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/avoid-pipeline-variables.md)
 ```
 
 ## Reason
 
-Using variables in the middle of a steps template should be avoided as it
-creates a dependency on that same variable. It's somehow similar to using global
-variables in a programming language like Java, which can make the template less
-reusable and harder to maintain.
+Referencing variables inside a steps template creates a direct dependency, acting like a global variable. This makes the template harder to maintain and less reusable.
 
-Parameters have the added benefit of being strongly typed, which can help catch
-errors at compile time, rather than at runtime.
+Parameters provide strong typing, helping you catch errors at compile time instead of at runtime.
 
-## Recommended Approach
+## Recommended approach
 
-Pass values to the template as parameters, rather than using variables.
-
-Other than removing the dependency on the variable, using parameters can also
-make the inputs to the template more explicit. i.e. it's easier to understand
-what values are needed to run the template.
+Pass values to the template as explicit parameters. This removes dependencies and makes the template requirements clearer.
 
 ## Example
 
@@ -49,7 +41,7 @@ steps:
     displayName: 'Greet'
 ```
 
-Optionally, you can set the default value of the parameter to the variable:
+Optionally, set the default parameter value to the variable:
 
 ```yaml
 parameters:
@@ -63,15 +55,10 @@ steps:
     displayName: 'Greet'
 ```
 
-But as mentioned above, this approach can make the template slightly less
-reusable due to the dependency on the variable (in case the parameter is not
-set).
-
-Consider using this approach as a first step to refactor the template, in order
-to remove the variable dependency.
+Use this option as a first step when refactoring templates to eliminate variable dependencies, though it slightly limits reusability since it falls back to the variable.
 
 ## Related guidelines
 
-- [DO: Validate Steps Parameters](/guidelines/steps/do-validate-parameters.md)
-- [DO: Restrict Parameter Values](/guidelines/parameters/do-restrict-values.md)
-- [CONSIDER: Grouping Related Parameters](/guidelines/parameters/consider-grouping.md)
+- [DO: Validate steps parameters](/guidelines/steps/do-validate-parameters.md)
+- [DO: Restrict parameter values](/guidelines/parameters/do-restrict-values.md)
+- [CONSIDER: Grouping related parameters](/guidelines/parameters/consider-grouping.md)

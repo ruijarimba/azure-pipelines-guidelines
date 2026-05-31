@@ -1,23 +1,20 @@
-# ✅ DO: Validate Steps Parameters
+﻿# ✅ DO: Validate step parameters
 
-Steps templates should validate their parameters and fail the pipeline if any
-is invalid.
+Validate step parameters in templates. Fail the pipeline if a parameter is invalid.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Validate Steps Parameters](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-validate-parameters.md)
+[DO: Validate step parameters](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-validate-parameters.md)
 ```
 
 ## Reason
 
-Detect and report errors as soon as they occur, rather than allowing them to
-propagate and potentially cause more significant issues later in the pipeline.
+Detect and report errors immediately to prevent them from causing larger issues later in the pipeline.
 
 ## Example
 
-Using a template to check if the input parameters are not empty and do not
-contain unexpanded variables:
+Use a template to verify that input parameters are not empty and do not contain unexpanded variables:
 
 ```yaml
 - template: /pipelines/steps/validate-input-steps.yaml
@@ -107,17 +104,14 @@ steps:
         PRINT: ${{ lower(parameters.printValues) }}
 ```
 
-Please note that the above template can (and should!) be extended to include
-additional validation rules, such as:
+Extend this template to include additional validation rules such as:
 
-- Validating a range
-- Validating an IP address
-- Validating an URL
-
-And so on.
+- Range validation
+- IP address validation
+- URL validation
 
 ## Related guidelines
 
-- [DO: Restrict Parameter Values](/guidelines/parameters/do-restrict-values.md)
-- [CONSIDER: Grouping Related Parameters](/guidelines/parameters/consider-grouping.md)
-- [AVOID: Using Variables in Scripts](/guidelines/steps/avoid-pipeline-variables.md)
+- [DO: Restrict parameter values](/guidelines/parameters/do-restrict-values.md)
+- [CONSIDER: Grouping related parameters](/guidelines/parameters/consider-grouping.md)
+- [AVOID: Using pipeline variables in tasks or steps templates](/guidelines/steps/avoid-pipeline-variables.md)

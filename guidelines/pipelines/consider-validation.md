@@ -1,24 +1,20 @@
-# ✅ CONSIDER: Running Pipelines in Validation Mode
+﻿# ✅ CONSIDER: Running pipelines in validation mode
 
-Consider adding a parameter to your pipeline or use conditions to run it in
-_validation mode_, i.e. without actually deploying or executing any changes.
+Add a parameter or condition to run the pipeline in _validation mode_, skipping deployment or changes.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Running Pipelines in Validation Mode](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/pipelines/consider-validation.md)
+[CONSIDER: Running pipelines in validation mode](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/pipelines/consider-validation.md)
 ```
 
 ## Reason
 
-Running a pipeline in validation mode allows you to skip stages or jobs that
-are not required in some scenarios, such as running it as part of a pull request
-validation.
+Validation mode skips unneeded stages or jobs, such as checking a pull request without deploying.
 
 ## Example
 
-Using a condition to skip the `Deploy` stage, when running the pipeline as part
-of a pull request:
+Use a condition to skip the `Deploy` stage during a pull request:
 
 ```yaml
 stages:
@@ -41,8 +37,7 @@ stages:
               # ...
 ```
 
-Using a parameter and conditional insertion to dynamically generate the
-`Deploy` stage:
+Use a parameter and conditional insertion to dynamically generate the `Deploy` stage:
 
 ```yaml
 parameters:
@@ -74,4 +69,4 @@ stages:
 
 ## Related guidelines
 
-- [CONSIDER: Adding a Validation Flag to Your Job](/guidelines/jobs/consider-validation-flag.md)
+- [CONSIDER: Adding a validation flag to your job](/guidelines/jobs/consider-validation-flag.md)

@@ -1,20 +1,18 @@
-# ✅ CONSIDER: Adding a Validation Flag to Your Job
+﻿# ✅ CONSIDER: Adding a validation flag to your job
 
-Consider adding a `boolean` parameter to your job to run it in
-_validation mode_, i.e. without actually deploying or executing any changes.
+Add a `boolean` parameter to your job to run it in _validation mode_, without deploying or executing any changes.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Adding a Validation Flag to Your Job](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-validation-flag.md)
+[CONSIDER: Adding a validation flag to your job](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-validation-flag.md)
 ```
 
 ## Reason
 
-Run a pipeline in validation mode when you want to perform at least a basic
-validation of the pipeline, without actually deploying or executing any changes.
+Run a pipeline in validation mode to perform basic validation without deploying or executing changes.
 
-Scenarios include (but are not limited to):
+Scenarios include:
 
 - Refactoring pipelines and correspondent templates
 - Validating a pipeline in pull requests
@@ -23,10 +21,8 @@ Scenarios include (but are not limited to):
 
 Example - running Terraform plan and applying changes:
 
-- `applyChanges: false` - the pipeline runs the plan but doesn't apply any
-changes to the infrastructure.
-- `applyChanges: true` - the pipeline runs the plan and applies the changes
-to the infrastructure.
+- `applyChanges: false` - the pipeline runs the plan but doesn't apply any changes to the infrastructure.
+- `applyChanges: true` - the pipeline runs the plan and applies the changes to the infrastructure.
 
 Using a validation parameter (`applyChanges`) in a Terraform job:
 
@@ -51,12 +47,10 @@ jobs:
           applyChanges: ${{ parameters.applyChanges }}
 ```
 
-Template `/pipelines/steps/terraform/plan-apply-steps.yaml` would then use the
-`applyChanges` parameter to decide whether to run the `terraform apply` command
-or not.
+Template `/pipelines/steps/terraform/plan-apply-steps.yaml` uses the `applyChanges` parameter to decide whether to run the `terraform apply` command.
 
 ## Related guidelines
 
-- [DO: Create Configurable and Extensible Jobs](/guidelines/jobs/do-extensible-jobs.md)
-- [DO: Create Configurable and Extensible Steps](/guidelines/steps/do-extensible-steps.md)
-- [CONSIDER: Running Pipelines in Validation Mode](/guidelines/pipelines/consider-validation.md)
+- [DO: Create configurable and extensible jobs](/guidelines/jobs/do-extensible-jobs.md)
+- [DO: Create configurable and extensible steps](/guidelines/steps/do-extensible-steps.md)
+- [CONSIDER: Running pipelines in validation mode](/guidelines/pipelines/consider-validation.md)

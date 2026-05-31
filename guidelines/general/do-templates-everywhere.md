@@ -1,4 +1,4 @@
-# ✅ DO: Use Templates Everywhere
+﻿# ✅ DO: Use templates everywhere
 
 Create and reference templates instead of defining logic or configuration
 directly in your pipelines or templates.
@@ -6,31 +6,28 @@ directly in your pipelines or templates.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Use Templates Everywhere](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-templates-everywhere.md)
+[DO: Use templates everywhere](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-templates-everywhere.md)
 ```
 
 ## Reason
 
-Use templates to to hide complex implementation details and reuse logic and
-configuration within or across pipelines.
+Use templates to hide complex implementation details and reuse logic and
+configuration across pipelines.
 
-Logic (aka functionality) templates:
+Logic templates:
 
-- **Steps**: define a sequence of steps that can be reused across jobs, or
-referenced in another steps template.
-- **Jobs**: define one or more jobs that can be reused across stages or pipelines.
-- **Stages**: define one or more stages that can be reused across pipelines.
-- **Base pipelines** (referenced using the `extends` keyword): define a pipeline
-template which can be used to create new pipelines with a common structure.
+- **Steps**: define steps to reuse across jobs or reference in another steps template.
+- **Jobs**: define jobs to reuse across stages or pipelines.
+- **Stages**: define stages to reuse across pipelines.
+- **Base pipelines** (using the `extends` keyword): define a pipeline template to create new pipelines with a common structure.
 
 Configuration templates:
 
-- **Variables**: define a set of variables that can be reused across jobs,
-stages or pipelines.
+- **Variables**: define variables to reuse across jobs, stages, or pipelines.
 
 Note:
 
-- When reusing templates, be aware of their
+- When reusing templates, observe their
 [imposed limits](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops&pivots=templates-includes#imposed-limits).
 
 ## Example
@@ -76,7 +73,7 @@ stages:
                       $(Build.BuildId)
 ```
 
-The above pipeline can be refactored in order to use shared templates as follows:
+You can refactor this pipeline to use shared templates:
 
 ```yaml
 # /pipelines/my-azure-pipeline.yml
@@ -205,7 +202,7 @@ steps:
 
 ## Related guidelines
 
-- [DO: Document Pipelines and Templates](/guidelines/general/do-documentation.md)
-- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
-- [DO NOT: Hard-code Values in Pipelines and Templates](/guidelines/general/donot-hard-code-values.md)
-- [CONSIDER: Using Absolute Paths to Reference Templates](/guidelines/general/consider-absolute-paths.md)
+- [DO: Document pipelines and templates](/guidelines/general/do-documentation.md)
+- [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)
+- [DO NOT: Hard-code values in pipelines and templates](/guidelines/general/donot-hard-code-values.md)
+- [CONSIDER: Use absolute paths to reference templates](/guidelines/general/consider-absolute-paths.md)
