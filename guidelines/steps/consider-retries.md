@@ -1,7 +1,6 @@
-# ✅ CONSIDER: configuring retries in tasks
+﻿# ✅ CONSIDER: Configuring retries in tasks
 
-Consider configuring the number of times that the task should be retried, if it
-fails.
+Configure the number of retries if a task faces transient failures.
 
 ## Markdown to reference this guideline
 
@@ -11,24 +10,21 @@ fails.
 
 ## Reason
 
-Retries are useful when you have tasks that might fail due to transient issues,
-such as network problems or timeouts.
+Retries help when tasks fail due to transient network issues or timeouts.
 
-Examples of tasks where you might want to configure retries:
+Tasks to retry:
 
-- Installer tasks that download files from the internet
-- Tasks that use package managers, such as NuGet or npm
+- Installer tasks fetching files from the internet.
+- Tasks using package managers (e.g., NuGet or npm).
 
-Examples of tasks where you might NOT want to configure retries:
+Tasks to NOT retry:
 
-- Tasks that build, compile, or test your code
-- Tasks that deploy your code
+- Build, compilation, or testing tasks.
+- Deployment tasks.
 
 ## Example
 
-Use the task property
-[retryCountOnTaskFailure](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/tasks?view=azure-devops&tabs=yaml#number-of-retries-if-task-failed)
-to specify the number of retries if a task fails:
+Use `retryCountOnTaskFailure` to specify maximum retries:
 
 ```yaml
 steps:
@@ -39,8 +35,8 @@ steps:
     retryCountOnTaskFailure: 3
 ```
 
-In this example, the `NuGetRestore@1` task will be retried up to 3 times if it fails.
+Here, the `NuGetRestore@1` task retries up to 3 times before failing.
 
 ## Related guidelines
 
-- [DO: Create Configurable and Extensible Steps](/guidelines/steps/do-extensible-steps.md)
+- [DO: Create configurable and extensible steps](/guidelines/steps/do-extensible-steps.md)

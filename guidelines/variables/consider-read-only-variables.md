@@ -1,18 +1,16 @@
-# ✅ CONSIDER: Declaring Variables as Read-only
+﻿# ✅ CONSIDER: Declaring variables as read-only
 
-Consider declaring variables as read-only when these are not intended to be
-modified after initialization.
+Mark variables as `readonly` when they shouldn't change after you initialize them.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Declaring Variables as Read-only](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/consider-read-only-variables.md)
+[CONSIDER: Declaring variables as read-only](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/consider-read-only-variables.md)
 ```
 
 ## Reason
 
-Read-only variables can prevent accidental modification and clearly indicate
-that the value should not change during pipeline execution.
+Read-only constraints prevent accidental modification and communicate design intent.
 
 ## Example
 
@@ -25,5 +23,5 @@ variables:
 
 ## Related guidelines
 
-- [DO: Organize Variables by Component and Environment](/guidelines/variables/do-organize-variables.md)
-- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
+- [DO: Organize variables by component and environment](/guidelines/variables/do-organize-variables.md)
+- [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)

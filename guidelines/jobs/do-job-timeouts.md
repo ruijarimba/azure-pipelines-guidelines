@@ -1,32 +1,26 @@
-# ✅ DO: Set Job Timeouts
+﻿# ✅ DO: Set job timeouts
 
-Set job timeouts or add parameters to shared job templates to allow users to
-configure them.
+Set job timeouts or add parameters to shared job templates to let users configure them.
 
-Provide reasonable default values, depending on the job's purpose and the
-expected or average run time.
+Provide reasonable default values based on the job's purpose and expected average run time.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Set Job Timeouts](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-job-timeouts.md)
+[DO: Set job timeouts](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-job-timeouts.md)
 ```
 
 ## Reason
 
-To avoid taking up resources when your job is unresponsive or waiting too long,
-it's a good idea to set a limit on how long your job is allowed to run. Use the
-job timeout settings to specify the limit in minutes for running the job.
+Set a limit on job run time to free resources when a job becomes unresponsive or waits too long. Use the job timeout settings to specify the limit in minutes.
 
-Don't set timeouts too aggressively, as it may lead to premature job cancellations.
+Avoid setting timeouts too aggressively to prevent premature job cancellations.
 
 ## Example
 
-Consider a job that runs smoke tests and that usually takes 5 minutes to finish.
+Consider a job that runs smoke tests and usually takes 5 minutes.
 
-A limit of 10 or even 15 minutes is acceptable, as it allows jobs that might
-take a bit longer to run without being cancelled but is much shorter than the
-default 60 minutes.
+A limit of 10 or 15 minutes is acceptable. This limit accommodates jobs that take slightly longer but remains much shorter than the default 60 minutes.
 
 ```yaml
 jobs:
@@ -38,5 +32,5 @@ jobs:
 
 ## Related guidelines
 
-- [DO: Create Configurable and Extensible Jobs](/guidelines/jobs/do-extensible-jobs.md)
-- [CONSIDER: Set Task Timeouts](/guidelines/steps/consider-timeouts.md)
+- [DO: Create configurable and extensible jobs](/guidelines/jobs/do-extensible-jobs.md)
+- [CONSIDER: Set task timeouts](/guidelines/steps/consider-timeouts.md)

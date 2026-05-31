@@ -1,25 +1,22 @@
-# ✅ DO: Document Pipelines and Templates
+# ✅ DO: Document pipelines and templates
 
-Document pipelines and templates by adding comments to the top of the corresponding
-files describing its purpose, usage, and other relevant information.
+Document pipelines and templates. Add comments to the top of pipeline and template files. Describe the purpose, usage, and other relevant information.
 
-Consider documenting parameters and even variables as well, if necessary.
+Consider documenting parameters and variables as well, if necessary.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Document Pipelines and Templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-documentation.md)
+[DO: Document pipelines and templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-documentation.md)
 ```
 
 ## Reason
 
-Comments at the top of the file help to understand the purpose of the pipeline or
-template and the context in which it is used at a glance, without the need to
-read the entire file.
+File-level comments help readers understand the pipeline or template quickly. They provide context without requiring the reader to read the entire file.
 
-## Documenting pipelines
+## Document pipelines
 
-Pipelines documentation should ideally include:
+Pipeline documentation should include:
 
 - A brief description of what the pipeline does
 - The name and URL of the published pipeline in Azure DevOps portal (to avoid
@@ -27,7 +24,7 @@ having to search for the pipeline in the Azure DevOps portal)
 - Context in which the pipeline is used, including but not limited to:
   - Pull request validation
   - Scheduled execution or trigger
-- Any other relevant information such as published/consumed artifacts, etc
+- Other relevant information, such as published or consumed artifacts
 
 ```yaml
 # This pipeline is used to validate the formatting of Terraform source code
@@ -46,13 +43,11 @@ jobs:
 
 ## Documenting stage and job templates
 
-Stage and job templates should ideally include:
+Stage and job templates should include:
 
 - A brief description of what the stage or job does
 - Any information that might be useful outside of the context of the template,
-such as output variables, artifacts, and other
-
-Example:
+such as output variables or artifacts
 
 ```yaml
 # Runs Terraform plan for the specified stack and environment
@@ -73,13 +68,12 @@ jobs:
     # ...
 ```
 
-## Documenting step templates
+## Document step templates
 
-Step templates should ideally include:
+Step templates should include:
 
 - A brief description of what the step does
-- Any information that might be useful outside of the context of the template,
-such as output variables, artifacts, and other
+- Any information that might be useful outside of the context of the template, such as output variables or artifacts
 
 Example:
   
@@ -96,9 +90,9 @@ steps:
   # ...
 ```
 
-## Documenting variables templates
+## Document variables templates
 
-Variables templates should ideally include:
+Variables templates should include:
 
 - A brief description of what the variables are used for
 
@@ -117,14 +111,14 @@ variables:
     value: $(Pipeline.Workspace)/myself/iac/stacks/azure/storage-account/westeurope/prod
 ```
 
-## Documenting parameters
+## Document parameters
 
-Pipeline or template parameters should ideally include:
+Pipeline or template parameters should include:
 
 - A brief description of what the parameter is used for, using the `displayName`
 property
 - List of properties for complex parameters (set with `type = object`)
-- Other relevant information such as default values, allowed values, etc
+- Other relevant information, such as default values or allowed values
 
 Example:
 
@@ -142,14 +136,13 @@ parameters:
   - name: helmChart
     type: object
     displayName: 'Helm chart settings'
-    default: {
-      chartPath: '',
-      releaseName: '',
-      timeout: '5m0s',
-      valuesFiles: [],
-      parameters: [],
+    default:
+      chartPath: ''
+      releaseName: ''
+      timeout: '5m0s'
+      valuesFiles: []
+      parameters: []
       dryRun: ''
-    }
 
   # An object containing the kubernetes context settings:
   # - namespace: Kubernetes namespace
@@ -157,12 +150,11 @@ parameters:
   - name: kubernetesContext
     type: object
     displayName: 'Kubernetes context settings'
-    default: {
-      namespace: '',
+    default:
+      namespace: ''
       kubeconfig: ''
-    }
 ```
 
 ## Related guidelines
 
-- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)

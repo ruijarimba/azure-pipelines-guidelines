@@ -1,8 +1,6 @@
-# ✅ DO: Create Configurable and Extensible Jobs
+﻿# ✅ DO: Create configurable and extensible jobs
 
-When creating job templates to be reused by different teams and/or across
-several stages or pipelines, consider adding some or all of the following
-parameters:
+When creating job templates for reuse by different teams, stages, or pipelines, add parameters such as:
 
 - Name and display name
 - Agent pool
@@ -15,22 +13,20 @@ parameters:
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Create Configurable and Extensible Jobs](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-extensible-jobs.md)
+[DO: Create configurable and extensible jobs](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-extensible-jobs.md)
 ```
 
 ## Reason
 
-It's difficult to predict and understand all the scenarios in which a job will
-be used:
+You cannot predict all scenarios for a job template:
 
-- Does the job need to run on a specific agent pool?
-- How long should the job run before it's automatically cancelled?
-- Are there any dependencies that need to be met before the job can run?
+- Does the job need a specific agent pool?
+- How long should the job run before it automatically cancels?
+- Are there unmet dependencies before the job runs?
 - Should the job run only under certain conditions?
-- Are there any additional steps that need to be run before or after the main steps?
+- Do additional steps need to run before or after the main steps?
 
-By configuring some or all of the above parameters, you can make
-your jobs more flexible and easier to reuse.
+Adding these parameters makes your jobs flexible and easier to reuse.
 
 ## Example
 
@@ -114,6 +110,6 @@ jobs:
 
 ## Related guidelines
 
-- [DO: Document Pipelines and Templates](/guidelines/general/do-documentation.md)
-- [DO: Create Configurable and Extensible Steps](/guidelines/steps/do-extensible-steps.md)
-- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Document pipelines and templates](/guidelines/general/do-documentation.md)
+- [DO: Create configurable and extensible steps](/guidelines/steps/do-extensible-steps.md)
+- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)

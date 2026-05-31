@@ -1,23 +1,20 @@
-# ✅ DO: Organize Variables by Component and Environment
+﻿# ✅ DO: Organize variables by component and environment
 
-Create a folder structure to organize your variables by functionality,
-environment or any other logical grouping that makes sense for your pipelines.
+Organize your variables into folders by functionality, environment, or any logical partition that fits your project.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Organize Variables by Component and Environment](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-organize-variables.md)
+[DO: Organize variables by component and environment](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-organize-variables.md)
 ```
 
 ## Reason
 
-Using a folder strucure with a good naming convention will help you to keep your
-variables organized, easy to manage and reuse.
+A clean and well-named directory structure simplifies variable management, reuse, and discoverability.
 
 ## Example
 
-The following example shows a directory structure for organizing
-Terraform-related variables by provider, resource, region and environment:
+Use nested folders to scope variables. For example, group Terraform variables by provider, resource, region, and environment:
 
 ```plaintext
 /pipelines/variables
@@ -45,12 +42,11 @@ Terraform-related variables by provider, resource, region and environment:
     remote-state-variables.yml
 ```
 
-Other templates are used to group common variables that are used across multiple
-components, such as `provider-variables.yml` and `remote-state-variables.yml`.
+Use standalone files like `provider-variables.yml` and `remote-state-variables.yml` to store shared variables in a clear, logical way.
 
 ## Related guidelines
 
-- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
-- [DO: Use a Consistent Folder Structure](/guidelines/general/do-folder-structure.md)
-- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
-- [DO NOT: Mix Variables from Different Environments](/guidelines/variables/donot-mix-environments.md)
+- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Use a consistent folder structure](/guidelines/general/do-folder-structure.md)
+- [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)
+- [DO NOT: Mix variables from different environments](/guidelines/variables/donot-mix-environments.md)

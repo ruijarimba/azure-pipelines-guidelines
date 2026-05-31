@@ -1,29 +1,25 @@
-# ✅ CONSIDER: Set Task Timeouts
+﻿# ✅ CONSIDER: Set task timeouts
 
-Consider setting tasks timeouts.
-
-Provide reasonable timeout values, depending on the task's purpose.
+Set timeouts for tasks to avoid stalling pipeline runs. Provide reasonable values based on the expected execution time.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Set Task Timeouts](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-timeouts.md)
+[CONSIDER: Set task timeouts](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-timeouts.md)
 ```
 
 ## Reason
 
-To avoid taking up resources when your task is unresponsive or waiting too long,
- it's a good idea to set a limit on how long your task is allowed to run.
+Timeouts release resources when tasks become unresponsive.
 
 Note:
 
-- Don't set timeouts too aggressively, as it may lead to premature task cancellations.
-- As an alternative, consider configuring the timeout for the job that contains
-the task, rather than for the task itself.
+- Avoid overly aggressive timeouts to prevent premature cancellations.
+- Alternatively, configure timeouts on the job instead of individual tasks.
 
 ## Example
 
-Using the `timeoutInMinutes` for a task that runs integration tests:
+Use `timeoutInMinutes` for integration tests:
 
 ```yaml
 steps:
@@ -38,4 +34,4 @@ steps:
 
 ## Related guidelines
 
-- [DO: Create Configurable and Extensible Steps](/guidelines/steps/do-extensible-steps.md)
+- [DO: Create configurable and extensible steps](/guidelines/steps/do-extensible-steps.md)

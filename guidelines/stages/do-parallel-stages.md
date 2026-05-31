@@ -1,6 +1,6 @@
-# ✅ DO: Run stages in parallel when possible
+﻿# ✅ DO: Run stages in parallel when possible
 
-Run stages that are independent of each other in parallel.
+Run independent stages in parallel.
 
 ## Markdown to reference this guideline
 
@@ -10,13 +10,11 @@ Run stages that are independent of each other in parallel.
 
 ## Reason
 
-When you define multiple stages in a pipeline, by default, they run one after
-the other. Running stages in parallel can help to reduce the overall pipeline
-execution time.
+Pipeline stages run sequentially by default. Running independent stages in parallel reduces overall execution time.
 
 ## Example
 
-Stages running in parallel:
+Run stages in parallel configuration:
 
 ```yaml
 stages:
@@ -26,7 +24,7 @@ stages:
         ...
 
   - stage: AcceptanceTest
-    dependsOn: [] # this removes the implicit dependency on previous stage and causes this to run in parallel
+    dependsOn: [] # removes the implicit dependency on the previous stage, causing this to run in parallel
     jobs:
       - job:
         ...

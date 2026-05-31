@@ -1,25 +1,18 @@
-# ✅ DO: Use a Consistent Folder Structure
+﻿# ✅ DO: Use a consistent folder structure
 
-Use a consistent and logical folder structure for the pipelines and templates
-in different projects and repositories.
+Organize pipelines and templates logically and consistently across different projects and repositories.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Use a Consistent Folder Structure](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-folder-structure.md)
+[DO: Use a consistent folder structure](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-folder-structure.md)
 ```
 
 ## Reason
 
-Using a consistent folder structure helps to organize the pipeline files in a
-logical way, such as by template type. This makes it easier to navigate the
-project and understand the structure at a glance.
+A consistent folder structure organizes pipeline files predictably, such as by template type. This makes it easier to navigate the project, understand the structure at a glance, and ensure consistency across different projects and repositories. Anyone familiar with one project can easily understand and navigate others.
 
-Also, it ensures consistency across different projects and repositories. This
-means that anyone familiar with one project can easily understand and navigate
-other projects.
-
-## Examples
+## Example folder structures
 
 ```plaintext
 /pipelines
@@ -87,6 +80,6 @@ You can optionally add subfolders to the `/jobs`, `/stages`, `/steps`, and
 
 ## Related guidelines
 
-- [DO: Use Templates Everywhere](/guidelines/general/do-templates-everywhere.md)
-- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
-- [CONSIDER: Using Absolute Paths to Reference Templates](/guidelines/general/consider-absolute-paths.md)
+- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)
+- [CONSIDER: Use absolute paths to reference templates](/guidelines/general/consider-absolute-paths.md)

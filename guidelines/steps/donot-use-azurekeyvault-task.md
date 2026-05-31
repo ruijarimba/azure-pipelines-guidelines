@@ -1,32 +1,26 @@
-# ❌ DO NOT: Use AzureKeyVault Task
+﻿# ❌ DO NOT: Use AzureKeyVault task
 
-Do not use the `AzureKeyVault` task in pipelines to retrieve sensitive
-information.
+Do not run the `AzureKeyVault` task to pull secrets into pipeline variables.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Use AzureKeyVault Task](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/donot-use-azurekeyvault-task.md)
+[DO NOT: Use AzureKeyVault task](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/donot-use-azurekeyvault-task.md)
 ```
 
 ## Reason
 
-The `AzureKeyVault` is used to fetch the values of secrets from an Azure Key
-Vault and set them as **pipeline variables** that can be used in subsequent
-tasks. This creates a coupling between the steps and the variables.
+The `AzureKeyVault` task converts vault secrets into **pipeline variables**. These global variables deeply couple steps together.
 
-See [AVOID: Using variables in steps templates](/guidelines/steps/avoid-pipeline-variables.md).
+See [AVOID: Using pipeline variables in tasks or steps templates](/guidelines/steps/avoid-pipeline-variables.md).
 
-## Recommended Approach
+## Recommended approach
 
-Use variable groups linked to an Azure Keyvault.
-
-Reference them within variables templates and pass them as parameters to the
-steps templates.
+Link an Azure Key Vault to a pipeline variable group. Source secrets from variables templates mapping to those groups, and pass them as step template parameters.
 
 ## Related guidelines
 
-- [DO: Store Sensitive Information in Variable Groups](/guidelines/variables/do-sensitive-information.md)
-- [DO: Organize Variables by Component and Environment](/guidelines/variables/do-organize-variables.md)
-- [DO: Separate Configuration From Logic](/guidelines/variables/do-separate-configuration.md)
-- [AVOID: Using variables in steps templates](/guidelines/steps/avoid-pipeline-variables.md)
+- [DO: Store sensitive information in variable groups](/guidelines/variables/do-sensitive-information.md)
+- [DO: Organize variables by component and environment](/guidelines/variables/do-organize-variables.md)
+- [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)
+- [AVOID: Using pipeline variables in tasks or steps templates](/guidelines/steps/avoid-pipeline-variables.md)
