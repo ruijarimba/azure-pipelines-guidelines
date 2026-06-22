@@ -3,9 +3,10 @@
 This root instruction file is the active entry point for Copilot and agent behavior.
 It points to the single documentation instruction file used in this repository.
 
-## Active instruction file
+## Active instruction files
 
 - `.github/instructions/documentation.md` — documentation authoring guidance for Markdown files.
+- `.github/instructions/guideline.md` — guideline file format and structure for files under `/guidelines`.
 
 ## Usage
 
