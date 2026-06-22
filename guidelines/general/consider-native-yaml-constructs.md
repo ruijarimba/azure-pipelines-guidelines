@@ -1,6 +1,6 @@
 # ✅ CONSIDER: Use native YAML constructs when possible
 
-Use native YAML formatting constructs, such as block scalars (`>` or `|`), for multi-line strings where appropriate.
+Prefer YAML‑native constructs to express values, logic, and scripts in a clear, consistent, and platform‑agnostic way.
 
 ## Markdown to reference this guideline
 
@@ -10,43 +10,30 @@ Use native YAML formatting constructs, such as block scalars (`>` or `|`), for m
 
 ## Reason
 
-Native YAML formatting features avoid operating system-specific line continuations (such as `\` for Linux/Bash, `^` for Windows/CMD, or `` ` `` for PowerShell). Relying on native YAML syntax prevents cross-platform compatibility issues, reduces parsing errors, and resolves complex escaping or quoting issues.
+Using native YAML features such as [block scalars (multiline strings)](https://yaml-multiline.info/) avoids OS‑specific syntax differences such as line continuations, quoting rules, and escaping across Bash, PowerShell, and CMD. This reduces parsing issues and ensures the pipeline works correctly on different platforms.
 
-It also prevents exceedingly long lines for variables and conditions, making the pipeline code simpler, cleaner, and OS-agnostic.
+It also eliminates the need for long, hard‑to‑scan lines in variables, scripts, and conditions, resulting in cleaner and more maintainable templates.
 
 ## Example
 
-Instead of using OS-specific line continuations and putting long variables or conditions on a single line:
+### Variables
+
+Instead of placing long values on a single line:
 
 ```yaml
 trigger: none
 
-# variables declared as part of the pipeline definition for simplicity purposes only - use variable templates instead 
 variables:
-  # Long strings on a single line
   HTTP_PROXY: http://proxy.mycompany.com:8080
   HTTPS_PROXY: http://proxy.mycompany.com:8080
   NO_PROXY: localhost,127.0.0.1,.mycompany.com
-
-jobs:
-  - job: myJob
-    # Complex condition on a single line
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
-    steps:
-      # OS-specific line continuations (\)
-      - script: |
-          az storage blob delete \
-            -c mycontainer \
-            -n MyBlob
-        displayName: Delete blob
 ```
 
-Use folded block scalars (`>-`) to cleanly break long strings, conditions, and format scripts without OS-specific line continuations:
+Use block scalars to keep the value readable and avoid long inline strings:
 
 ```yaml
 trigger: none
 
-# variables declared as part of the pipeline definition for simplicity purposes only - use variable templates instead
 variables:
   HTTP_PROXY: http://proxy.mycompany.com:8080
   HTTPS_PROXY: http://proxy.mycompany.com:8080
@@ -54,33 +41,54 @@ variables:
     localhost,
     127.0.0.1,
     .mycompany.com
+```
 
+### Conditions
+
+Instead of a long condition on one line:
+
+```yaml
 jobs:
   - job: myJob
-    # Long conditions can span multiple lines for better readability
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+```
+
+Use YAML block syntax so conditions are easier to read and edit:
+
+```yaml
+jobs:
+  - job: myJob
     condition: |
       and(
         succeeded(),
         eq(variables['Build.SourceBranch'], 'refs/heads/main')
       )
-    steps:
-      # YAML folded block scalars (`>-`) replace OS-specific line continuations (\ or ^)
-      - script: >-
-          az storage blob delete
-          -c mycontainer
-          -n MyBlob
-        displayName: Delete blob
 ```
 
-## Related guidelines
+### Scripts
 
-- [DO: Document pipelines and templates](/guidelines/general/do-documentation.md)
-- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)
-- [CONSIDER: Declaring variables as read-only](/guidelines/variables/consider-read-only-variables.md)
+Instead of using OS-specific line continuations in a script:
 
-## Useful sources
+```yaml
+steps:
+  - script: |
+      az storage blob delete \
+        -c mycontainer \
+        -n MyBlob
+    displayName: Delete blob
+```
 
-For more details and examples on YAML multiline constructs, check out:
+Use a folded block scalar so the script body is written naturally:
 
-- [YAML Multiline Strings](https://yaml-multiline.info/)
-- [How do I break a string in YAML over multiple lines? (StackOverflow)](https://stackoverflow.com/q/3790454)
+```yaml
+steps:
+  - script: >-
+      az storage blob delete
+      -c mycontainer
+      -n MyBlob
+    displayName: Delete blob
+```
+
+### Related info
+
+- [How do I break a string in YAML over multiple lines?](https://stackoverflow.com/questions/3790454/how-do-i-break-a-string-in-yaml-over-multiple-lines)
