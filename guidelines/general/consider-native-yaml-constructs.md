@@ -73,8 +73,8 @@ Instead of using OS-specific line continuations in a script:
 steps:
   - script: |
       az storage blob delete \
-        -c mycontainer \
-        -n MyBlob
+        -c $(container) \
+        -n $(blob)
     displayName: Delete blob
 ```
 
@@ -84,11 +84,16 @@ Use a folded block scalar so the script body is written naturally:
 steps:
   - script: >-
       az storage blob delete
-      -c mycontainer
-      -n MyBlob
+      -c $(container)
+      -n $(blob)
     displayName: Delete blob
 ```
 
-### Related info
+## Related guidelines
 
-- [How do I break a string in YAML over multiple lines?](https://stackoverflow.com/questions/3790454/how-do-i-break-a-string-in-yaml-over-multiple-lines)
+- [DO: Document pipelines and templates](/guidelines/general/do-documentation.md)
+- [DO NOT: Hard-code values in pipelines and templates](/guidelines/general/donot-hard-code-values.md)
+
+## Useful sources
+
+- [How do I break a string in YAML over multiple lines?](https://stackoverflow.com/questions/3790454/how-do-i-break-a-string-in-yaml-over-many-lines)
