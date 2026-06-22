@@ -28,7 +28,7 @@ stages:
 
   - stage: Deploy
     dependsOn: Build
-    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
     jobs:
       - job: Deploy
         steps:

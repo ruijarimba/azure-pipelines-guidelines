@@ -26,8 +26,7 @@ having to search for the pipeline in the Azure DevOps portal)
 - Context in which the pipeline is used, including but not limited to:
   - Pull request validation
   - Scheduled execution or trigger
-- Stable labels when they help scanning, such as `Purpose`, `Trigger`,
-  `Published artifacts`, `Consumed artifacts`, or `Prerequisites`
+- Stable labels when they help scanning, such as `Purpose`, `Trigger`, or `Prerequisites`
 - Other relevant information, such as published or consumed artifacts
 
 ```yaml

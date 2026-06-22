@@ -16,7 +16,7 @@ Mixing configuration constants inside the same template creates complex conditio
 
 Use separate variable templates for each environment.
 
-This keeps environment settings clear and prevents one environmentâ€™s variables from affecting another.
+This keeps environment settings clear and prevents one environment's variables from affecting another.
 
 ## Example
 

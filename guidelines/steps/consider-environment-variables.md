@@ -17,7 +17,7 @@ Many tools like Terraform, Azure CLI, and Azure DevOps CLI integrate directly wi
 - Reuse values across multiple commands (e.g., `AZURE_STORAGE_XXXX` for Azure CLI storage management).
 - Authenticate seamlessly with services (e.g., `ARM_CLIENT_ID` and `ARM_CLIENT_SECRET` for the Terraform `azurerm` provider).
 
-Values containing special characters such as spaces, quotes, or dollar signs are passed to the script as-is â€” no quoting or escaping needed.
+Values containing special characters such as spaces, quotes, or dollar signs are passed to the script as-is — no quoting or escaping needed.
 
 ## Example
 

@@ -139,7 +139,7 @@ parameters:
     type: string
     displayName: Deployment Environment
 
-deployments:
+jobs:
   - deployment: Build
     displayName: Build and publish Docker image
     environment: ${{ parameters.environment }}
