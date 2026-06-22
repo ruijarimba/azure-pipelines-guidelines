@@ -7,6 +7,7 @@ It points to the single documentation instruction file used in this repository.
 
 - `.github/instructions/documentation.md` — documentation authoring guidance for Markdown files.
 - `.github/instructions/guideline.md` — guideline file format and structure for files under `/guidelines`.
+- `.github/instructions/changelog.md` — changelog authoring guidance for `CHANGELOG.md`.
 
 ## Usage
 

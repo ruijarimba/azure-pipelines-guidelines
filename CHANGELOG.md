@@ -6,8 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-### Planned
-
 - Add a `CONSIDER:` guideline advising that template parameter types should match Azure Pipelines YAML schema types for common task and job options such as `condition`, `timeoutInMinutes`, `dependsOn`, `strategy`, and other pipeline fields. This will keep custom templates consistent with the official pipeline schema and make validation and reuse more reliable.
 
 - Add a `CONSIDER:` guideline for debug-mode execution. Recommend that tasks or jobs running in debug mode emit extra diagnostic detail, including input values, state before a change, expected state, and actual state, so troubleshooting information is sufficient for a human or AI agent to identify the likely issue without needing data from other steps or jobs.
@@ -20,7 +18,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- Added `CONSIDER: Use native YAML constructs when possible` guideline to promote native YAML block scalars (`>-`, `|`) over OS-specific line continuations and for formatting long expressions.
+- Added [CONSIDER: Use native YAML constructs when possible](/guidelines/general/consider-native-yaml-constructs.md)
+
+- Added [CONSIDER: Explicitly declare checkout in jobs](/guidelines/jobs/consider-explicit-checkout.md)
 
 ## [0.2.0] - 2026-05-31
 
