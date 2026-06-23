@@ -69,4 +69,5 @@ stages:
 
 ## Related guidelines
 
+- [DO: Create configurable and extensible jobs](/guidelines/jobs/do-extensible-jobs.md)
 - [CONSIDER: Adding a validation flag to your job](/guidelines/jobs/consider-validation-flag.md)

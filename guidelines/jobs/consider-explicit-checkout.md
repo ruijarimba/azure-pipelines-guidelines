@@ -69,8 +69,8 @@ jobs:
 ## Related guidelines
 
 - [DO: Document pipelines and templates](/guidelines/general/do-documentation.md)
+- [DO: Create configurable and extensible jobs](/guidelines/jobs/do-extensible-jobs.md)
 - [DO: Ensure jobs have a single responsibility](/guidelines/jobs/do-single-responsibility.md)
-- [CONSIDER: Running pipelines in validation mode](/guidelines/pipelines/consider-validation.md)
 
 ## Useful sources
 

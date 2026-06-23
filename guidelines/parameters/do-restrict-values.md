@@ -53,3 +53,4 @@ parameters:
 ## Related guidelines
 
 - [DO: Validate step parameters](/guidelines/steps/do-validate-parameters.md)
+- [CONSIDER: Grouping related parameters](/guidelines/parameters/consider-grouping.md)

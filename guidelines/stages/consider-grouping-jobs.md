@@ -61,3 +61,4 @@ stages:
 ## Related guidelines
 
 - [DO: Run stages in parallel when possible](/guidelines/stages/do-parallel-stages.md)
+- [DO: Ensure jobs have a single responsibility](/guidelines/jobs/do-single-responsibility.md)

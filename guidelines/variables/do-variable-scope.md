@@ -38,4 +38,5 @@ Other broad, generic variables can be set at the root or stage level:
 ## Related guidelines
 
 - [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)
 - [CONSIDER: Declaring variables at the job level](/guidelines/jobs/consider-job-variables.md)

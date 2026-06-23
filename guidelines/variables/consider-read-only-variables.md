@@ -23,5 +23,6 @@ variables:
 
 ## Related guidelines
 
+- [DO: Reduce variable scope](/guidelines/variables/do-variable-scope.md)
 - [DO: Organize variables by component and environment](/guidelines/variables/do-organize-variables.md)
 - [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)
