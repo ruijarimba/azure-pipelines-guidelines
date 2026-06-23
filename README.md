@@ -72,6 +72,8 @@ VS Code extensions:
 
 This repository and its content are not sponsored or supported by Microsoft Corporation. The guidelines are based mostly on the author's (limited) experience and opinions. There might be cases, though, where the author has used official Microsoft documentation as a reference.
 
+AI tools were used only for support tasks such as reviewing grammar, improving clarity, and validating information. The recommendations themselves were written by the author.
+
 The author is not responsible for any misuse of these guidelines or any damage that may result from their use. Use them at your own responsibility.
 
 ## Buy me a coffee
