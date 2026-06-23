@@ -5,15 +5,11 @@ applyTo: 'guidelines/**/*.md'
 
 # Writing guideline files
 
-This instruction file explains how to write and structure guideline files under
-the `/guidelines` folder.
+This instruction file explains how to write and structure guideline files under the `/guidelines` folder.
 
-Follow this guidance when you create or update a guideline file. The
-[documentation.md](documentation.md) instruction file also applies to guideline
-files and covers prose style and language. Use both together.
+Follow this guidance when you create or update a guideline file. The [documentation.md](documentation.md) instruction file also applies to guideline files and covers prose style and language. Use both together.
 
-Each guideline file covers one concept. Do not combine unrelated topics in the
-same file.
+Each guideline file covers one concept. Do not combine unrelated topics in the same file.
 
 ## File naming
 
@@ -24,8 +20,7 @@ Use kebab-case. Start the filename with the recommendation prefix:
 - `consider-` for `CONSIDER` guidelines
 - `avoid-` for `AVOID` guidelines
 
-Examples: `do-job-timeouts.md`, `consider-read-only-variables.md`,
-`donot-mix-syntax.md`, `avoid-pipeline-variables.md`
+Examples: `do-job-timeouts.md`, `consider-read-only-variables.md`, `donot-mix-syntax.md`, `avoid-pipeline-variables.md`
 
 ## Recommendation prefix and emoji
 
@@ -72,8 +67,7 @@ Every guideline file must include the following sections in this order:
 
 ## Example section rules
 
-Where there is a natural anti-pattern to show, use the "Instead of" / "Use"
-pair pattern. This is the standard example style across all guidelines:
+Where there is a natural anti-pattern to show, use the "Instead of" / "Use" pair pattern. This is the standard example style across all guidelines:
 
 ```
 Instead of doing X:
@@ -85,16 +79,11 @@ Use Y instead:
 [YAML code block showing the recommended approach]
 ```
 
-When there is no natural anti-pattern (for example, a guideline that simply
-adds a new attribute), show only the recommended YAML block with a brief
-introductory sentence.
+When there is no natural anti-pattern (for example, a guideline that simply adds a new attribute), show only the recommended YAML block with a brief introductory sentence.
 
-When a guideline covers multiple distinct scenarios, use `###` sub-headings
-inside the `## Example` section to separate them. Each sub-heading should name
-the scenario, not repeat the guideline title.
+When a guideline covers multiple distinct scenarios, use `###` sub-headings inside the `## Example` section to separate them. Each sub-heading should name the scenario, not repeat the guideline title.
 
-Use fenced `yaml` code blocks for all examples. Add short inline comments to
-the good example block when they help clarify what the code demonstrates.
+Use fenced `yaml` code blocks for all examples. Add short inline comments to the good example block when they help clarify what the code demonstrates.
 
 ## Related guidelines link format
 
@@ -115,8 +104,7 @@ Example:
 - [DO NOT: Hard-code values in pipelines and templates](/guidelines/general/donot-hard-code-values.md)
 ```
 
-Include 2 to 4 links. Choose guidelines that are directly related to the
-topic, not just loosely connected ones.
+Include 2 to 4 links. Choose guidelines that are directly related to the topic, not just loosely connected ones.
 
 ## Complete structure example
 

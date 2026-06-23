@@ -5,13 +5,9 @@ applyTo: '**/*.md'
 
 # Writing documentation files
 
-This instruction file explains how to write documentation files in Markdown.
-The guidance in this file applies only to Markdown documentation files and not to
-other file types.
+This instruction file explains how to write documentation files in Markdown. The guidance in this file applies only to Markdown documentation files and not to other file types.
 
-The goal is to make documentation easy to read, easy to scan, and easy to
-understand for readers who may not be native English speakers or may not be
-technical experts.
+The goal is to make documentation easy to read, easy to scan, and easy to understand for readers who may not be native English speakers or may not be technical experts.
 
 ## What this file covers
 
@@ -22,8 +18,7 @@ technical experts.
 
 ## Keep it simple and helpful
 
-Use short sentences and short paragraphs.
-Write as if you are helping someone who is new to the topic.
+Use short sentences and short paragraphs. Write as if you are helping someone who is new to the topic.
 
 - Use plain words instead of fancy words.
 - Use active voice: say who does what.
@@ -40,8 +35,7 @@ Write as if you are helping someone who is new to the topic.
 
 ## Start with a clear purpose
 
-Each Markdown file should answer one or two main questions.
-Ask yourself:
+Each Markdown file should answer one or two main questions. Ask yourself:
 
 - Who is this document for?
 - What should the reader do or learn?
@@ -51,8 +45,7 @@ When the purpose is clear, the document is easier to follow.
 
 ## Use structure that helps scanning
 
-Good structure makes documents easier to scan.
-Use headings, lists, and tables instead of long blocks of text.
+Good structure makes documents easier to scan. Use headings, lists, and tables instead of long blocks of text.
 
 ### Recommended structure
 
@@ -103,8 +96,7 @@ Better heading:
 
 ## Reduce cognitive load with clear visuals
 
-Visual elements are helpful when they explain a structure or process.
-Use them when they make the information easier to understand.
+Visual elements are helpful when they explain a structure or process. Use them when they make the information easier to understand.
 
 ### Use tables for comparison
 
@@ -112,13 +104,11 @@ Tables work well for showing differences, options, or rules.
 
 ### Use code blocks for examples
 
-Show concrete examples in Markdown or YAML code blocks.
-Always explain what the example shows.
+Show concrete examples in Markdown or YAML code blocks. Always explain what the example shows.
 
 ### Use diagrams for flow or structure
 
-Use simple diagrams when a process is hard to explain in text.
-Use Mermaid when needed. Use tools and syntax supported by the target Markdown renderer. For Azure DevOps, prefer `graph LR` instead of `flowchart LR`.
+Use simple diagrams when a process is hard to explain in text. Use Mermaid when needed. Use tools and syntax supported by the target Markdown renderer. For Azure DevOps, prefer `graph LR` instead of `flowchart LR`.
 
 ```mermaid
 graph LR
@@ -130,8 +120,7 @@ graph LR
 
 ## Avoid noise and vague language
 
-Remove extra words and any phrase that does not add meaning.
-Avoid words like:
+Remove extra words and any phrase that does not add meaning. Avoid words like:
 
 - basically
 - frankly
@@ -155,14 +144,11 @@ Better:
 
 ## Use examples early
 
-Show at least one example near the top of the document.
-Examples help readers understand quickly.
-If the document is a guideline, include both a bad example and a good example when possible.
+Show at least one example near the top of the document. Examples help readers understand quickly. If the document is a guideline, include both a bad example and a good example when possible.
 
 ## Write for global readers
 
-Many readers are not native English speakers.
-Write in a way that is easy to translate and easy to understand.
+Many readers are not native English speakers. Write in a way that is easy to translate and easy to understand.
 
 - Use standard American spelling.
 - Avoid idioms and slang.
@@ -172,8 +158,7 @@ Write in a way that is easy to translate and easy to understand.
 
 ## Review and revise
 
-Great documentation is usually rewritten.
-After writing, do these checks:
+Great documentation is usually rewritten. After writing, do these checks:
 
 - Does the first sentence explain the main idea?
 - Does each heading describe the section clearly?
@@ -190,6 +175,4 @@ After writing, do these checks:
 
 ## How to use this instruction file
 
-This file is a reference for writing Markdown documentation in this repository.
-When you write a new doc, follow these principles and link to the sources above
-for more detail.
+This file is a reference for writing Markdown documentation in this repository. When you write a new doc, follow these principles and link to the sources above for more detail.

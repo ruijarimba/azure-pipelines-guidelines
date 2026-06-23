@@ -83,7 +83,7 @@ Step templates should include:
 - Any information that might be useful outside of the context of the template, such as output variables or artifacts
 
 Example:
-  
+
 ```yaml
 # Validates and sets the KUBECONFIG variable for the Kubernetes context.
 #

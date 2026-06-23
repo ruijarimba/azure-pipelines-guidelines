@@ -1,7 +1,6 @@
 ﻿# ✅ DO: Use templates everywhere
 
-Create and reference templates instead of defining logic or configuration
-directly in your pipelines or templates.
+Create and reference templates instead of defining logic or configuration directly in your pipelines or templates.
 
 ## Markdown to reference this guideline
 
@@ -11,8 +10,7 @@ directly in your pipelines or templates.
 
 ## Reason
 
-Use templates to hide complex implementation details and reuse logic and
-configuration across pipelines.
+Use templates to hide complex implementation details and reuse logic and configuration across pipelines.
 
 Logic templates:
 

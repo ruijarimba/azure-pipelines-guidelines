@@ -1,8 +1,6 @@
 # ✅ CONSIDER: Align template parameters with the YAML schema
 
-When adding parameters that map to Azure Pipelines YAML fields, use the same name, type, and a
-schema-compatible default value so templates work naturally without requiring every parameter to
-be explicitly set.
+When adding parameters that map to Azure Pipelines YAML fields, use the same name, type, and a schema-compatible default value so templates work naturally without requiring every parameter to be explicitly set.
 
 ## Markdown to reference this guideline
 
@@ -12,24 +10,13 @@ be explicitly set.
 
 ## Reason
 
-Azure Pipelines job, stage, and step fields such as `pool`, `dependsOn`, `strategy`, `workspace`,
-and `variables` accept structured objects in the YAML schema. When template parameters use custom
-names or simpler types — for example, `agentPool` as a `string` instead of `pool` as an `object`
-— callers lose access to the full range of valid values and tooling cannot correlate the parameter
-with the underlying schema field.
+Azure Pipelines job, stage, and step fields such as `pool`, `dependsOn`, `strategy`, `workspace`, and `variables` accept structured objects in the YAML schema. When template parameters use custom names or simpler types — for example, `agentPool` as a `string` instead of `pool` as an `object` — callers lose access to the full range of valid values and tooling cannot correlate the parameter with the underlying schema field.
 
-Using the schema name and type keeps the template interface predictable and makes the mapping
-between parameters and pipeline fields immediately obvious. It also allows any schema-valid value
-to be passed without workarounds such as conditional assignments.
+Using the schema name and type keeps the template interface predictable and makes the mapping between parameters and pipeline fields immediately obvious. It also allows any schema-valid value to be passed without workarounds such as conditional assignments.
 
-Default values should follow the same principle. For optional fields, use the empty schema-compatible
-value — `[]` for list fields such as `dependsOn` and `variables`, `{}` for object fields such as
-`strategy` and `workspace`. This ensures that a caller who omits a parameter gets the same natural
-behavior as if the field were absent from a regular pipeline definition.
+Default values should follow the same principle. For optional fields, use the empty schema-compatible value — `[]` for list fields such as `dependsOn` and `variables`, `{}` for object fields such as `strategy` and `workspace`. This ensures that a caller who omits a parameter gets the same natural behavior as if the field were absent from a regular pipeline definition.
 
-Exceptions are valid when you intentionally want to restrict what callers can set — for example,
-accepting only a pool name string to prevent callers from specifying demands or a VM image. In
-these cases, the default value should match the restricted type rather than the schema default.
+Exceptions are valid when you intentionally want to restrict what callers can set — for example, accepting only a pool name string to prevent callers from specifying demands or a VM image. In these cases, the default value should match the restricted type rather than the schema default.
 
 ## Example
 
@@ -111,8 +98,7 @@ jobs:
 
 ### Exception: restricting a parameter to a subset
 
-When you intentionally want to restrict callers — for example, to accept only a pool name and
-disallow setting demands or a VM image — a `string` type and a descriptive name is valid:
+When you intentionally want to restrict callers — for example, to accept only a pool name and disallow setting demands or a VM image — a `string` type and a descriptive name is valid:
 
 ```yaml
 parameters:

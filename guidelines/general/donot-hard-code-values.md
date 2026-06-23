@@ -18,12 +18,9 @@ Just like in a regular application, hard-coding values in pipelines and template
 
 ## Recommended approach
 
-Separate logic (steps, jobs, stages) from configuration (environment-specific
-values) to make your pipelines cleaner and easier to reuse.
+Separate logic (steps, jobs, stages) from configuration (environment-specific values) to make your pipelines cleaner and easier to reuse.
 
-Use variables templates to define and group values by environment, region,
-functionality or any other criteria that makes sense for your scenario and
-reference them in your pipelines and templates.
+Use variables templates to define and group values by environment, region, functionality or any other criteria that makes sense for your scenario and reference them in your pipelines and templates.
 
 ## Example
 

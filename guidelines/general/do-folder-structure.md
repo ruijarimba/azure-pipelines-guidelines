@@ -44,8 +44,7 @@ if any.
   - `/steps`: Contains steps templates.
   - `/variables`: Contains variables templates.
 
-You can optionally add subfolders to the `/jobs`, `/stages`, `/steps`, and
-`/variables` folders to further organize the templates - for example:
+You can optionally add subfolders to the `/jobs`, `/stages`, `/steps`, and `/variables` folders to further organize the templates - for example:
 
 ```plaintext
 /pipelines
