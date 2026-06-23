@@ -17,9 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - Added [CONSIDER: Use schema-compatible names and types for template parameters](/guidelines/general/consider-schema-compatible-types.md)
-
 - Added [CONSIDER: Use native YAML constructs when possible](/guidelines/general/consider-native-yaml-constructs.md)
-
 - Added [CONSIDER: Explicitly declare checkout in jobs](/guidelines/jobs/consider-explicit-checkout.md)
 
 ## [0.2.0] - 2026-05-31
