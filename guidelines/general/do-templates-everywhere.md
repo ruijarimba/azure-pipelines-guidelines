@@ -97,11 +97,11 @@ stages:
 variables:
 - name: agentPool
   value: 'Default'
-  isReadonly: true
+  readonly: true
 
 - name: azureDevOpsEnvironment
   value: 'my-environment'
-  isReadonly: true
+  readonly: true
 ```
 
 ```yaml
@@ -110,23 +110,23 @@ variables:
 variables:
 - name: dockerVersion
   value: '17.09.0-ce'
-  isReadonly: true
+  readonly: true
 
 - name: containerRegistryServiceConnection
   value: 'my-registry-connection'
-  isReadonly: true
+  readonly: true
 
 - name: dockerImageRepository
   value: 'my-repo/my-image'
-  isReadonly: true
+  readonly: true
 
 - name: dockerfilePath
   value: '$(Build.SourcesDirectory)/app/Dockerfile'
-  isReadonly: true
+  readonly: true
 
 - name: dockerTag
   value: '$(Build.BuildId)'
-  isReadonly: true
+  readonly: true
 ```
 
 ```yaml

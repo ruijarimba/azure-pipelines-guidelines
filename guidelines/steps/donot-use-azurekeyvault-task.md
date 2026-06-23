@@ -16,7 +16,35 @@ See [AVOID: Using pipeline variables in tasks or steps templates](/guidelines/st
 
 ## Recommended approach
 
-Link an Azure Key Vault to a pipeline variable group. Source secrets from variables templates mapping to those groups, and pass them as step template parameters.
+Link an Azure Key Vault to a pipeline variable group, reference that group from a variables template, and pass only the required secrets as explicit step template parameters.
+
+## Example
+
+Use variable-group linkage and pass only the required secret as an explicit parameter:
+
+```yaml
+# /pipelines/variables/app/prod-variables.yml
+
+variables:
+  # 'app-secrets-prod' is a variable group linked to an Azure Key Vault
+  - group: app-secrets-prod
+
+  - name: apiKey
+    value: $(api-key)   # secret sourced from the linked Key Vault
+```
+
+```yaml
+# /pipelines/jobs/deploy-job.yml
+
+jobs:
+  - job: deploy
+    variables:
+      - template: /pipelines/variables/app/prod-variables.yml
+    steps:
+      - template: /pipelines/steps/deploy-steps.yml
+        parameters:
+          apiKey: $(apiKey)   # passed explicitly, not consumed as a global pipeline variable
+```
 
 ## Related guidelines
 

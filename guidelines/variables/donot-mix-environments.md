@@ -1,6 +1,6 @@
 ﻿# ❌ DO NOT: Mix variables from different environments
 
-Do not weave multi-environmental configurations identically within a single variable template.
+Do not define variables for multiple environments inside a single variable template.
 
 ## Markdown to reference this guideline
 

@@ -16,9 +16,9 @@ Pipelines let you define variable scopes:
 - Stage level (localized to stage boundaries).
 - Job level (localized to single job boundaries).
 
-Variables set globally leak state and breed collision conflicts across concurrent jobs.
+Variables set globally are visible everywhere and can collide across concurrently running jobs.
 
-Scope variables locally by defining them at the job level. This clarifies runtime requirements and scales parallelism efficiently across disparate configurations.
+Scope variables locally by defining them at the job level. This makes a job's requirements explicit and lets jobs run in parallel with different configurations without conflict.
 
 Use globally accessible variables only for shared, structural settings such as default pools or environment selectors.
 

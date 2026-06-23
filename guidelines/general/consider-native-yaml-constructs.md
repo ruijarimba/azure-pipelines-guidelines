@@ -24,9 +24,7 @@ Instead of placing long values on a single line:
 trigger: none
 
 variables:
-  HTTP_PROXY: http://proxy.mycompany.com:8080
-  HTTPS_PROXY: http://proxy.mycompany.com:8080
-  NO_PROXY: localhost,127.0.0.1,.mycompany.com
+  enabledModules: 'auth, billing, notifications, search, analytics, reporting, userProfiles, adminPortal'
 ```
 
 Use block scalars to keep the value readable and avoid long inline strings:
@@ -35,12 +33,15 @@ Use block scalars to keep the value readable and avoid long inline strings:
 trigger: none
 
 variables:
-  HTTP_PROXY: http://proxy.mycompany.com:8080
-  HTTPS_PROXY: http://proxy.mycompany.com:8080
-  NO_PROXY: >-
-    localhost,
-    127.0.0.1,
-    .mycompany.com
+  enabledModules: >-
+    auth,
+    billing,
+    notifications,
+    search,
+    analytics,
+    reporting,
+    userProfiles,
+    adminPortal
 ```
 
 ### Conditions

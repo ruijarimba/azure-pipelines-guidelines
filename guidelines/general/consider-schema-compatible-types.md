@@ -75,7 +75,7 @@ parameters:
 
   - name: strategy           # matches schema field name
     type: object             # accepts matrix, parallel, or runOnce strategies
-    default: {}              # schema default: run once (no matrix or parallel strategy)
+    default: {}              # schema default: no matrix or parallel strategy
 
   - name: workspace          # matches schema field name
     type: object             # accepts any valid workspace clean option
