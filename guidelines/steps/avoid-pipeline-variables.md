@@ -59,6 +59,6 @@ Use this option as a first step when refactoring templates to eliminate variable
 
 ## Related guidelines
 
-- [DO: Validate steps parameters](/guidelines/steps/do-validate-parameters.md)
+- [DO: Validate step parameters](/guidelines/steps/do-validate-parameters.md)
 - [DO: Restrict parameter values](/guidelines/parameters/do-restrict-values.md)
 - [CONSIDER: Grouping related parameters](/guidelines/parameters/consider-grouping.md)

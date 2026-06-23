@@ -93,6 +93,7 @@ steps:
 
 - [DO: Document pipelines and templates](/guidelines/general/do-documentation.md)
 - [DO NOT: Hard-code values in pipelines and templates](/guidelines/general/donot-hard-code-values.md)
+- [CONSIDER: Align template parameters with the YAML schema](/guidelines/general/consider-schema-compatible-types.md)
 
 ## Useful sources
 

@@ -47,6 +47,6 @@ Use the environment variable:
 
 ## Related guidelines
 
-- [DO: Validate steps parameters](/guidelines/steps/do-validate-parameters.md)
+- [DO: Validate step parameters](/guidelines/steps/do-validate-parameters.md)
 - [DO NOT: Mix pipelines syntax in script tasks](/guidelines/steps/donot-mix-syntax.md)
 - [AVOID: Using pipeline variables in tasks or steps templates](/guidelines/steps/avoid-pipeline-variables.md)

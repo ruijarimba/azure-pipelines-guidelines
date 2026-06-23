@@ -104,7 +104,7 @@ Example:
 - [DO NOT: Hard-code values in pipelines and templates](/guidelines/general/donot-hard-code-values.md)
 ```
 
-Include 2 to 4 links. Choose guidelines that are directly related to the topic, not just loosely connected ones.
+Include up to 5 links. Choose guidelines that are directly related to the topic, not just loosely connected ones. In some rare cases, a guideline may have no related guidelines; in that case, omit this section.
 
 ## Complete structure example
 

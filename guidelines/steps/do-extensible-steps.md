@@ -92,3 +92,5 @@ steps:
 
 - [DO: Create configurable and extensible jobs](/guidelines/jobs/do-extensible-jobs.md)
 - [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)
+- [CONSIDER: Configuring retries in tasks](/guidelines/steps/consider-retries.md)
+- [CONSIDER: Set task timeouts](/guidelines/steps/consider-timeouts.md)

@@ -100,6 +100,6 @@ This approach has limitations:
 
 ## Related guidelines
 
-- [DO: Validate steps parameters](/guidelines/steps/do-validate-parameters.md)
+- [DO: Validate step parameters](/guidelines/steps/do-validate-parameters.md)
 - [CONSIDER: Setting environment variables at the task level](/guidelines/steps/consider-environment-variables.md)
 - [AVOID: Using pipeline variables in tasks or steps templates](/guidelines/steps/avoid-pipeline-variables.md)

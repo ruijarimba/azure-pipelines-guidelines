@@ -1,11 +1,11 @@
-﻿# ✅ DO: Reduce variables scope
+﻿# ✅ DO: Reduce variable scope
 
 Restrict the scope of variables as much as possible.
 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Reduce variables scope](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-variable-scope.md)
+[DO: Reduce variable scope](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-variable-scope.md)
 ```
 
 ## Reason
