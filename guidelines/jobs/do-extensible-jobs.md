@@ -45,6 +45,8 @@ parameters:
     default: 'Deploy Helm chart'
 
   # Optional, agent pool can be set at the pipeline level
+  # Intentional simplification: keep this as string to restrict callers
+  # to a pool name instead of the full schema `pool` object.
   - name: agentPool
     type: string
     displayName: 'Agent pool'

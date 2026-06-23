@@ -112,7 +112,7 @@ jobs:
         parameters:
           authentication:
             azureClientId: ${{ parameters.azureClientId }}
-            azureClientsecret: ${{ parameters.azureClientSecret }}
+            azureClientSecret: ${{ parameters.azureClientSecret }}
             azureSubscriptionId: ${{ parameters.azureSubscriptionId }}
             azureTenantId: ${{ parameters.azureTenantId }}
           remoteState:
@@ -151,7 +151,7 @@ variables:
   - name: tf_azureClientId
     value: $(terraform-sp-client-id)
   
-  - name: tf_azureClientsecret
+  - name: tf_azureClientSecret
     value: $(terraform-sp-client-secret)
   
   - name: tf_azureSubscriptionId
@@ -194,7 +194,7 @@ jobs:
         parameters:
           authentication:
             azureClientId: ${{ variables.tf_azureClientId }}
-            azureClientsecret: ${{ variables.tf_azureClientSecret }}
+            azureClientSecret: ${{ variables.tf_azureClientSecret }}
             azureSubscriptionId: ${{ variables.tf_azureSubscriptionId }}
             azureTenantId: ${{ variables.tf_azureTenantId }}
           remoteState:

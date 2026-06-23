@@ -45,7 +45,7 @@ variables:
   - name: tf_azureClientId
     value: $(terraform-sp-client-id)
   
-  - name: tf_azureClientsecret
+  - name: tf_azureClientSecret
     value: $(terraform-sp-client-secret)
   
   - name: tf_azureSubscriptionId
