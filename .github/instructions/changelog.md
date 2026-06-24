@@ -43,3 +43,7 @@ Example:
 - Use `### Added`, `### Changed`, `### Deprecated`, `### Removed`, `### Fixed`, `### Security`, and other standard Keep a Changelog headings as needed.
 - Do not use custom section names such as `### Planned`.
 - Do not add release notes outside a release section.
+
+## Grouping guideline entries by category
+
+- When a release includes guideline additions, group them by category under `### Added` using subheadings such as `#### General guidelines`, `#### Jobs guidelines`, `#### Steps guidelines`, and so on.
