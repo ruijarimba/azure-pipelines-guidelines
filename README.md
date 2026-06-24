@@ -4,7 +4,7 @@ A set of coding guidelines to create [Azure YAML pipelines](https://learn.micros
 
 For a complete list of guideline files, see the [guideline index](guidelines/README.md).
 
-Current version: `0.2.0` (see the [CHANGELOG](CHANGELOG.md)).
+Most relevant changes can be found in the [CHANGELOG](CHANGELOG.md).
 
 ## Table of Contents
 
