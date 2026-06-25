@@ -30,7 +30,7 @@ The type of recommendation indicates how strongly it should be followed:
 
 The guidelines can be found in the `/guidelines` folder and are organized into the following categories:
 
-- `/data`: Machine-readable manifest and schema for downstream AI tooling (MCP servers, linters, fixers, LLM/RAG pipelines).
+- `/data`: Machine-readable structured data for downstream tools and processes (e.g., linters, MCP servers, and LLM/RAG pipelines).
 - `/docs`: Documentation for contributors and downstream tool authors.
 - `/guidelines`: Guideline markdown files, organized by category:
   - `/general`: General recommendations that apply to more than one category.
@@ -48,8 +48,8 @@ Originally written for human readers, these guidelines are now intended for both
 Potential usage examples:
 
 - **Learning:** people can use the guidelines to understand good practices for Azure YAML pipelines and templates.
-- **PR review (human):** Quote the human-readable recommendation in a review and cite its stable rule ID (for example, `RULE-001`) when requesting changes.
-- **Linter / CI:** A linter maps rule IDs from the machine index to diagnostics so CI can fail builds on violations (example: run the manifest validator with `node ./.github/scripts/build-manifest.mjs`).
+- **PR review (human):** Quote the human-readable recommendation in a review and cite its stable rule ID (for example, `ADOG-STEPS-001`) when requesting changes.
+- **Linter / CI:** A linter maps rule IDs from the machine index to diagnostics so CI can fail builds on violations (example: run the [manifest validator script](./.github/scripts/build-manifest.mjs)).
 - **Automated fixer:** A fixer looks up a rule ID, applies the transform from the rule metadata, and opens a suggested patch or pull request.
 - **AI / MCP integration:** An AI or MCP server retrieves guidance by rule ID from the index to generate suggestions, explain rationale, or author automated fixes for users.
 

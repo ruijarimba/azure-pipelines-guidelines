@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/schema/guideline-manifest.schema.json",
+  "$id": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/data/guideline-manifest.schema.json",
   "title": "Azure Pipelines Guidelines manifest",
   "description": "Machine-readable index of every guideline. Downstream MCP servers, linters, fixers, and LLM/RAG pipelines consume this file as the structured source of truth. The markdown files under /guidelines remain the human-readable content; this manifest adds stable IDs, severity, scope, tags, detection hints, and fix guidance.",
   "type": "object",

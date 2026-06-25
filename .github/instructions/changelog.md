@@ -23,7 +23,7 @@ When adding a new guideline file, use a concise entry that includes only the gui
 
 Example:
 
-- Added [CONSIDER: Explicitly declare checkout in jobs](/guidelines/jobs/consider-explicit-checkout.md)
+- [CONSIDER: Explicitly declare checkout in jobs](/guidelines/jobs/consider-explicit-checkout.md)
 
 ## Entry format for updated guideline files
 

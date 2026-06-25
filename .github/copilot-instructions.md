@@ -16,7 +16,7 @@ This root instruction file is the active entry point for Copilot and agent behav
 
 ## Machine-readable data
 
-This repository is the structured source for downstream AI tooling (MCP linter or fixer, LLM and RAG pipelines), which live in separate repositories.
+This repository is the structured source for downstream tools and processes (e.g., linters, MCP servers, and LLM/RAG pipelines), which live in separate repositories.
 
 - `data/guidelines.json` — the manifest: one structured entry per guideline, with stable IDs.
 - `data/guidelines.jsonl` — line-delimited export for RAG and fine-tuning.
