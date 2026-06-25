@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Add a `CONSIDER:` guideline for using output variables for explicit cross-job or cross-stage data flow. Recommend `isOutput=true` and named producing steps so downstream jobs and stages consume computed values through declared dependencies instead of hidden global state.
 
+## [1.0.0] - 2026-06-25
+
+### Added
+
+- Add a machine-readable manifest (`data/guidelines.json`) with stable `AZP-<CATEGORY>-<NNN>` IDs, severity, scope, tags, detection hints, and fix guidance for every guideline, plus a JSON Schema (`data/guideline-manifest.schema.json`), a line-delimited export (`data/guidelines.jsonl`), a zero-dependency generator (`.github/scripts/build-manifest.mjs`), and the [AI integration guide](/docs/ai-integration.md). The guideline index in `guidelines/README.md` is now generated from the manifest.
+
 ## [0.3.0] - 2026-06-25
 
 ### Added

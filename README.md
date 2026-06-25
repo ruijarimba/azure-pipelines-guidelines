@@ -30,13 +30,16 @@ The type of recommendation indicates how strongly it should be followed:
 
 The guidelines can be found in the `/guidelines` folder and are organized into the following categories:
 
-- `/general`: General recommendations that apply to more than one category.
-- `/jobs`: Jobs-related recommendations.
-- `/parameters`: Parameters-related recommendations.
-- `/pipelines`: Pipelines-related recommendations.
-- `/stages`: Stages-related recommendations.
-- `/steps`: Steps-related recommendations.
-- `/variables`: Variables-related recommendations.
+- `/data`: Machine-readable manifest and schema for downstream AI tooling (MCP servers, linters, fixers, LLM/RAG pipelines).
+- `/docs`: Documentation for contributors and downstream tool authors.
+- `/guidelines`: Guideline markdown files, organized by category:
+  - `/general`: General recommendations that apply to more than one category.
+  - `/jobs`: Jobs-related recommendations.
+  - `/parameters`: Parameters-related recommendations.
+  - `/pipelines`: Pipelines-related recommendations.
+  - `/stages`: Stages-related recommendations.
+  - `/steps`: Steps-related recommendations.
+  - `/variables`: Variables-related recommendations.
 
 ## Using the guidelines
 

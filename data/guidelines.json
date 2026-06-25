@@ -1,0 +1,1543 @@
+{
+  "$schema": "./guideline-manifest.schema.json",
+  "schemaVersion": "1.0.0",
+  "generatedBy": ".github/scripts/build-manifest.mjs sync",
+  "guidelines": [
+    {
+      "id": "AZP-GENERAL-001",
+      "category": "general",
+      "severity": "consider",
+      "title": "CONSIDER: Use absolute paths to reference templates",
+      "summary": "Use absolute paths to reference stages, jobs, steps and variables templates.",
+      "path": "/guidelines/general/consider-absolute-paths.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/consider-absolute-paths.md",
+      "appliesTo": [
+        "template",
+        "general"
+      ],
+      "tags": [
+        "templating",
+        "maintainability",
+        "structure"
+      ],
+      "related": [
+        "/guidelines/general/do-folder-structure.md",
+        "/guidelines/general/do-templates-everywhere.md"
+      ],
+      "detection": [
+        {
+          "kind": "regex",
+          "pattern": "template:\\s*(?!/)[^@\\n]+\\.ya?ml",
+          "appliesTo": [
+            "template"
+          ],
+          "message": "Template referenced with a relative path. Use an absolute, repo-rooted path starting with \"/\"."
+        }
+      ],
+      "fix": {
+        "summary": "Reference templates with absolute paths rooted at the repository.",
+        "autofixable": false,
+        "steps": [
+          "Replace relative template paths (./ or ../) with an absolute path starting at \"/\".",
+          "Keep paths stable when files move between folders."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-GENERAL-002",
+      "category": "general",
+      "severity": "consider",
+      "title": "CONSIDER: Use native YAML constructs when possible",
+      "summary": "Prefer YAML‑native constructs to express values, logic, and scripts in a clear, consistent, and platform‑agnostic way.",
+      "path": "/guidelines/general/consider-native-yaml-constructs.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/consider-native-yaml-constructs.md",
+      "appliesTo": [
+        "general",
+        "template"
+      ],
+      "tags": [
+        "readability",
+        "maintainability",
+        "yaml"
+      ],
+      "related": [
+        "/guidelines/general/do-documentation.md",
+        "/guidelines/general/donot-hard-code-values.md",
+        "/guidelines/general/consider-schema-compatible-types.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Inline JSON-style YAML, string-encoded lists/maps, or scripts replacing native YAML constructs.",
+          "appliesTo": [
+            "general",
+            "template"
+          ],
+          "message": "Prefer native YAML constructs (lists, maps, multiline blocks) over string-encoded or scripted equivalents."
+        }
+      ],
+      "fix": {
+        "summary": "Rewrite values, logic, and scripts using native YAML constructs.",
+        "autofixable": false,
+        "steps": [
+          "Replace inline JSON-style YAML with native YAML lists and maps.",
+          "Use multiline block scalars for scripts instead of single-line strings."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-GENERAL-003",
+      "category": "general",
+      "severity": "consider",
+      "title": "CONSIDER: Align template parameters with the YAML schema",
+      "summary": "When adding parameters that map to Azure Pipelines YAML fields, use the same name, type, and a schema-compatible default value so templates work naturally without requiring every parameter to be explicitly set.",
+      "path": "/guidelines/general/consider-schema-compatible-types.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/consider-schema-compatible-types.md",
+      "appliesTo": [
+        "parameters",
+        "template"
+      ],
+      "tags": [
+        "parameters",
+        "templating",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/jobs/do-extensible-jobs.md",
+        "/guidelines/steps/do-extensible-steps.md",
+        "/guidelines/general/consider-native-yaml-constructs.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Template parameters that mirror Azure Pipelines fields but use different names/types or incompatible defaults.",
+          "appliesTo": [
+            "parameters",
+            "template"
+          ],
+          "message": "Align parameter name, type, and default with the matching Azure Pipelines YAML schema field."
+        }
+      ],
+      "fix": {
+        "summary": "Match parameter name, type, and default to the underlying YAML schema field.",
+        "autofixable": false,
+        "steps": [
+          "Rename parameters to match the schema field they map to.",
+          "Use a schema-compatible type and default value."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-GENERAL-004",
+      "category": "general",
+      "severity": "do",
+      "title": "DO: Document pipelines and templates",
+      "summary": "Document pipelines and templates. Add comments to the top of pipeline and template files. Describe the purpose, usage, and other relevant information clearly for both people and tools.",
+      "path": "/guidelines/general/do-documentation.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-documentation.md",
+      "appliesTo": [
+        "general",
+        "template",
+        "pipeline"
+      ],
+      "tags": [
+        "documentation",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/general/do-templates-everywhere.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Pipeline or template file with no header comment describing purpose and usage.",
+          "appliesTo": [
+            "pipeline",
+            "template"
+          ],
+          "message": "Add a header comment describing the purpose, usage, and parameters of this pipeline or template."
+        }
+      ],
+      "fix": {
+        "summary": "Add a descriptive header comment to pipeline and template files.",
+        "autofixable": false,
+        "steps": [
+          "Add a comment block at the top describing purpose, usage, and parameters."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-GENERAL-005",
+      "category": "general",
+      "severity": "do",
+      "title": "DO: Use a consistent folder structure",
+      "summary": "Organize pipelines and templates logically and consistently across different projects and repositories.",
+      "path": "/guidelines/general/do-folder-structure.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-folder-structure.md",
+      "appliesTo": [
+        "general"
+      ],
+      "tags": [
+        "structure",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/general/do-templates-everywhere.md",
+        "/guidelines/variables/do-separate-configuration.md",
+        "/guidelines/general/consider-absolute-paths.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Templates scattered without a consistent /pipelines folder structure.",
+          "appliesTo": [
+            "general"
+          ],
+          "message": "Organize pipelines and templates using a consistent folder structure."
+        }
+      ],
+      "fix": {
+        "summary": "Adopt a consistent, predictable folder structure for pipelines and templates.",
+        "autofixable": false,
+        "steps": [
+          "Group templates by type (stages, jobs, steps, variables) under a shared root."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-GENERAL-006",
+      "category": "general",
+      "severity": "do",
+      "title": "DO: Use templates everywhere",
+      "summary": "Create and reference templates instead of defining logic or configuration directly in your pipelines or templates.",
+      "path": "/guidelines/general/do-templates-everywhere.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-templates-everywhere.md",
+      "appliesTo": [
+        "pipeline",
+        "template",
+        "general"
+      ],
+      "tags": [
+        "templating",
+        "reusability",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/general/do-documentation.md",
+        "/guidelines/variables/do-separate-configuration.md",
+        "/guidelines/general/donot-hard-code-values.md",
+        "/guidelines/general/consider-absolute-paths.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Stages, jobs, or steps defined inline in a pipeline instead of referencing templates.",
+          "appliesTo": [
+            "pipeline"
+          ],
+          "message": "Move repeated logic and configuration into templates and reference them."
+        }
+      ],
+      "fix": {
+        "summary": "Extract inline logic into templates and reference them.",
+        "autofixable": false,
+        "steps": [
+          "Identify repeated inline logic.",
+          "Extract it into a stages/jobs/steps template.",
+          "Reference the template from the pipeline."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-GENERAL-007",
+      "category": "general",
+      "severity": "do-not",
+      "title": "DO NOT: Hard-code values in pipelines and templates",
+      "summary": "Do not hard-code values in Azure DevOps pipelines and templates.",
+      "path": "/guidelines/general/donot-hard-code-values.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/donot-hard-code-values.md",
+      "appliesTo": [
+        "pipeline",
+        "template",
+        "general"
+      ],
+      "tags": [
+        "configuration",
+        "maintainability",
+        "hard-coding"
+      ],
+      "related": [
+        "/guidelines/variables/do-separate-configuration.md",
+        "/guidelines/general/do-templates-everywhere.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Literal environment names, regions, URLs, resource names, or versions embedded directly in pipeline/template bodies.",
+          "appliesTo": [
+            "pipeline",
+            "template"
+          ],
+          "message": "Replace hard-coded values with parameters or variables."
+        }
+      ],
+      "fix": {
+        "summary": "Move hard-coded values into parameters or variable templates.",
+        "autofixable": false,
+        "steps": [
+          "Replace literals with parameters or variables.",
+          "Source environment-specific values from variable templates."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-JOBS-001",
+      "category": "jobs",
+      "severity": "consider",
+      "title": "CONSIDER: Explicitly declare checkout in jobs",
+      "summary": "Explicitly set `checkout` in every job to make source code checkout behavior clear and stable.",
+      "path": "/guidelines/jobs/consider-explicit-checkout.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-explicit-checkout.md",
+      "appliesTo": [
+        "job"
+      ],
+      "tags": [
+        "readability",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/general/do-documentation.md",
+        "/guidelines/jobs/do-extensible-jobs.md",
+        "/guidelines/jobs/do-single-responsibility.md"
+      ],
+      "detection": [
+        {
+          "kind": "yaml-path",
+          "pattern": "jobs[].steps where no checkout step is present",
+          "appliesTo": [
+            "job"
+          ],
+          "message": "Declare checkout explicitly (checkout: self or checkout: none) to make source checkout behavior clear."
+        }
+      ],
+      "fix": {
+        "summary": "Add an explicit checkout step to every job.",
+        "autofixable": false,
+        "steps": [
+          "Add \"checkout: self\" or \"checkout: none\" as the first step of the job."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-JOBS-002",
+      "category": "jobs",
+      "severity": "consider",
+      "title": "CONSIDER: Grouping job tasks into a single template",
+      "summary": "Group job tasks into a single steps template, rather than using multiple steps templates in a job.",
+      "path": "/guidelines/jobs/consider-grouping-tasks.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-grouping-tasks.md",
+      "appliesTo": [
+        "job",
+        "template"
+      ],
+      "tags": [
+        "templating",
+        "maintainability",
+        "reusability"
+      ],
+      "related": [
+        "/guidelines/general/do-templates-everywhere.md",
+        "/guidelines/steps/do-extensible-steps.md",
+        "/guidelines/jobs/do-single-responsibility.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "A single job referencing multiple separate steps templates that always run together.",
+          "appliesTo": [
+            "job"
+          ],
+          "message": "Group tasks that always run together into a single steps template."
+        }
+      ],
+      "fix": {
+        "summary": "Consolidate related steps templates into one.",
+        "autofixable": false,
+        "steps": [
+          "Combine the steps templates used together into a single template and reference it once."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-JOBS-003",
+      "category": "jobs",
+      "severity": "consider",
+      "title": "CONSIDER: Declaring variables at the job level",
+      "summary": "Declare variables at the job level instead of the stage or root level.",
+      "path": "/guidelines/jobs/consider-job-variables.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-job-variables.md",
+      "appliesTo": [
+        "job",
+        "variables"
+      ],
+      "tags": [
+        "variables",
+        "scoping",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/variables/do-variable-scope.md",
+        "/guidelines/steps/avoid-pipeline-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Variables used by a single job declared at stage or root level.",
+          "appliesTo": [
+            "variables",
+            "job"
+          ],
+          "message": "Declare job-specific variables at the job level to reduce scope."
+        }
+      ],
+      "fix": {
+        "summary": "Move single-job variables down to the job scope.",
+        "autofixable": false,
+        "steps": [
+          "Move variables only used by one job into that job's variables block."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-JOBS-004",
+      "category": "jobs",
+      "severity": "consider",
+      "title": "CONSIDER: Adding a validation flag to your job",
+      "summary": "Add a `boolean` parameter to your job to run it in _validation mode_, without deploying or executing any changes.",
+      "path": "/guidelines/jobs/consider-validation-flag.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-validation-flag.md",
+      "appliesTo": [
+        "job",
+        "parameters"
+      ],
+      "tags": [
+        "validation",
+        "parameters",
+        "reusability"
+      ],
+      "related": [
+        "/guidelines/jobs/do-extensible-jobs.md",
+        "/guidelines/steps/do-extensible-steps.md",
+        "/guidelines/pipelines/consider-validation.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Deployment/change job template without a boolean validation/what-if flag.",
+          "appliesTo": [
+            "job",
+            "parameters"
+          ],
+          "message": "Add a boolean parameter to run the job in validation mode without applying changes."
+        }
+      ],
+      "fix": {
+        "summary": "Add a boolean validation-mode parameter to the job.",
+        "autofixable": false,
+        "steps": [
+          "Add a boolean parameter (e.g. validateOnly).",
+          "Guard change-applying steps with a condition on that parameter."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-JOBS-005",
+      "category": "jobs",
+      "severity": "do",
+      "title": "DO: Create configurable and extensible jobs",
+      "summary": "When creating job templates for reuse by different teams, stages, or pipelines, add parameters such as:",
+      "path": "/guidelines/jobs/do-extensible-jobs.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-extensible-jobs.md",
+      "appliesTo": [
+        "job",
+        "template",
+        "parameters"
+      ],
+      "tags": [
+        "templating",
+        "reusability",
+        "parameters"
+      ],
+      "related": [
+        "/guidelines/general/do-documentation.md",
+        "/guidelines/steps/do-extensible-steps.md",
+        "/guidelines/general/do-templates-everywhere.md",
+        "/guidelines/jobs/consider-validation-flag.md",
+        "/guidelines/general/consider-schema-compatible-types.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Reusable job template that hard-codes pool, container, dependsOn, or condition instead of exposing parameters.",
+          "appliesTo": [
+            "job",
+            "template"
+          ],
+          "message": "Expose control settings (pool, dependsOn, condition, etc.) as parameters in reusable job templates."
+        }
+      ],
+      "fix": {
+        "summary": "Parameterize control settings in reusable job templates.",
+        "autofixable": false,
+        "steps": [
+          "Add parameters for pool, dependsOn, condition, and other reuse-relevant settings."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-JOBS-006",
+      "category": "jobs",
+      "severity": "do",
+      "title": "DO: Set job timeouts",
+      "summary": "Set job timeouts or add parameters to shared job templates to let users configure them.",
+      "path": "/guidelines/jobs/do-job-timeouts.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-job-timeouts.md",
+      "appliesTo": [
+        "job"
+      ],
+      "tags": [
+        "resilience",
+        "reliability"
+      ],
+      "related": [
+        "/guidelines/jobs/do-extensible-jobs.md",
+        "/guidelines/steps/consider-timeouts.md"
+      ],
+      "detection": [
+        {
+          "kind": "yaml-path",
+          "pattern": "jobs[] missing timeoutInMinutes",
+          "appliesTo": [
+            "job"
+          ],
+          "message": "Set timeoutInMinutes on the job, or expose it as a parameter in shared templates."
+        }
+      ],
+      "fix": {
+        "summary": "Set a job timeout or expose it as a parameter.",
+        "autofixable": true,
+        "steps": [
+          "Add timeoutInMinutes to the job.",
+          "In shared templates, add a timeout parameter with a sensible default."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-JOBS-007",
+      "category": "jobs",
+      "severity": "do",
+      "title": "DO: Minimize the number of parameters in job templates",
+      "summary": "When defining job templates in Azure DevOps pipelines, keep the number of **environment-related** parameters as short as possible.",
+      "path": "/guidelines/jobs/do-parameters-short.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-parameters-short.md",
+      "appliesTo": [
+        "job",
+        "template",
+        "parameters"
+      ],
+      "tags": [
+        "parameters",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/variables/do-variable-scope.md",
+        "/guidelines/parameters/consider-grouping.md",
+        "/guidelines/jobs/consider-job-variables.md",
+        "/guidelines/steps/avoid-pipeline-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Job template with many environment-related parameters that could come from variable templates.",
+          "appliesTo": [
+            "job",
+            "parameters"
+          ],
+          "message": "Minimize environment-related parameters; source environment values from variable templates instead."
+        }
+      ],
+      "fix": {
+        "summary": "Reduce environment-related parameters by sourcing values from variable templates.",
+        "autofixable": false,
+        "steps": [
+          "Move environment-specific parameters into variable templates referenced by the job."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-JOBS-008",
+      "category": "jobs",
+      "severity": "do",
+      "title": "DO: Ensure jobs have a single responsibility",
+      "summary": "Focus each job on a single, well-defined responsibility.",
+      "path": "/guidelines/jobs/do-single-responsibility.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-single-responsibility.md",
+      "appliesTo": [
+        "job"
+      ],
+      "tags": [
+        "maintainability",
+        "structure"
+      ],
+      "related": [
+        "/guidelines/general/do-templates-everywhere.md",
+        "/guidelines/jobs/consider-validation-flag.md",
+        "/guidelines/stages/consider-grouping-jobs.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "A job performing multiple unrelated responsibilities (e.g. build + deploy + test).",
+          "appliesTo": [
+            "job"
+          ],
+          "message": "Split jobs so each has a single, well-defined responsibility."
+        }
+      ],
+      "fix": {
+        "summary": "Split multi-purpose jobs into single-responsibility jobs.",
+        "autofixable": false,
+        "steps": [
+          "Separate unrelated responsibilities into distinct jobs."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-PARAMETERS-001",
+      "category": "parameters",
+      "severity": "consider",
+      "title": "CONSIDER: Grouping related parameters",
+      "summary": "Group related parameters, such as username and password.",
+      "path": "/guidelines/parameters/consider-grouping.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/parameters/consider-grouping.md",
+      "appliesTo": [
+        "parameters"
+      ],
+      "tags": [
+        "parameters",
+        "readability",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/general/do-documentation.md",
+        "/guidelines/jobs/do-parameters-short.md",
+        "/guidelines/general/consider-schema-compatible-types.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Related parameters (e.g. username and password) declared separately without grouping.",
+          "appliesTo": [
+            "parameters"
+          ],
+          "message": "Group related parameters together (e.g. into an object parameter)."
+        }
+      ],
+      "fix": {
+        "summary": "Group related parameters, for example using an object parameter.",
+        "autofixable": false,
+        "steps": [
+          "Combine related scalar parameters into a single object parameter."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-PARAMETERS-002",
+      "category": "parameters",
+      "severity": "do",
+      "title": "DO: Restrict parameter values",
+      "summary": "Restrict the values of parameters when they have a well-defined set.",
+      "path": "/guidelines/parameters/do-restrict-values.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/parameters/do-restrict-values.md",
+      "appliesTo": [
+        "parameters"
+      ],
+      "tags": [
+        "parameters",
+        "validation"
+      ],
+      "related": [
+        "/guidelines/steps/do-validate-parameters.md",
+        "/guidelines/parameters/consider-grouping.md"
+      ],
+      "detection": [
+        {
+          "kind": "yaml-path",
+          "pattern": "parameters[] with a finite value set but no \"values:\" list",
+          "appliesTo": [
+            "parameters"
+          ],
+          "message": "Restrict parameter values with a \"values:\" list when the set is well-defined."
+        }
+      ],
+      "fix": {
+        "summary": "Add a values list to constrain parameters with a known set.",
+        "autofixable": false,
+        "steps": [
+          "Add a \"values:\" allow-list to the parameter definition."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-PIPELINES-001",
+      "category": "pipelines",
+      "severity": "consider",
+      "title": "CONSIDER: Running pipelines in validation mode",
+      "summary": "Add a parameter or condition to run the pipeline in _validation mode_, skipping deployment or changes.",
+      "path": "/guidelines/pipelines/consider-validation.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/pipelines/consider-validation.md",
+      "appliesTo": [
+        "pipeline",
+        "parameters"
+      ],
+      "tags": [
+        "validation",
+        "reusability"
+      ],
+      "related": [
+        "/guidelines/jobs/do-extensible-jobs.md",
+        "/guidelines/jobs/consider-validation-flag.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Pipeline that applies changes with no way to run in validation/what-if mode.",
+          "appliesTo": [
+            "pipeline"
+          ],
+          "message": "Add a parameter or condition to run the pipeline in validation mode."
+        }
+      ],
+      "fix": {
+        "summary": "Add a validation-mode parameter or condition to the pipeline.",
+        "autofixable": false,
+        "steps": [
+          "Add a validation parameter.",
+          "Skip deployment/change steps when validation mode is on."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STAGES-001",
+      "category": "stages",
+      "severity": "consider",
+      "title": "CONSIDER: Grouping related jobs into stages",
+      "summary": "Organize related jobs into stages to:",
+      "path": "/guidelines/stages/consider-grouping-jobs.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/stages/consider-grouping-jobs.md",
+      "appliesTo": [
+        "stage",
+        "job"
+      ],
+      "tags": [
+        "structure",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/stages/do-parallel-stages.md",
+        "/guidelines/jobs/do-single-responsibility.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Many related jobs at pipeline root with no stage grouping.",
+          "appliesTo": [
+            "stage",
+            "job"
+          ],
+          "message": "Group related jobs into stages for clearer structure and control."
+        }
+      ],
+      "fix": {
+        "summary": "Organize related jobs into stages.",
+        "autofixable": false,
+        "steps": [
+          "Wrap related jobs in a stage with a meaningful name."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STAGES-002",
+      "category": "stages",
+      "severity": "do",
+      "title": "DO: Run stages in parallel when possible",
+      "summary": "Run independent stages in parallel.",
+      "path": "/guidelines/stages/do-parallel-stages.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/stages/do-parallel-stages.md",
+      "appliesTo": [
+        "stage"
+      ],
+      "tags": [
+        "performance",
+        "structure"
+      ],
+      "related": [
+        "/guidelines/stages/consider-grouping-jobs.md",
+        "/guidelines/jobs/do-single-responsibility.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Independent stages chained with unnecessary dependsOn, forcing serial execution.",
+          "appliesTo": [
+            "stage"
+          ],
+          "message": "Remove unnecessary dependsOn so independent stages run in parallel."
+        }
+      ],
+      "fix": {
+        "summary": "Let independent stages run in parallel by removing needless dependsOn.",
+        "autofixable": false,
+        "steps": [
+          "Remove dependsOn between stages that have no real dependency."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STEPS-001",
+      "category": "steps",
+      "severity": "avoid",
+      "title": "AVOID: Using pipeline variables in tasks or steps templates",
+      "summary": "Avoid pipeline variables in steps templates. Use parameters instead.",
+      "path": "/guidelines/steps/avoid-pipeline-variables.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/avoid-pipeline-variables.md",
+      "appliesTo": [
+        "step",
+        "task",
+        "template"
+      ],
+      "tags": [
+        "variables",
+        "parameters",
+        "maintainability",
+        "coupling"
+      ],
+      "related": [
+        "/guidelines/steps/do-validate-parameters.md",
+        "/guidelines/parameters/do-restrict-values.md",
+        "/guidelines/parameters/consider-grouping.md"
+      ],
+      "detection": [
+        {
+          "kind": "regex",
+          "pattern": "\\$\\([A-Za-z0-9_.]+\\)",
+          "appliesTo": [
+            "step",
+            "template"
+          ],
+          "message": "Steps template reads a pipeline variable with $(...). Pass values as parameters instead."
+        }
+      ],
+      "fix": {
+        "summary": "Replace pipeline variable reads in steps templates with template parameters.",
+        "autofixable": false,
+        "steps": [
+          "Add a parameter for each consumed value.",
+          "Replace $(var) references with ${{ parameters.x }}.",
+          "Pass values from the caller."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STEPS-002",
+      "category": "steps",
+      "severity": "consider",
+      "title": "CONSIDER: Setting environment variables at the task level",
+      "summary": "Set environment variables at the task level.",
+      "path": "/guidelines/steps/consider-environment-variables.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-environment-variables.md",
+      "appliesTo": [
+        "step",
+        "task"
+      ],
+      "tags": [
+        "variables",
+        "scoping",
+        "security"
+      ],
+      "related": [
+        "/guidelines/steps/do-validate-parameters.md",
+        "/guidelines/steps/donot-mix-syntax.md",
+        "/guidelines/steps/avoid-pipeline-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Values a task needs set as pipeline-wide variables instead of in the task env block.",
+          "appliesTo": [
+            "step",
+            "task"
+          ],
+          "message": "Set environment variables at the task level via the env: block."
+        }
+      ],
+      "fix": {
+        "summary": "Scope environment variables to the task using its env block.",
+        "autofixable": false,
+        "steps": [
+          "Move values into the task-level env: block."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STEPS-003",
+      "category": "steps",
+      "severity": "consider",
+      "title": "CONSIDER: Logging diagnostic details",
+      "summary": "Log enough diagnostic details required to troubleshoot issues and failures.",
+      "path": "/guidelines/steps/consider-logging-diagnostic-details.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-logging-diagnostics.md",
+      "appliesTo": [
+        "step",
+        "task"
+      ],
+      "tags": [
+        "observability",
+        "troubleshooting"
+      ],
+      "related": [
+        "/guidelines/general/do-documentation.md",
+        "/guidelines/steps/do-extensible-steps.md",
+        "/guidelines/steps/do-validate-parameters.md",
+        "/guidelines/steps/consider-environment-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Scripts/tasks that fail without logging enough diagnostic context.",
+          "appliesTo": [
+            "step",
+            "task"
+          ],
+          "message": "Log enough diagnostic detail to troubleshoot failures."
+        }
+      ],
+      "fix": {
+        "summary": "Add diagnostic logging to steps to aid troubleshooting.",
+        "autofixable": false,
+        "steps": [
+          "Log key inputs, versions, and state needed to diagnose failures."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STEPS-004",
+      "category": "steps",
+      "severity": "consider",
+      "title": "CONSIDER: Logging diagnostic details",
+      "summary": "Log enough diagnostic details required to troubleshoot issues and failures.",
+      "path": "/guidelines/steps/consider-logging-diagnostics.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-logging-diagnostics.md",
+      "appliesTo": [
+        "step",
+        "task"
+      ],
+      "tags": [
+        "observability",
+        "troubleshooting"
+      ],
+      "related": [
+        "/guidelines/general/do-documentation.md",
+        "/guidelines/steps/do-extensible-steps.md",
+        "/guidelines/steps/do-validate-parameters.md",
+        "/guidelines/steps/consider-environment-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Scripts/tasks that fail without logging enough diagnostic context.",
+          "appliesTo": [
+            "step",
+            "task"
+          ],
+          "message": "Log enough diagnostic detail to troubleshoot failures."
+        }
+      ],
+      "fix": {
+        "summary": "Add diagnostic logging to steps to aid troubleshooting.",
+        "autofixable": false,
+        "steps": [
+          "Log key inputs, versions, and state needed to diagnose failures."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STEPS-005",
+      "category": "steps",
+      "severity": "consider",
+      "title": "CONSIDER: Configuring retries in tasks",
+      "summary": "Configure the number of retries if a task faces transient failures.",
+      "path": "/guidelines/steps/consider-retries.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-retries.md",
+      "appliesTo": [
+        "step",
+        "task"
+      ],
+      "tags": [
+        "resilience",
+        "reliability"
+      ],
+      "related": [
+        "/guidelines/steps/do-extensible-steps.md",
+        "/guidelines/steps/consider-timeouts.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Installer or package-manager tasks (NuGet, npm, downloads) without retryCountOnTaskFailure.",
+          "appliesTo": [
+            "task"
+          ],
+          "message": "Configure retryCountOnTaskFailure for tasks prone to transient failures."
+        }
+      ],
+      "fix": {
+        "summary": "Add retryCountOnTaskFailure to transient-failure-prone tasks.",
+        "autofixable": true,
+        "steps": [
+          "Add retryCountOnTaskFailure to installer/network tasks.",
+          "Do not retry build, test, or deployment tasks."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STEPS-006",
+      "category": "steps",
+      "severity": "consider",
+      "title": "CONSIDER: Set task timeouts",
+      "summary": "Set timeouts for tasks to avoid stalling pipeline runs. Provide reasonable values based on the expected execution time.",
+      "path": "/guidelines/steps/consider-timeouts.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-timeouts.md",
+      "appliesTo": [
+        "step",
+        "task"
+      ],
+      "tags": [
+        "resilience",
+        "reliability"
+      ],
+      "related": [
+        "/guidelines/steps/do-extensible-steps.md",
+        "/guidelines/jobs/do-job-timeouts.md"
+      ],
+      "detection": [
+        {
+          "kind": "yaml-path",
+          "pattern": "steps[].task missing timeoutInMinutes",
+          "appliesTo": [
+            "task"
+          ],
+          "message": "Set timeoutInMinutes on tasks to avoid stalling pipeline runs."
+        }
+      ],
+      "fix": {
+        "summary": "Set a reasonable timeout on long-running tasks.",
+        "autofixable": true,
+        "steps": [
+          "Add timeoutInMinutes based on expected execution time."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STEPS-007",
+      "category": "steps",
+      "severity": "do",
+      "title": "DO: Create configurable and extensible steps",
+      "summary": "When building reusable templates, add these control parameters:",
+      "path": "/guidelines/steps/do-extensible-steps.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-extensible-steps.md",
+      "appliesTo": [
+        "step",
+        "template",
+        "parameters"
+      ],
+      "tags": [
+        "templating",
+        "reusability",
+        "parameters"
+      ],
+      "related": [
+        "/guidelines/jobs/do-extensible-jobs.md",
+        "/guidelines/general/do-templates-everywhere.md",
+        "/guidelines/steps/consider-retries.md",
+        "/guidelines/steps/consider-timeouts.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Reusable steps template without control parameters (condition, enabled, name overrides).",
+          "appliesTo": [
+            "step",
+            "template"
+          ],
+          "message": "Add control parameters to make steps templates configurable."
+        }
+      ],
+      "fix": {
+        "summary": "Add control parameters to reusable steps templates.",
+        "autofixable": false,
+        "steps": [
+          "Expose condition, enable/disable, and naming as parameters."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STEPS-008",
+      "category": "steps",
+      "severity": "do",
+      "title": "DO: Use service connections when possible",
+      "summary": "Use Service Connections to authenticate with external services (Azure, GitHub, Docker, Kubernetes, etc.).",
+      "path": "/guidelines/steps/do-use-service-connections.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-use-service-connections.md",
+      "appliesTo": [
+        "step",
+        "task"
+      ],
+      "tags": [
+        "security",
+        "authentication",
+        "secrets"
+      ],
+      "related": [
+        "/guidelines/steps/do-validate-parameters.md",
+        "/guidelines/steps/avoid-pipeline-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Tasks authenticating with inline credentials/keys instead of a service connection.",
+          "appliesTo": [
+            "step",
+            "task"
+          ],
+          "message": "Authenticate to external services with a service connection, not inline credentials."
+        }
+      ],
+      "fix": {
+        "summary": "Replace inline credentials with a service connection.",
+        "autofixable": false,
+        "steps": [
+          "Create a service connection for the external service.",
+          "Reference it from the task instead of passing credentials."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STEPS-009",
+      "category": "steps",
+      "severity": "do",
+      "title": "DO: Validate step parameters",
+      "summary": "Validate step parameters in templates. Fail the pipeline if a parameter is invalid.",
+      "path": "/guidelines/steps/do-validate-parameters.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-validate-parameters.md",
+      "appliesTo": [
+        "step",
+        "template",
+        "parameters"
+      ],
+      "tags": [
+        "validation",
+        "parameters",
+        "reliability"
+      ],
+      "related": [
+        "/guidelines/parameters/do-restrict-values.md",
+        "/guidelines/parameters/consider-grouping.md",
+        "/guidelines/steps/avoid-pipeline-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Steps template using parameters without validating them or failing fast on invalid input.",
+          "appliesTo": [
+            "step",
+            "template"
+          ],
+          "message": "Validate step parameters and fail the pipeline on invalid input."
+        }
+      ],
+      "fix": {
+        "summary": "Validate parameters in steps templates and fail fast.",
+        "autofixable": false,
+        "steps": [
+          "Add validation logic that fails the pipeline when a parameter is invalid."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STEPS-010",
+      "category": "steps",
+      "severity": "do-not",
+      "title": "DO NOT: Mix pipelines syntax in script tasks",
+      "summary": "Do not embed pipeline expressions (`$(...)` or `${{ ... }}`) throughout the body of a script task. Bind them at the boundary instead — either in the task-level `env:` block or as variable assignments at the very top of the script.",
+      "path": "/guidelines/steps/donot-mix-syntax.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/donot-mix-syntax.md",
+      "appliesTo": [
+        "step",
+        "task"
+      ],
+      "tags": [
+        "security",
+        "readability",
+        "injection"
+      ],
+      "related": [
+        "/guidelines/steps/do-validate-parameters.md",
+        "/guidelines/steps/consider-environment-variables.md",
+        "/guidelines/steps/avoid-pipeline-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "regex",
+          "pattern": "(\\$\\{\\{|\\$\\()[^)]*\\}?\\}?",
+          "appliesTo": [
+            "step",
+            "task"
+          ],
+          "message": "Pipeline expression used inside a script body. Bind it via the env: block or at the top of the script instead."
+        }
+      ],
+      "fix": {
+        "summary": "Bind pipeline expressions at the boundary (env block) instead of inside script bodies.",
+        "autofixable": false,
+        "steps": [
+          "Move $(...) and ${{ }} out of the script body.",
+          "Pass them through the task env: block and read them as environment variables."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-STEPS-011",
+      "category": "steps",
+      "severity": "do-not",
+      "title": "DO NOT: Use AzureKeyVault task",
+      "summary": "Do not run the `AzureKeyVault` task to pull secrets into pipeline variables.",
+      "path": "/guidelines/steps/donot-use-azurekeyvault-task.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/donot-use-azurekeyvault-task.md",
+      "appliesTo": [
+        "step",
+        "task",
+        "variables"
+      ],
+      "tags": [
+        "security",
+        "secrets",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/variables/do-sensitive-information.md",
+        "/guidelines/variables/do-organize-variables.md",
+        "/guidelines/variables/do-separate-configuration.md",
+        "/guidelines/steps/avoid-pipeline-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "regex",
+          "pattern": "task:\\s*AzureKeyVault@\\d+",
+          "appliesTo": [
+            "step",
+            "task"
+          ],
+          "message": "AzureKeyVault task pulls secrets into pipeline variables. Use a variable group linked to Key Vault instead."
+        }
+      ],
+      "fix": {
+        "summary": "Replace the AzureKeyVault task with a Key Vault-linked variable group and explicit parameters.",
+        "autofixable": false,
+        "steps": [
+          "Link the Key Vault to a variable group.",
+          "Reference the group from a variables template.",
+          "Pass only the required secrets as explicit step parameters."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-VARIABLES-001",
+      "category": "variables",
+      "severity": "consider",
+      "title": "CONSIDER: Declaring variables as read-only",
+      "summary": "Mark variables as `readonly` when they shouldn't change after you initialize them.",
+      "path": "/guidelines/variables/consider-read-only-variables.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/consider-read-only-variables.md",
+      "appliesTo": [
+        "variables"
+      ],
+      "tags": [
+        "variables",
+        "safety",
+        "readability"
+      ],
+      "related": [
+        "/guidelines/variables/do-variable-scope.md",
+        "/guidelines/variables/do-organize-variables.md",
+        "/guidelines/variables/do-separate-configuration.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Constant variables that should not change after initialization declared without readonly.",
+          "appliesTo": [
+            "variables"
+          ],
+          "message": "Mark variables readonly when they should not change after initialization."
+        }
+      ],
+      "fix": {
+        "summary": "Declare unchanging variables as readonly.",
+        "autofixable": false,
+        "steps": [
+          "Add readonly: true to variables that must not be reassigned."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-VARIABLES-002",
+      "category": "variables",
+      "severity": "do",
+      "title": "DO: Organize variables by component and environment",
+      "summary": "Organize your variables into folders by functionality, environment, or any logical partition that fits your project.",
+      "path": "/guidelines/variables/do-organize-variables.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-organize-variables.md",
+      "appliesTo": [
+        "variables",
+        "template"
+      ],
+      "tags": [
+        "variables",
+        "structure",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/general/do-templates-everywhere.md",
+        "/guidelines/general/do-folder-structure.md",
+        "/guidelines/variables/do-separate-configuration.md",
+        "/guidelines/variables/donot-mix-environments.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Variable templates not organized by component/environment.",
+          "appliesTo": [
+            "variables"
+          ],
+          "message": "Organize variables into folders by component and environment."
+        }
+      ],
+      "fix": {
+        "summary": "Organize variable templates by component and environment.",
+        "autofixable": false,
+        "steps": [
+          "Split variables into folders by component, environment, or logical partition."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-VARIABLES-003",
+      "category": "variables",
+      "severity": "do",
+      "title": "DO: Store sensitive information in variable groups",
+      "summary": "Store passwords, tokens, and keys inside [variable groups](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml).",
+      "path": "/guidelines/variables/do-sensitive-information.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-sensitive-information.md",
+      "appliesTo": [
+        "variables"
+      ],
+      "tags": [
+        "security",
+        "secrets"
+      ],
+      "related": [
+        "/guidelines/variables/do-organize-variables.md",
+        "/guidelines/variables/do-separate-configuration.md",
+        "/guidelines/steps/donot-use-azurekeyvault-task.md",
+        "/guidelines/variables/donot-mix-environments.md",
+        "/guidelines/steps/avoid-pipeline-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "regex",
+          "pattern": "(?i)(password|secret|token|api[_-]?key|client[_-]?secret)\\s*:\\s*['\"]?\\S+",
+          "appliesTo": [
+            "variables"
+          ],
+          "message": "Possible secret stored as a plaintext variable. Store secrets in a variable group instead."
+        }
+      ],
+      "fix": {
+        "summary": "Move secrets into variable groups instead of plaintext variables.",
+        "autofixable": false,
+        "steps": [
+          "Move passwords, tokens, and keys into a variable group.",
+          "Reference the group from the pipeline."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-VARIABLES-004",
+      "category": "variables",
+      "severity": "do",
+      "title": "DO: Separate configuration from logic",
+      "summary": "Avoid hard-coding configuration values inside pipeline, step, job, or stage templates.",
+      "path": "/guidelines/variables/do-separate-configuration.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-separate-configuration.md",
+      "appliesTo": [
+        "variables",
+        "template"
+      ],
+      "tags": [
+        "configuration",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/general/do-templates-everywhere.md",
+        "/guidelines/general/do-folder-structure.md",
+        "/guidelines/variables/do-organize-variables.md",
+        "/guidelines/variables/consider-read-only-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Configuration values hard-coded inside pipeline/job/stage/step templates.",
+          "appliesTo": [
+            "variables",
+            "template"
+          ],
+          "message": "Separate configuration from logic by sourcing values from variable templates."
+        }
+      ],
+      "fix": {
+        "summary": "Move configuration out of logic templates into variable templates.",
+        "autofixable": false,
+        "steps": [
+          "Extract configuration values into variable templates and reference them."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-VARIABLES-005",
+      "category": "variables",
+      "severity": "do",
+      "title": "DO: Reduce variable scope",
+      "summary": "Restrict the scope of variables as much as possible.",
+      "path": "/guidelines/variables/do-variable-scope.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-variable-scope.md",
+      "appliesTo": [
+        "variables"
+      ],
+      "tags": [
+        "variables",
+        "scoping",
+        "maintainability"
+      ],
+      "related": [
+        "/guidelines/general/do-templates-everywhere.md",
+        "/guidelines/variables/do-separate-configuration.md",
+        "/guidelines/jobs/consider-job-variables.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "Variables declared at root/stage level but used only in a narrower scope.",
+          "appliesTo": [
+            "variables"
+          ],
+          "message": "Restrict variable scope to the narrowest level where it is used."
+        }
+      ],
+      "fix": {
+        "summary": "Declare variables at the narrowest scope that needs them.",
+        "autofixable": false,
+        "steps": [
+          "Move variables down to the job or step scope where they are actually used."
+        ],
+        "exampleRef": "Example"
+      }
+    },
+    {
+      "id": "AZP-VARIABLES-006",
+      "category": "variables",
+      "severity": "do-not",
+      "title": "DO NOT: Mix variables from different environments",
+      "summary": "Do not define variables for multiple environments inside a single variable template.",
+      "path": "/guidelines/variables/donot-mix-environments.md",
+      "url": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/donot-mix-environments.md",
+      "appliesTo": [
+        "variables"
+      ],
+      "tags": [
+        "variables",
+        "configuration",
+        "environments"
+      ],
+      "related": [
+        "/guidelines/variables/do-organize-variables.md",
+        "/guidelines/general/do-templates-everywhere.md",
+        "/guidelines/general/do-folder-structure.md",
+        "/guidelines/variables/do-separate-configuration.md"
+      ],
+      "detection": [
+        {
+          "kind": "heuristic",
+          "pattern": "A single variable template defining values for multiple environments (dev/test/prod).",
+          "appliesTo": [
+            "variables"
+          ],
+          "message": "Split per-environment values into separate variable templates."
+        }
+      ],
+      "fix": {
+        "summary": "Use one variable template per environment.",
+        "autofixable": false,
+        "steps": [
+          "Split mixed-environment variables into per-environment templates."
+        ],
+        "exampleRef": "Example"
+      }
+    }
+  ]
+}

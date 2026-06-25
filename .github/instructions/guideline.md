@@ -11,6 +11,8 @@ Follow this guidance when you create or update a guideline file. The [documentat
 
 Each guideline file covers one concept. Do not combine unrelated topics in the same file.
 
+Every guideline also has an entry in the machine-readable manifest `data/guidelines.json`. After creating or renaming a guideline file, run `node .github/scripts/build-manifest.mjs sync` and then add the hand-authored enrichment fields. See [manifest.md](manifest.md) and [ai-integration.md](/docs/ai-integration.md).
+
 ## File naming
 
 Use kebab-case. Start the filename with the recommendation prefix:
