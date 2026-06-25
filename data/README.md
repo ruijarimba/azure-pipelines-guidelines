@@ -1,6 +1,6 @@
 # data
 
-Machine-readable structured data for downstream AI tooling (MCP servers, linters, fixers, and LLM/RAG pipelines).
+Machine-readable structured data for downstream tools and processes (e.g, linters, MCP servers, and LLM/RAG pipelines).
 
 | File | Description |
 | --- | --- |
