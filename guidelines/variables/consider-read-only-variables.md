@@ -5,7 +5,7 @@ Mark variables as `readonly` when they shouldn't change after you initialize the
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Declaring variables as read-only](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/consider-read-only-variables.md)
+[ADOG-VARIABLES-001 — CONSIDER: Declaring variables as read-only](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/consider-read-only-variables.md)
 ```
 
 ## Reason

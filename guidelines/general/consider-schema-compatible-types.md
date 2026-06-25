@@ -5,7 +5,7 @@ When adding parameters that map to Azure Pipelines YAML fields, use the same nam
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Align template parameters with the YAML schema](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/consider-schema-compatible-types.md)
+[ADOG-GENERAL-003 — CONSIDER: Align template parameters with the YAML schema](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/consider-schema-compatible-types.md)
 ```
 
 ## Reason

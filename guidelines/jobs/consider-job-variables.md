@@ -5,7 +5,7 @@ Declare variables at the job level instead of the stage or root level.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Declaring variables at the job level](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-job-variables.md)
+[ADOG-JOBS-003 — CONSIDER: Declaring variables at the job level](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-job-variables.md)
 ```
 
 ## Reason

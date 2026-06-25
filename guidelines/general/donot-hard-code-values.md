@@ -5,7 +5,7 @@ Do not hard-code values in Azure DevOps pipelines and templates.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Hard-code values in pipelines and templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/donot-hard-code-values.md)
+[ADOG-GENERAL-007 — DO NOT: Hard-code values in pipelines and templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/donot-hard-code-values.md)
 ```
 
 ## Reason

@@ -128,7 +128,7 @@
         "id": {
           "type": "string",
           "description": "Stable unique identifier. Never reused after a guideline is renamed or removed.",
-          "pattern": "^AZP-(GENERAL|JOBS|PARAMETERS|PIPELINES|STAGES|STEPS|VARIABLES)-[0-9]{3}$"
+          "pattern": "^ADOG-(GENERAL|JOBS|PARAMETERS|PIPELINES|STAGES|STEPS|VARIABLES)-[0-9]{3}$"
         },
         "category": { "$ref": "#/$defs/category" },
         "severity": { "$ref": "#/$defs/severity" },

@@ -14,22 +14,22 @@ The Markdown files under `/guidelines` remain the human-readable source of truth
 | `.github/scripts/build-manifest.mjs` | Zero-dependency Node script that generates, validates, and syncs the manifest and index. |
 | `.github/instructions/manifest.md` | Authoring rules for the manifest. |
 
-Downstream MCP servers and LLM pipelines live in **separate repositories**. This repository is only the structured content source.
+This repository provides structured content for Azure Pipelines guidelines. The development of any tools that use this content is outside the scope of this project.
 
 ## Design decisions
 
 These choices were made deliberately. Keep them unless there is a strong reason to change.
 
 - **Central manifest, no per-file frontmatter.** Metadata lives only in `data/guidelines.json`. The guideline Markdown files are not modified. This keeps the human content clean and the machine data in one place.
-- **Stable IDs, Checkov-style.** Each guideline has an ID `AZP-<CATEGORY>-<NNN>` (for example `AZP-STEPS-001`). IDs are stable and never reused after a guideline is renamed or removed. They are the citation key for linters and LLMs.
+- **Stable Rule IDs.** Each guideline has a stable ID in a format common to security and linting tools (e.g., Checkov, TFLint), such as `ADOG-<CATEGORY>-<NNN>` (for example `ADOG-STEPS-001`). IDs are stable and never reused after a guideline is renamed or removed. They are the citation key for linters and LLMs.
 - **Derived vs. enriched fields.** Some fields are derived from the Markdown automatically (`id`, `category`, `severity`, `title`, `summary`, `path`, `url`, `related`). Others are hand-authored enrichment (`appliesTo`, `tags`, `detection`, `fix`). The sync script preserves enrichment while refreshing derived fields.
 - **No CI.** Generation and validation run locally through the documented script. There is no GitHub Actions workflow.
 
 ## ID scheme
 
-Format: `AZP-<CATEGORY>-<NNN>`
+Format: `ADOG-<CATEGORY>-<NNN>`
 
-- `AZP` is the fixed product prefix (Azure Pipelines).
+- `ADOG` is the fixed product prefix (Azure DevOps Guidelines).
 - `<CATEGORY>` is the uppercase category name: `GENERAL`, `JOBS`, `PARAMETERS`, `PIPELINES`, `STAGES`, `STEPS`, `VARIABLES`.
 - `<NNN>` is a zero-padded three-digit sequence, assigned per category in alphabetical filename order at first generation.
 
@@ -38,6 +38,10 @@ Rules:
 - An ID is permanent. If a guideline file is renamed, keep its existing ID (the sync script preserves IDs by file path; if you rename a file, copy the old ID into the new entry before running sync, or restore it afterwards).
 - Never reuse a retired number. If a guideline is removed, leave a gap.
 - New guidelines get the next free number in their category.
+
+### Where the ID appears
+
+The ID lives in the manifest and is also surfaced inside each guideline, in the `## Markdown to reference this guideline` citation block: `[<ID> — <title>](<url>)`. This makes the ID easy to cite in pull request comments. The `validate` command checks that the embedded ID matches the manifest, so the two never drift. Guideline filenames keep their human-readable slugs; the ID is not encoded in the path, which keeps existing links stable.
 
 ## Manifest fields
 

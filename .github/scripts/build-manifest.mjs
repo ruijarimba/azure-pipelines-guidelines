@@ -117,6 +117,10 @@ function parseGuideline(absFile) {
   const url = urlMatch ? urlMatch[1] : '';
   if (!url) errors.push(`${repoPath}: missing canonical reference URL`);
 
+  // Embedded ID from the citation block link text, e.g. "[ADOG-STEPS-005 — ...".
+  const idMatch = raw.match(/\[(ADOG-[A-Z]+-\d{3})\b/);
+  const embeddedId = idMatch ? idMatch[1] : '';
+
   // Related guidelines: relative links under the "## Related guidelines" section.
   const related = [];
   const relSectionMatch = raw.match(/##\s+Related guidelines\s*\n([\s\S]*?)(\n##\s|$)/);
@@ -127,7 +131,7 @@ function parseGuideline(absFile) {
     while ((m = linkRe.exec(block)) !== null) related.push(m[1]);
   }
 
-  return { repoPath, category, title, severity, summary, url, related, errors, raw };
+  return { repoPath, category, title, severity, summary, url, related, embeddedId, errors, raw };
 }
 
 function categoryCode(category) {
@@ -147,7 +151,7 @@ function nextId(category, usedNumbers) {
   while (set.has(n)) n++;
   set.add(n);
   usedNumbers.set(code, set);
-  return `AZP-${code}-${String(n).padStart(3, '0')}`;
+  return `ADOG-${code}-${String(n).padStart(3, '0')}`;
 }
 
 function buildEntries(mode) {
@@ -160,7 +164,7 @@ function buildEntries(mode) {
   if (existing) {
     for (const g of existing.guidelines) {
       byPath.set(g.path, g);
-      const m = g.id.match(/^AZP-([A-Z]+)-(\d{3})$/);
+      const m = g.id.match(/^ADOG-([A-Z]+)-(\d{3})$/);
       if (m) {
         const set = usedNumbers.get(m[1]) || new Set();
         set.add(Number(m[2]));
@@ -189,6 +193,7 @@ function buildEntries(mode) {
       fix: prior?.fix,
       usefulSources: prior?.usefulSources,
       _raw: p.raw,
+      _embeddedId: p.embeddedId,
     };
   });
 
@@ -204,7 +209,7 @@ function buildEntries(mode) {
 }
 
 function stripInternal(entry) {
-  const { _raw, ...rest } = entry;
+  const { _raw, _embeddedId, ...rest } = entry;
   // Drop undefined optional fields so the JSON stays clean.
   if (rest.fix === undefined) delete rest.fix;
   if (rest.usefulSources === undefined) delete rest.usefulSources;
@@ -214,9 +219,9 @@ function stripInternal(entry) {
 function writeManifest(entries) {
   mkdirSync(dirname(manifestPath), { recursive: true });
   const manifest = {
-    $schema: '../schema/guideline-manifest.schema.json',
+    $schema: './guideline-manifest.schema.json',
     schemaVersion: SCHEMA_VERSION,
-    generatedBy: 'scripts/build-manifest.mjs sync',
+    generatedBy: '.github/scripts/build-manifest.mjs sync',
     guidelines: entries.map(stripInternal),
   };
   writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
@@ -284,7 +289,7 @@ function validate() {
     // ID format + uniqueness.
     const seenIds = new Set();
     for (const g of existing.guidelines) {
-      if (!/^AZP-(GENERAL|JOBS|PARAMETERS|PIPELINES|STAGES|STEPS|VARIABLES)-\d{3}$/.test(g.id)) {
+      if (!/^ADOG-(GENERAL|JOBS|PARAMETERS|PIPELINES|STAGES|STEPS|VARIABLES)-\d{3}$/.test(g.id)) {
         problems.push(`Invalid ID format: ${g.id} (${g.path})`);
       }
       if (seenIds.has(g.id)) problems.push(`Duplicate ID: ${g.id}`);
@@ -303,6 +308,13 @@ function validate() {
       // Enrichment must be present.
       if (!cur.appliesTo || cur.appliesTo.length === 0) problems.push(`Missing appliesTo for ${cur.id} (${p})`);
       if (!cur.tags || cur.tags.length === 0) problems.push(`Missing tags for ${cur.id} (${p})`);
+
+      // The ID embedded in the markdown citation block must match the manifest.
+      if (!parsed._embeddedId) {
+        problems.push(`Missing embedded ID in citation block for ${p} (expected ${cur.id})`);
+      } else if (parsed._embeddedId !== cur.id) {
+        problems.push(`Embedded ID mismatch for ${p}:\n    manifest: ${cur.id}\n    markdown: ${parsed._embeddedId}`);
+      }
     }
 
     // Related links must resolve to existing files.

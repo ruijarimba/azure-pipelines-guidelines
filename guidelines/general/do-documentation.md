@@ -7,7 +7,7 @@ Consider documenting parameters and variables as well, if necessary.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Document pipelines and templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-documentation.md)
+[ADOG-GENERAL-004 — DO: Document pipelines and templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-documentation.md)
 ```
 
 ## Reason

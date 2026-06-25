@@ -10,7 +10,7 @@ Organize related jobs into stages to:
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Grouping related jobs into stages](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/stages/consider-grouping-jobs.md)
+[ADOG-STAGES-001 — CONSIDER: Grouping related jobs into stages](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/stages/consider-grouping-jobs.md)
 ```
 
 ## Reason

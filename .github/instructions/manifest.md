@@ -25,9 +25,10 @@ node .github/scripts/build-manifest.mjs validate   # check the manifest and Mark
 
 ## IDs
 
-- Format: `AZP-<CATEGORY>-<NNN>`, where `<CATEGORY>` is the uppercase category and `<NNN>` is a zero-padded sequence.
+- Format: `ADOG-<CATEGORY>-<NNN>`, where `<CATEGORY>` is the uppercase category and `<NNN>` is a zero-padded sequence.
 - IDs are permanent. Never reuse a retired number. New guidelines get the next free number in their category, assigned by `sync`.
 - If you rename a guideline file, preserve its existing ID.
+- Each guideline also embeds its ID in the `## Markdown to reference this guideline` citation block, as `[<ID> — <title>](<url>)`. The `validate` command checks that this embedded ID matches the manifest.
 
 ## Enrichment rules
 
@@ -38,6 +39,6 @@ node .github/scripts/build-manifest.mjs validate   # check the manifest and Mark
 
 ## After any change
 
-1. Run `node scripts/build-manifest.mjs sync`.
-2. Run `node scripts/build-manifest.mjs validate` and confirm it passes.
+1. Run `node .github/scripts/build-manifest.mjs sync`.
+2. Run `node .github/scripts/build-manifest.mjs validate` and confirm it passes.
 - The schema is `data/guideline-manifest.schema.json`.

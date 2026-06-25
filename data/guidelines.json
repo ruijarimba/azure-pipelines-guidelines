@@ -4,7 +4,7 @@
   "generatedBy": ".github/scripts/build-manifest.mjs sync",
   "guidelines": [
     {
-      "id": "AZP-GENERAL-001",
+      "id": "ADOG-GENERAL-001",
       "category": "general",
       "severity": "consider",
       "title": "CONSIDER: Use absolute paths to reference templates",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "AZP-GENERAL-002",
+      "id": "ADOG-GENERAL-002",
       "category": "general",
       "severity": "consider",
       "title": "CONSIDER: Use native YAML constructs when possible",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "AZP-GENERAL-003",
+      "id": "ADOG-GENERAL-003",
       "category": "general",
       "severity": "consider",
       "title": "CONSIDER: Align template parameters with the YAML schema",
@@ -131,7 +131,7 @@
       }
     },
     {
-      "id": "AZP-GENERAL-004",
+      "id": "ADOG-GENERAL-004",
       "category": "general",
       "severity": "do",
       "title": "DO: Document pipelines and templates",
@@ -171,7 +171,7 @@
       }
     },
     {
-      "id": "AZP-GENERAL-005",
+      "id": "ADOG-GENERAL-005",
       "category": "general",
       "severity": "do",
       "title": "DO: Use a consistent folder structure",
@@ -210,7 +210,7 @@
       }
     },
     {
-      "id": "AZP-GENERAL-006",
+      "id": "ADOG-GENERAL-006",
       "category": "general",
       "severity": "do",
       "title": "DO: Use templates everywhere",
@@ -255,7 +255,7 @@
       }
     },
     {
-      "id": "AZP-GENERAL-007",
+      "id": "ADOG-GENERAL-007",
       "category": "general",
       "severity": "do-not",
       "title": "DO NOT: Hard-code values in pipelines and templates",
@@ -298,7 +298,7 @@
       }
     },
     {
-      "id": "AZP-JOBS-001",
+      "id": "ADOG-JOBS-001",
       "category": "jobs",
       "severity": "consider",
       "title": "CONSIDER: Explicitly declare checkout in jobs",
@@ -337,7 +337,7 @@
       }
     },
     {
-      "id": "AZP-JOBS-002",
+      "id": "ADOG-JOBS-002",
       "category": "jobs",
       "severity": "consider",
       "title": "CONSIDER: Grouping job tasks into a single template",
@@ -378,7 +378,7 @@
       }
     },
     {
-      "id": "AZP-JOBS-003",
+      "id": "ADOG-JOBS-003",
       "category": "jobs",
       "severity": "consider",
       "title": "CONSIDER: Declaring variables at the job level",
@@ -419,7 +419,7 @@
       }
     },
     {
-      "id": "AZP-JOBS-004",
+      "id": "ADOG-JOBS-004",
       "category": "jobs",
       "severity": "consider",
       "title": "CONSIDER: Adding a validation flag to your job",
@@ -462,7 +462,7 @@
       }
     },
     {
-      "id": "AZP-JOBS-005",
+      "id": "ADOG-JOBS-005",
       "category": "jobs",
       "severity": "do",
       "title": "DO: Create configurable and extensible jobs",
@@ -507,7 +507,7 @@
       }
     },
     {
-      "id": "AZP-JOBS-006",
+      "id": "ADOG-JOBS-006",
       "category": "jobs",
       "severity": "do",
       "title": "DO: Set job timeouts",
@@ -546,7 +546,7 @@
       }
     },
     {
-      "id": "AZP-JOBS-007",
+      "id": "ADOG-JOBS-007",
       "category": "jobs",
       "severity": "do",
       "title": "DO: Minimize the number of parameters in job templates",
@@ -589,7 +589,7 @@
       }
     },
     {
-      "id": "AZP-JOBS-008",
+      "id": "ADOG-JOBS-008",
       "category": "jobs",
       "severity": "do",
       "title": "DO: Ensure jobs have a single responsibility",
@@ -628,7 +628,7 @@
       }
     },
     {
-      "id": "AZP-PARAMETERS-001",
+      "id": "ADOG-PARAMETERS-001",
       "category": "parameters",
       "severity": "consider",
       "title": "CONSIDER: Grouping related parameters",
@@ -668,7 +668,7 @@
       }
     },
     {
-      "id": "AZP-PARAMETERS-002",
+      "id": "ADOG-PARAMETERS-002",
       "category": "parameters",
       "severity": "do",
       "title": "DO: Restrict parameter values",
@@ -706,7 +706,7 @@
       }
     },
     {
-      "id": "AZP-PIPELINES-001",
+      "id": "ADOG-PIPELINES-001",
       "category": "pipelines",
       "severity": "consider",
       "title": "CONSIDER: Running pipelines in validation mode",
@@ -746,7 +746,7 @@
       }
     },
     {
-      "id": "AZP-STAGES-001",
+      "id": "ADOG-STAGES-001",
       "category": "stages",
       "severity": "consider",
       "title": "CONSIDER: Grouping related jobs into stages",
@@ -786,7 +786,7 @@
       }
     },
     {
-      "id": "AZP-STAGES-002",
+      "id": "ADOG-STAGES-002",
       "category": "stages",
       "severity": "do",
       "title": "DO: Run stages in parallel when possible",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "AZP-STEPS-001",
+      "id": "ADOG-STEPS-001",
       "category": "steps",
       "severity": "avoid",
       "title": "AVOID: Using pipeline variables in tasks or steps templates",
@@ -870,7 +870,7 @@
       }
     },
     {
-      "id": "AZP-STEPS-002",
+      "id": "ADOG-STEPS-002",
       "category": "steps",
       "severity": "consider",
       "title": "CONSIDER: Setting environment variables at the task level",
@@ -912,7 +912,7 @@
       }
     },
     {
-      "id": "AZP-STEPS-003",
+      "id": "ADOG-STEPS-003",
       "category": "steps",
       "severity": "consider",
       "title": "CONSIDER: Logging diagnostic details",
@@ -954,7 +954,7 @@
       }
     },
     {
-      "id": "AZP-STEPS-004",
+      "id": "ADOG-STEPS-004",
       "category": "steps",
       "severity": "consider",
       "title": "CONSIDER: Logging diagnostic details",
@@ -996,7 +996,7 @@
       }
     },
     {
-      "id": "AZP-STEPS-005",
+      "id": "ADOG-STEPS-005",
       "category": "steps",
       "severity": "consider",
       "title": "CONSIDER: Configuring retries in tasks",
@@ -1036,7 +1036,7 @@
       }
     },
     {
-      "id": "AZP-STEPS-006",
+      "id": "ADOG-STEPS-006",
       "category": "steps",
       "severity": "consider",
       "title": "CONSIDER: Set task timeouts",
@@ -1075,7 +1075,7 @@
       }
     },
     {
-      "id": "AZP-STEPS-007",
+      "id": "ADOG-STEPS-007",
       "category": "steps",
       "severity": "do",
       "title": "DO: Create configurable and extensible steps",
@@ -1119,7 +1119,7 @@
       }
     },
     {
-      "id": "AZP-STEPS-008",
+      "id": "ADOG-STEPS-008",
       "category": "steps",
       "severity": "do",
       "title": "DO: Use service connections when possible",
@@ -1161,7 +1161,7 @@
       }
     },
     {
-      "id": "AZP-STEPS-009",
+      "id": "ADOG-STEPS-009",
       "category": "steps",
       "severity": "do",
       "title": "DO: Validate step parameters",
@@ -1204,7 +1204,7 @@
       }
     },
     {
-      "id": "AZP-STEPS-010",
+      "id": "ADOG-STEPS-010",
       "category": "steps",
       "severity": "do-not",
       "title": "DO NOT: Mix pipelines syntax in script tasks",
@@ -1247,7 +1247,7 @@
       }
     },
     {
-      "id": "AZP-STEPS-011",
+      "id": "ADOG-STEPS-011",
       "category": "steps",
       "severity": "do-not",
       "title": "DO NOT: Use AzureKeyVault task",
@@ -1293,7 +1293,7 @@
       }
     },
     {
-      "id": "AZP-VARIABLES-001",
+      "id": "ADOG-VARIABLES-001",
       "category": "variables",
       "severity": "consider",
       "title": "CONSIDER: Declaring variables as read-only",
@@ -1333,7 +1333,7 @@
       }
     },
     {
-      "id": "AZP-VARIABLES-002",
+      "id": "ADOG-VARIABLES-002",
       "category": "variables",
       "severity": "do",
       "title": "DO: Organize variables by component and environment",
@@ -1375,7 +1375,7 @@
       }
     },
     {
-      "id": "AZP-VARIABLES-003",
+      "id": "ADOG-VARIABLES-003",
       "category": "variables",
       "severity": "do",
       "title": "DO: Store sensitive information in variable groups",
@@ -1417,7 +1417,7 @@
       }
     },
     {
-      "id": "AZP-VARIABLES-004",
+      "id": "ADOG-VARIABLES-004",
       "category": "variables",
       "severity": "do",
       "title": "DO: Separate configuration from logic",
@@ -1459,7 +1459,7 @@
       }
     },
     {
-      "id": "AZP-VARIABLES-005",
+      "id": "ADOG-VARIABLES-005",
       "category": "variables",
       "severity": "do",
       "title": "DO: Reduce variable scope",
@@ -1499,7 +1499,7 @@
       }
     },
     {
-      "id": "AZP-VARIABLES-006",
+      "id": "ADOG-VARIABLES-006",
       "category": "variables",
       "severity": "do-not",
       "title": "DO NOT: Mix variables from different environments",

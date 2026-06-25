@@ -5,7 +5,7 @@ Avoid pipeline variables in steps templates. Use parameters instead.
 ## Markdown to reference this guideline
 
 ```plaintext
-[AVOID: Using pipeline variables in tasks or steps templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/avoid-pipeline-variables.md)
+[ADOG-STEPS-001 — AVOID: Using pipeline variables in tasks or steps templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/avoid-pipeline-variables.md)
 ```
 
 ## Reason

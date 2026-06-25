@@ -5,7 +5,7 @@ Create and reference templates instead of defining logic or configuration direct
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Use templates everywhere](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-templates-everywhere.md)
+[ADOG-GENERAL-006 — DO: Use templates everywhere](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-templates-everywhere.md)
 ```
 
 ## Reason

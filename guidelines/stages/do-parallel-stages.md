@@ -5,7 +5,7 @@ Run independent stages in parallel.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Run stages in parallel when possible](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/stages/do-parallel-stages.md)
+[ADOG-STAGES-002 — DO: Run stages in parallel when possible](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/stages/do-parallel-stages.md)
 ```
 
 ## Reason

@@ -12,9 +12,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [1.0.0] - 2026-06-25
 
+Version 1.0.0 marks an important milestone: the guidelines are now treated as stable, and each guideline has a permanent ID that is expected to remain unchanged. Rule codes such as `ADOG-STEPS-005` provide a durable way to cite guidance in reviews, documentation, and future automated checks.
+
+The original audience for these guidelines was human readers, and that remains true. This release also adds structured index files and machine-readable metadata so tools can use the guidelines more easily, with the goal of supporting future integration with as many tools as possible, including linters, analyzers, and AI-related tools such as MCP servers, so they can inspect pipeline code and help identify or fix issues.
+
 ### Added
 
-- Add a machine-readable manifest (`data/guidelines.json`) with stable `AZP-<CATEGORY>-<NNN>` IDs, severity, scope, tags, detection hints, and fix guidance for every guideline, plus a JSON Schema (`data/guideline-manifest.schema.json`), a line-delimited export (`data/guidelines.jsonl`), a zero-dependency generator (`.github/scripts/build-manifest.mjs`), and the [AI integration guide](/docs/ai-integration.md). The guideline index in `guidelines/README.md` is now generated from the manifest.
+- Each guideline now shows a short, stable rule code in its "Markdown to reference this guideline" section, making it easy to cite the exact rule when reviewing pull requests.
+- Added a structured data file (`data/guidelines.json`) that records every guideline with its rule code, severity, scope, and hints for detecting and fixing violations. This is the foundation for tools that can automatically check pipelines against the guidelines. See the [AI integration guide](/docs/ai-integration.md) for technical details.
 
 ## [0.3.0] - 2026-06-25
 

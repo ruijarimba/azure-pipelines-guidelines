@@ -5,7 +5,7 @@ Organize your variables into folders by functionality, environment, or any logic
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Organize variables by component and environment](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-organize-variables.md)
+[ADOG-VARIABLES-002 — DO: Organize variables by component and environment](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-organize-variables.md)
 ```
 
 ## Reason

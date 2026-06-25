@@ -47,7 +47,9 @@ Every guideline file must include the following sections in this order:
 3. `## Markdown to reference this guideline` — a fenced `plaintext` code block
    containing the full GitHub URL, for use when citing the guideline in pull
    request comments. Place this immediately after the one-line summary. The
-   display text must match the H1 title exactly, without the emoji.
+   display text must be the guideline ID, an em dash, then the H1 title without
+   the emoji: `<ID> — <PREFIX>: Title`. The ID must match the entry in
+   `data/guidelines.json` (run the manifest script to assign it).
    URL format: `https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/{category}/{filename}.md`
 4. `## Reason` — explains *why* the guideline matters; keep it to 1–3 short
    paragraphs. Do not repeat the one-line summary.
@@ -118,7 +120,7 @@ One-line summary sentence here.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Example guideline title](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/category/consider-example.md)
+[ADOG-CATEGORY-001 — CONSIDER: Example guideline title](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/category/consider-example.md)
 ```
 
 ## Reason

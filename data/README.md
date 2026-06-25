@@ -10,7 +10,7 @@ Machine-readable structured data for downstream AI tooling (MCP servers, linters
 
 ## IDs
 
-Each guideline has a stable ID in the format `AZP-<CATEGORY>-<NNN>`, for example `AZP-STEPS-001`. IDs are never reused.
+Each guideline has a stable ID in the format `ADOG-<CATEGORY>-<NNN>`, for example `ADOG-STEPS-001`. IDs are never reused.
 
 ## Maintaining this data
 

@@ -5,7 +5,7 @@ Set environment variables at the task level.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Setting environment variables at the task level](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-environment-variables.md)
+[ADOG-STEPS-002 — CONSIDER: Setting environment variables at the task level](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-environment-variables.md)
 ```
 
 ## Reason

@@ -5,7 +5,7 @@ Use Service Connections to authenticate with external services (Azure, GitHub, D
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Use service connections when possible](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-use-service-connections.md)
+[ADOG-STEPS-008 — DO: Use service connections when possible](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-use-service-connections.md)
 ```
 
 ## Reason
