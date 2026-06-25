@@ -12,9 +12,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [1.0.0] - 2026-06-25
 
-Version 1.0.0 marks an important milestone: the guidelines are now treated as stable, and each guideline has a permanent ID that is expected to remain unchanged. Rule codes such as `ADOG-STEPS-005` provide a durable way to cite guidance in reviews, documentation, and future automated checks.
+This release marks the guidelines as **stable**. Each guideline now has a **permanent ID** such as `ADOG-STEPS-005` so it can be easily referenced in reviews, documentation, and automated checks.
 
-The original audience for these guidelines was human readers, and that remains true. This release also adds structured index files and machine-readable metadata so tools can use the guidelines more easily, with the goal of supporting future integration with as many tools as possible, including linters, analyzers, and AI-related tools such as MCP servers, so they can inspect pipeline code and help identify or fix issues.
+The guidelines were originally intended for humans, and they still are. This release adds structured index files and machine‑readable metadata to support future integration with tools such as linters, analyzers, and AI systems (including MCP servers) that can review pipeline code and help identify or correct problems in an automated manner.
 
 ### Added
 
