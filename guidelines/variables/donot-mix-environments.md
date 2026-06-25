@@ -1,6 +1,6 @@
 ﻿# ❌ DO NOT: Mix variables from different environments
 
-Do not weave multi-environmental configurations identically within a single variable template.
+Do not define variables for multiple environments inside a single variable template.
 
 ## Markdown to reference this guideline
 
@@ -16,7 +16,7 @@ Mixing configuration constants inside the same template creates complex conditio
 
 Use separate variable templates for each environment.
 
-This keeps environment settings clear and prevents one environmentâ€™s variables from affecting another.
+This keeps environment settings clear and prevents one environment's variables from affecting another.
 
 ## Example
 
@@ -36,7 +36,7 @@ variables:
     - name: tf_azureClientId
       value: $(terraform-sp-client-id)
     
-    - name: tf_azureClientsecret
+    - name: tf_azureClientSecret
       value: $(terraform-sp-client-secret)
     
     - name: tf_azureSubscriptionId
@@ -51,7 +51,7 @@ variables:
     - name: tf_azureClientId
       value: $(terraform-sp-client-id)
     
-    - name: tf_azureClientsecret
+    - name: tf_azureClientSecret
       value: $(terraform-sp-client-secret)
     
     - name: tf_azureSubscriptionId
@@ -66,7 +66,7 @@ variables:
     - name: tf_azureClientId
       value: $(terraform-sp-client-id)
     
-    - name: tf_azureClientsecret
+    - name: tf_azureClientSecret
       value: $(terraform-sp-client-secret)
     
     - name: tf_azureSubscriptionId
@@ -87,7 +87,7 @@ variables:
   - name: tf_azureClientId
     value: $(terraform-sp-client-id)
   
-  - name: tf_azureClientsecret
+  - name: tf_azureClientSecret
     value: $(terraform-sp-client-secret)
   
   - name: tf_azureSubscriptionId
@@ -106,7 +106,7 @@ variables:
   - name: tf_azureClientId
     value: $(terraform-sp-client-id)
   
-  - name: tf_azureClientsecret
+  - name: tf_azureClientSecret
     value: $(terraform-sp-client-secret)
   
   - name: tf_azureSubscriptionId
@@ -125,7 +125,7 @@ variables:
   - name: tf_azureClientId
     value: $(terraform-sp-client-id)
   
-  - name: tf_azureClientsecret
+  - name: tf_azureClientSecret
     value: $(terraform-sp-client-secret)
   
   - name: tf_azureSubscriptionId

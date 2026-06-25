@@ -2,7 +2,7 @@
 
 A set of coding guidelines to create [Azure YAML pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/key-pipelines-concepts) and related templates that are easy to understand, maintain, extend, and reuse.
 
-Current version: `0.2.0` (see the [CHANGELOG](CHANGELOG.md)).
+For a complete list of guidelines, see the [guideline index](guidelines/README.md).
 
 ## Table of Contents
 
@@ -71,6 +71,8 @@ VS Code extensions:
 ## Disclaimer
 
 This repository and its content are not sponsored or supported by Microsoft Corporation. The guidelines are based mostly on the author's (limited) experience and opinions. There might be cases, though, where the author has used official Microsoft documentation as a reference.
+
+AI tools were used only for support tasks such as reviewing grammar, improving clarity, and validating information. The recommendations themselves were written by the author.
 
 The author is not responsible for any misuse of these guidelines or any damage that may result from their use. Use them at your own responsibility.
 

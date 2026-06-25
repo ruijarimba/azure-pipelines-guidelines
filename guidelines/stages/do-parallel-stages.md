@@ -33,3 +33,4 @@ stages:
 ## Related guidelines
 
 - [CONSIDER: Grouping related jobs into stages](/guidelines/stages/consider-grouping-jobs.md)
+- [DO: Ensure jobs have a single responsibility](/guidelines/jobs/do-single-responsibility.md)

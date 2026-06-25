@@ -27,7 +27,7 @@ Example - running Terraform plan and applying changes:
 Using a validation parameter (`applyChanges`) in a Terraform job:
 
 ```yaml
-# Runs Terraform plan and (optionaly) apply changes
+# Runs Terraform plan and (optionally) apply changes
 
 parameters:
   # other parameters here

@@ -1,7 +1,6 @@
 ﻿# ✅ DO: Use templates everywhere
 
-Create and reference templates instead of defining logic or configuration
-directly in your pipelines or templates.
+Create and reference templates instead of defining logic or configuration directly in your pipelines or templates.
 
 ## Markdown to reference this guideline
 
@@ -11,8 +10,7 @@ directly in your pipelines or templates.
 
 ## Reason
 
-Use templates to hide complex implementation details and reuse logic and
-configuration across pipelines.
+Use templates to hide complex implementation details and reuse logic and configuration across pipelines.
 
 Logic templates:
 
@@ -99,11 +97,11 @@ stages:
 variables:
 - name: agentPool
   value: 'Default'
-  isReadonly: true
+  readonly: true
 
 - name: azureDevOpsEnvironment
   value: 'my-environment'
-  isReadonly: true
+  readonly: true
 ```
 
 ```yaml
@@ -112,23 +110,23 @@ variables:
 variables:
 - name: dockerVersion
   value: '17.09.0-ce'
-  isReadonly: true
+  readonly: true
 
 - name: containerRegistryServiceConnection
   value: 'my-registry-connection'
-  isReadonly: true
+  readonly: true
 
 - name: dockerImageRepository
   value: 'my-repo/my-image'
-  isReadonly: true
+  readonly: true
 
 - name: dockerfilePath
   value: '$(Build.SourcesDirectory)/app/Dockerfile'
-  isReadonly: true
+  readonly: true
 
 - name: dockerTag
   value: '$(Build.BuildId)'
-  isReadonly: true
+  readonly: true
 ```
 
 ```yaml
@@ -139,7 +137,7 @@ parameters:
     type: string
     displayName: Deployment Environment
 
-deployments:
+jobs:
   - deployment: Build
     displayName: Build and publish Docker image
     environment: ${{ parameters.environment }}

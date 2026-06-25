@@ -40,3 +40,4 @@ Here, the `NuGetRestore@1` task retries up to 3 times before failing.
 ## Related guidelines
 
 - [DO: Create configurable and extensible steps](/guidelines/steps/do-extensible-steps.md)
+- [CONSIDER: Set task timeouts](/guidelines/steps/consider-timeouts.md)

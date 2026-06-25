@@ -1,7 +1,6 @@
 ﻿# ✅ CONSIDER: Use absolute paths to reference templates
 
-Use absolute paths to reference stages, jobs, steps and variables
-templates.
+Use absolute paths to reference stages, jobs, steps and variables templates.
 
 ## Markdown to reference this guideline
 

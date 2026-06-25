@@ -28,7 +28,7 @@ stages:
 
   - stage: Deploy
     dependsOn: Build
-    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
     jobs:
       - job: Deploy
         steps:
@@ -69,4 +69,5 @@ stages:
 
 ## Related guidelines
 
+- [DO: Create configurable and extensible jobs](/guidelines/jobs/do-extensible-jobs.md)
 - [CONSIDER: Adding a validation flag to your job](/guidelines/jobs/consider-validation-flag.md)

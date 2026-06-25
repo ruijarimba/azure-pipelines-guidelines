@@ -45,6 +45,8 @@ parameters:
     default: 'Deploy Helm chart'
 
   # Optional, agent pool can be set at the pipeline level
+  # Intentional simplification: keep this as string to restrict callers
+  # to a pool name instead of the full schema `pool` object.
   - name: agentPool
     type: string
     displayName: 'Agent pool'
@@ -102,7 +104,7 @@ jobs:
     steps:
       - checkout: ${{ parameters.repository }}
       - ${{ parameters.preSteps }}
-      - template: /pipeline/steps/helm/deploy-chart.yml
+      - template: /pipelines/steps/helm/deploy-chart.yml
         parameters:
           # ....
       - ${{ parameters.postSteps }}
@@ -113,3 +115,5 @@ jobs:
 - [DO: Document pipelines and templates](/guidelines/general/do-documentation.md)
 - [DO: Create configurable and extensible steps](/guidelines/steps/do-extensible-steps.md)
 - [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)
+- [CONSIDER: Adding a validation flag to your job](/guidelines/jobs/consider-validation-flag.md)
+- [CONSIDER: Align template parameters with the YAML schema](/guidelines/general/consider-schema-compatible-types.md)

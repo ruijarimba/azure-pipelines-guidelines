@@ -63,4 +63,5 @@ Where `/pipelines/steps/terraform/plan-apply.yml` contains the tasks for install
 ## Related guidelines
 
 - [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO: Create configurable and extensible steps](/guidelines/steps/do-extensible-steps.md)
 - [DO: Ensure jobs have a single responsibility](/guidelines/jobs/do-single-responsibility.md)

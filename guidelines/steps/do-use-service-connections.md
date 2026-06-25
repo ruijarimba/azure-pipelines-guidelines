@@ -30,5 +30,5 @@ List the Azure CLI version and retrieve subscription details using a service con
 
 ## Related guidelines
 
-- [DO: Validate steps parameters](/guidelines/steps/do-validate-parameters.md)
+- [DO: Validate step parameters](/guidelines/steps/do-validate-parameters.md)
 - [AVOID: Using pipeline variables in tasks or steps templates](/guidelines/steps/avoid-pipeline-variables.md)

@@ -1,6 +1,6 @@
 ﻿# ❌ DO NOT: Mix pipelines syntax in script tasks
 
-Do not embed pipeline expressions (`$(...)` or `${{ ... }}`) throughout the body of a script task. Bind them at the boundary instead â€” either in the task-level `env:` block or as variable assignments at the very top of the script.
+Do not embed pipeline expressions (`$(...)` or `${{ ... }}`) throughout the body of a script task. Bind them at the boundary instead — either in the task-level `env:` block or as variable assignments at the very top of the script.
 
 ## Markdown to reference this guideline
 
@@ -94,12 +94,12 @@ steps:
 
 This approach has limitations:
 
-- **Pipeline syntax in the script body** â€” the `${{ ... }}` expression sits inside the script, not in the YAML task metadata. Local testing still requires manually substituting those values.
-- **Slippery slope** â€” once `${{ ... }}` appears at the top of the script, it is easy to add more expressions further down, drifting back toward the anti-pattern.
-- **Special character hazard** â€” values containing spaces, quotes, dollar signs, or newlines must be explicitly quoted or escaped to avoid script errors. The `env:` approach handles special characters safely without any escaping.
+- **Pipeline syntax in the script body** — the `${{ ... }}` expression sits inside the script, not in the YAML task metadata. Local testing still requires manually substituting those values.
+- **Slippery slope** — once `${{ ... }}` appears at the top of the script, it is easy to add more expressions further down, drifting back toward the anti-pattern.
+- **Special character hazard** — values containing spaces, quotes, dollar signs, or newlines must be explicitly quoted or escaped to avoid script errors. The `env:` approach handles special characters safely without any escaping.
 
 ## Related guidelines
 
-- [DO: Validate steps parameters](/guidelines/steps/do-validate-parameters.md)
+- [DO: Validate step parameters](/guidelines/steps/do-validate-parameters.md)
 - [CONSIDER: Setting environment variables at the task level](/guidelines/steps/consider-environment-variables.md)
 - [AVOID: Using pipeline variables in tasks or steps templates](/guidelines/steps/avoid-pipeline-variables.md)

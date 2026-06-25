@@ -51,7 +51,7 @@ jobs:
         parameters:
           authentication:
             azureClientId: ${{ variables.tf_azureClientId }}
-            azureClientsecret: ${{ variables.tf_azureClientSecret }}
+            azureClientSecret: ${{ variables.tf_azureClientSecret }}
             azureSubscriptionId: ${{ variables.tf_azureSubscriptionId }}
             azureTenantId: ${{ variables.tf_azureTenantId }}
           remoteState:

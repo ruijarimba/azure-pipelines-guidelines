@@ -21,7 +21,7 @@ Use nested folders to scope variables. For example, group Terraform variables by
   /terraform
     /azure
       /app-service
-        /norteurope
+        /northeurope
           dev-variables.yml
           qa-variables.yml
           prod-variables.yml
@@ -30,7 +30,7 @@ Use nested folders to scope variables. For example, group Terraform variables by
           qa-variables.yml
           prod-variables.yml
       /virtual-network
-        /norteurope
+        /northeurope
           dev-variables.yml
           qa-variables.yml
           prod-variables.yml

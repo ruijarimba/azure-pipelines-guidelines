@@ -6,17 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-### Planned
-
-- Add a `CONSIDER:` guideline advising that template parameter types should match Azure Pipelines YAML schema types for common task and job options such as `condition`, `timeoutInMinutes`, `dependsOn`, `strategy`, and other pipeline fields. This will keep custom templates consistent with the official pipeline schema and make validation and reuse more reliable.
-
-- Add a `CONSIDER:` guideline for debug-mode execution. Recommend that tasks or jobs running in debug mode emit extra diagnostic detail, including input values, state before a change, expected state, and actual state, so troubleshooting information is sufficient for a human or AI agent to identify the likely issue without needing data from other steps or jobs.
-
-- Add a `CONSIDER:` guideline for using YAML multi-line strings to improve readability. Cover folded block scalars (`>-`) for long variables or `condition:` expressions and `arguments:` values, literal block scalars (`|`) for multi-command `script:` bodies, etc
-
 - Add an `AVOID:` guideline warning against setting hidden runtime state with `##vso[task.setvariable]` inside reusable templates. Recommend using template parameters for declared inputs and output variables only when a value must be produced at runtime.
 
 - Add a `CONSIDER:` guideline for using output variables for explicit cross-job or cross-stage data flow. Recommend `isOutput=true` and named producing steps so downstream jobs and stages consume computed values through declared dependencies instead of hidden global state.
+
+## [0.3.0] - 2026-06-25
+
+### Added
+
+#### General guidelines
+
+- [CONSIDER: Use schema-compatible names and types for template parameters](/guidelines/general/consider-schema-compatible-types.md)
+- [CONSIDER: Use native YAML constructs when possible](/guidelines/general/consider-native-yaml-constructs.md)
+
+#### Jobs guidelines
+
+- [CONSIDER: Explicitly declare checkout in jobs](/guidelines/jobs/consider-explicit-checkout.md)
+
+#### Steps guidelines
+
+- [CONSIDER: Logging diagnostic details](/guidelines/steps/consider-logging-diagnostics.md)
 
 ## [0.2.0] - 2026-05-31
 
@@ -31,6 +40,60 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.1.0] - 2024-05-15
 
+Initial release of the guidelines.
+
 ### Added
 
-- Initial release of the guidelines.
+#### General guidelines
+
+- [CONSIDER: Use absolute paths to reference templates](/guidelines/general/consider-absolute-paths.md)
+- [DO: Document pipelines and templates](/guidelines/general/do-documentation.md)
+- [DO: Use a consistent folder structure](/guidelines/general/do-folder-structure.md)
+- [DO: Use templates everywhere](/guidelines/general/do-templates-everywhere.md)
+- [DO NOT: Hard-code values in pipelines and templates](/guidelines/general/donot-hard-code-values.md)
+
+#### Jobs guidelines
+
+- [CONSIDER: Grouping job tasks into a single template](/guidelines/jobs/consider-grouping-tasks.md)
+- [CONSIDER: Declaring variables at the job level](/guidelines/jobs/consider-job-variables.md)
+- [CONSIDER: Adding a validation flag to your job](/guidelines/jobs/consider-validation-flag.md)
+- [DO: Create configurable and extensible jobs](/guidelines/jobs/do-extensible-jobs.md)
+- [DO: Set job timeouts](/guidelines/jobs/do-job-timeouts.md)
+- [DO: Minimize the number of parameters in job templates](/guidelines/jobs/do-parameters-short.md)
+- [DO: Ensure jobs have a single responsibility](/guidelines/jobs/do-single-responsibility.md)
+
+#### Parameters guidelines
+
+- [CONSIDER: Grouping related parameters](/guidelines/parameters/consider-grouping.md)
+- [DO: Restrict parameter values](/guidelines/parameters/do-restrict-values.md)
+
+#### Pipelines guidelines
+
+- [CONSIDER: Running pipelines in validation mode](/guidelines/pipelines/consider-validation.md)
+
+#### Stages guidelines
+
+- [CONSIDER: Grouping related jobs into stages](/guidelines/stages/consider-grouping-jobs.md)
+- [DO: Run stages in parallel when possible](/guidelines/stages/do-parallel-stages.md)
+
+#### Steps guidelines
+
+- [AVOID: Using pipeline variables in tasks or steps templates](/guidelines/steps/avoid-pipeline-variables.md)
+- [CONSIDER: Setting environment variables at the task level](/guidelines/steps/consider-environment-variables.md)
+- [CONSIDER: Logging diagnostic details](/guidelines/steps/consider-logging-diagnostic-details.md)
+- [CONSIDER: Configuring retries in tasks](/guidelines/steps/consider-retries.md)
+- [CONSIDER: Set task timeouts](/guidelines/steps/consider-timeouts.md)
+- [DO: Create configurable and extensible steps](/guidelines/steps/do-extensible-steps.md)
+- [DO: Use service connections when possible](/guidelines/steps/do-use-service-connections.md)
+- [DO: Validate step parameters](/guidelines/steps/do-validate-parameters.md)
+- [DO NOT: Mix pipelines syntax in script tasks](/guidelines/steps/donot-mix-syntax.md)
+- [DO NOT: Use AzureKeyVault task](/guidelines/steps/donot-use-azurekeyvault-task.md)
+
+#### Variables guidelines
+
+- [CONSIDER: Declaring variables as read-only](/guidelines/variables/consider-read-only-variables.md)
+- [DO: Organize variables by component and environment](/guidelines/variables/do-organize-variables.md)
+- [DO: Store sensitive information in variable groups](/guidelines/variables/do-sensitive-information.md)
+- [DO: Separate configuration from logic](/guidelines/variables/do-separate-configuration.md)
+- [DO: Reduce variable scope](/guidelines/variables/do-variable-scope.md)
+- [DO NOT: Mix variables from different environments](/guidelines/variables/donot-mix-environments.md)

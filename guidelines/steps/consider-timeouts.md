@@ -35,3 +35,4 @@ steps:
 ## Related guidelines
 
 - [DO: Create configurable and extensible steps](/guidelines/steps/do-extensible-steps.md)
+- [DO: Set job timeouts](/guidelines/jobs/do-job-timeouts.md)

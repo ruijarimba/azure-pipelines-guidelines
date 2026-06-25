@@ -24,7 +24,7 @@ A limit of 10 or 15 minutes is acceptable. This limit accommodates jobs that tak
 
 ```yaml
 jobs:
-- job:
+- job: smokeTests
   displayName: 'Run smoke tests'
   timeoutInMinutes: 15 # how long to run the job before automatically cancelling
   cancelTimeoutInMinutes: 1 # how much time to give 'run always even if cancelled tasks' before stopping them

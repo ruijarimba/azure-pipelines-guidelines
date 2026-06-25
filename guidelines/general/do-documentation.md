@@ -1,6 +1,6 @@
 # ✅ DO: Document pipelines and templates
 
-Document pipelines and templates. Add comments to the top of pipeline and template files. Describe the purpose, usage, and other relevant information.
+Document pipelines and templates. Add comments to the top of pipeline and template files. Describe the purpose, usage, and other relevant information clearly for both people and tools.
 
 Consider documenting parameters and variables as well, if necessary.
 
@@ -14,6 +14,8 @@ Consider documenting parameters and variables as well, if necessary.
 
 File-level comments help readers understand the pipeline or template quickly. They provide context without requiring the reader to read the entire file.
 
+Comments and documentation are also consumed by search, review tooling, and AI assistants. Write for humans first, but use clear structure, stable terminology, and explicit intent so the same content is easy for tools to interpret correctly.
+
 ## Document pipelines
 
 Pipeline documentation should include:
@@ -24,13 +26,16 @@ having to search for the pipeline in the Azure DevOps portal)
 - Context in which the pipeline is used, including but not limited to:
   - Pull request validation
   - Scheduled execution or trigger
+- Stable labels when they help scanning, such as `Purpose`, `Trigger`, or `Prerequisites`
 - Other relevant information, such as published or consumed artifacts
 
 ```yaml
-# This pipeline is used to validate the formatting of Terraform source code
+# Purpose: Validate Terraform source code formatting
+# Trigger: Pull request validation
 #
 # Name: terraform-example-validate-formatting
 # https://my-organization.visualstudio.com/myproject/_build?definitionId=123456
+# Published artifacts: None
 
 name: terraform-example-validate-formatting-$(date:yyyyMMdd-HHmmss)
 
@@ -48,6 +53,8 @@ Stage and job templates should include:
 - A brief description of what the stage or job does
 - Any information that might be useful outside of the context of the template,
 such as output variables or artifacts
+- Explicit labels for contracts such as output variables, prerequisites,
+  consumed artifacts, or published artifacts when applicable
 
 ```yaml
 # Runs Terraform plan for the specified stack and environment
@@ -76,7 +83,7 @@ Step templates should include:
 - Any information that might be useful outside of the context of the template, such as output variables or artifacts
 
 Example:
-  
+
 ```yaml
 # Validates and sets the KUBECONFIG variable for the Kubernetes context.
 #
@@ -118,6 +125,7 @@ Pipeline or template parameters should include:
 - A brief description of what the parameter is used for, using the `displayName`
 property
 - List of properties for complex parameters (set with `type = object`)
+- Property names and descriptions that match the actual parameter schema
 - Other relevant information, such as default values or allowed values
 
 Example:

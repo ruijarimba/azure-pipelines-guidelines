@@ -1,7 +1,6 @@
 ﻿# ✅ DO: Minimize the number of parameters in job templates
 
-When defining job templates in Azure DevOps pipelines, keep the number of
-**environment-related** parameters as short as possible.
+When defining job templates in Azure DevOps pipelines, keep the number of **environment-related** parameters as short as possible.
 
 Environment-related parameters might include, but are not limited to:
 
@@ -65,8 +64,7 @@ jobs:
 
 ## Example
 
-In the following job template, all the configuration required must be passed as
-parameters (8 parameters in total):
+In the following job template, all the configuration required must be passed as parameters (8 parameters in total):
 
 ```yaml
 # Run Terraform plan for the specified stack, region and environment
@@ -114,7 +112,7 @@ jobs:
         parameters:
           authentication:
             azureClientId: ${{ parameters.azureClientId }}
-            azureClientsecret: ${{ parameters.azureClientSecret }}
+            azureClientSecret: ${{ parameters.azureClientSecret }}
             azureSubscriptionId: ${{ parameters.azureSubscriptionId }}
             azureTenantId: ${{ parameters.azureTenantId }}
           remoteState:
@@ -124,12 +122,9 @@ jobs:
   # Other job specific parameters such as environment, etc
 ```
 
-The above template can be refactored in order to use less environment-related
-parameters instead - for example, `stackName`, `environment` and `region` are
-enough to identify the context in which the job is running.
+The above template can be refactored in order to use less environment-related parameters instead - for example, `stackName`, `environment` and `region` are enough to identify the context in which the job is running.
 
-Based on these parameters we can reference a variables template that contains
-the rest of the configuration such as:
+Based on these parameters we can reference a variables template that contains the rest of the configuration such as:
 
 ```yaml
 # /pipelines/variables/terraform/app-gateway/westeurope/prod-variables.yaml
@@ -156,7 +151,7 @@ variables:
   - name: tf_azureClientId
     value: $(terraform-sp-client-id)
   
-  - name: tf_azureClientsecret
+  - name: tf_azureClientSecret
     value: $(terraform-sp-client-secret)
   
   - name: tf_azureSubscriptionId
@@ -199,7 +194,7 @@ jobs:
         parameters:
           authentication:
             azureClientId: ${{ variables.tf_azureClientId }}
-            azureClientsecret: ${{ variables.tf_azureClientSecret }}
+            azureClientSecret: ${{ variables.tf_azureClientSecret }}
             azureSubscriptionId: ${{ variables.tf_azureSubscriptionId }}
             azureTenantId: ${{ variables.tf_azureTenantId }}
           remoteState:
