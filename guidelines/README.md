@@ -4,7 +4,7 @@ A complete list of the guideline files in this repository, organized by category
 
 Use this page as a reference when you want to browse all recommendations in one place.
 
-Each guideline also has a stable ID (for example `ADOG-STEPS-001`). The machine-readable index lives in [data/guidelines.json](/data/guidelines.json); see [docs/ai-integration.md](/docs/ai-integration.md). The table below is generated from that manifest by `.github/scripts/build-manifest.mjs` — do not edit it by hand.
+Each guideline also has a stable ID (for example `ADOG-STEPS-001`). The machine-readable index lives in [data/guidelines.json](/data/guidelines.json); see the [AI integration guide](/docs/ai-integration.md). The table below is generated from that manifest by `.github/scripts/build-manifest.mjs` — do not edit it by hand.
 
 <!-- BEGIN GENERATED INDEX -->
 

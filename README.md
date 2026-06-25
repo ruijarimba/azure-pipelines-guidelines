@@ -2,6 +2,8 @@
 
 A set of coding guidelines to create [Azure YAML pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/key-pipelines-concepts) and related templates that are easy to understand, maintain, extend, and reuse.
 
+From `v1.0.0` onward, these guidelines are intended not only for human readers but also for tool integration. Human-readable guidance remains the primary goal, while stable rule IDs and machine-readable index files make it easier for linters, analyzers, and AI-related tools to reference the guidelines consistently.
+
 For a complete list of guidelines, see the [guideline index](guidelines/README.md).
 
 ## Table of Contents
@@ -70,6 +72,11 @@ I couldn't find anything similar, so I decided to put these together, hoping the
 VS Code extensions:
 
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint): Markdown/CommonMark linting and style checking for Visual Studio Code.
+- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml): YAML language support, schema validation, and IntelliSense for pipeline files.
+
+Tools:
+
+- Node.js/npm: used for manifest validation and index regeneration (see [AI integration guide](/docs/ai-integration.md)).
 
 ## Disclaimer
 
