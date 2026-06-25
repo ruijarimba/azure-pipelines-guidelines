@@ -2,8 +2,6 @@
 
 A set of coding guidelines to create [Azure YAML pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/key-pipelines-concepts) and related templates that are easy to understand, maintain, extend, and reuse.
 
-From `v1.0.0` onward, these guidelines are intended not only for human readers but also for tool integration. Human-readable guidance remains the primary goal, while stable rule IDs and machine-readable index files make it easier for linters, analyzers, and AI-related tools to reference the guidelines consistently.
-
 For a complete list of guidelines, see the [guideline index](guidelines/README.md).
 
 ## Table of Contents
@@ -45,11 +43,15 @@ The guidelines can be found in the `/guidelines` folder and are organized into t
 
 ## Using the guidelines
 
-The guidelines can be used in different ways:
+Originally written for human readers, these guidelines are now intended for both people and tools: as of `v1.0.0` the repository publishes stable rule IDs and a machine-readable index to support linters, analyzers, and AI/MCP integrations while preserving human-readable guidance.
 
-- As a learning resource to understand good practices for YAML pipelines.
-- As a reference when creating new pipelines, helping to standardize the structure and ensure consistency across different pipelines and templates.
-- As a reference during code reviews and pull requests to ensure consistency and quality (copy/paste the markdown code in each guideline when reviewing pull requests!).
+Potential usage examples:
+
+- **Learning:** people can use the guidelines to understand good practices for Azure YAML pipelines and templates.
+- **PR review (human):** Quote the human-readable recommendation in a review and cite its stable rule ID (for example, `RULE-001`) when requesting changes.
+- **Linter / CI:** A linter maps rule IDs from the machine index to diagnostics so CI can fail builds on violations (example: run the manifest validator with `node ./.github/scripts/build-manifest.mjs`).
+- **Automated fixer:** A fixer looks up a rule ID, applies the transform from the rule metadata, and opens a suggested patch or pull request.
+- **AI / MCP integration:** An AI or MCP server retrieves guidance by rule ID from the index to generate suggestions, explain rationale, or author automated fixes for users.
 
 ## Contributing
 
