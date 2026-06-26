@@ -5,7 +5,7 @@ Do not define variables for multiple environments inside a single variable templ
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Mix variables from different environments](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/donot-mix-environments.md)
+[ADOG-VARIABLES-006 — DO NOT: Mix variables from different environments](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/donot-mix-environments.md)
 ```
 
 ## Reason

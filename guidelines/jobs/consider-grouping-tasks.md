@@ -5,7 +5,7 @@ Group job tasks into a single steps template, rather than using multiple steps t
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Grouping job tasks into a single template](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-grouping-tasks.md)
+[ADOG-JOBS-002 — CONSIDER: Grouping job tasks into a single template](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-grouping-tasks.md)
 ```
 
 ## Reason

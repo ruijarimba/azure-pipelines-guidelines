@@ -5,7 +5,7 @@ Validate step parameters in templates. Fail the pipeline if a parameter is inval
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Validate step parameters](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-validate-parameters.md)
+[ADOG-STEPS-009 — DO: Validate step parameters](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-validate-parameters.md)
 ```
 
 ## Reason

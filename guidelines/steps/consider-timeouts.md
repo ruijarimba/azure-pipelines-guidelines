@@ -5,7 +5,7 @@ Set timeouts for tasks to avoid stalling pipeline runs. Provide reasonable value
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Set task timeouts](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-timeouts.md)
+[ADOG-STEPS-006 — CONSIDER: Set task timeouts](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-timeouts.md)
 ```
 
 ## Reason

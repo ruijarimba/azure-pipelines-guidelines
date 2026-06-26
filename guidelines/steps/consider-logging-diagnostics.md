@@ -5,7 +5,7 @@ Log enough diagnostic details required to troubleshoot issues and failures.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Logging diagnostic details](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-logging-diagnostics.md)
+[ADOG-STEPS-004 — CONSIDER: Logging diagnostic details](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-logging-diagnostics.md)
 ```
 
 ## Reason

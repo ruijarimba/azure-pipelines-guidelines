@@ -5,7 +5,7 @@ Prefer YAML‑native constructs to express values, logic, and scripts in a clear
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Use native YAML constructs when possible](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/consider-native-yaml-constructs.md)
+[ADOG-GENERAL-002 — CONSIDER: Use native YAML constructs when possible](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/consider-native-yaml-constructs.md)
 ```
 
 ## Reason

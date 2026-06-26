@@ -5,7 +5,7 @@ Explicitly set `checkout` in every job to make source code checkout behavior cle
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Explicitly declare checkout in jobs](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-explicit-checkout.md)
+[ADOG-JOBS-001 — CONSIDER: Explicitly declare checkout in jobs](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-explicit-checkout.md)
 ```
 
 ## Reason

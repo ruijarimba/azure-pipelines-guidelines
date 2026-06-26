@@ -5,7 +5,7 @@ Add a parameter or condition to run the pipeline in _validation mode_, skipping 
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Running pipelines in validation mode](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/pipelines/consider-validation.md)
+[ADOG-PIPELINES-001 — CONSIDER: Running pipelines in validation mode](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/pipelines/consider-validation.md)
 ```
 
 ## Reason

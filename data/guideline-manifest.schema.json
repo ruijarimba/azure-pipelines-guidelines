@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/data/guideline-manifest.schema.json",
+  "title": "Azure Pipelines Guidelines manifest",
+  "description": "Machine-readable index of every guideline. Downstream MCP servers, linters, fixers, and LLM/RAG pipelines consume this file as the structured source of truth. The markdown files under /guidelines remain the human-readable content; this manifest adds stable IDs, severity, scope, tags, detection hints, and fix guidance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "guidelines"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Optional relative path to this schema, for editor validation."
+    },
+    "schemaVersion": {
+      "type": "string",
+      "description": "Version of the manifest schema, independent of the repository release version.",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "generatedBy": {
+      "type": "string",
+      "description": "Tool and mode that last wrote derived fields, e.g. 'scripts/build-manifest.mjs sync'."
+    },
+    "guidelines": {
+      "type": "array",
+      "description": "One entry per guideline markdown file under /guidelines.",
+      "items": { "$ref": "#/$defs/guideline" }
+    }
+  },
+  "$defs": {
+    "category": {
+      "type": "string",
+      "enum": [
+        "general",
+        "jobs",
+        "parameters",
+        "pipelines",
+        "stages",
+        "steps",
+        "variables"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "description": "Recommendation strength. Maps to the title/filename prefix. Suggested lint levels: do->error, do-not->error, avoid->warning, consider->info.",
+      "enum": ["do", "consider", "avoid", "do-not"]
+    },
+    "scope": {
+      "type": "string",
+      "description": "Azure Pipelines YAML element the guideline applies to.",
+      "enum": [
+        "pipeline",
+        "stage",
+        "job",
+        "step",
+        "task",
+        "variables",
+        "parameters",
+        "template",
+        "general"
+      ]
+    },
+    "detectionHint": {
+      "type": "object",
+      "description": "A heuristic a downstream linter can use to flag a likely violation. This repository does not run the engine; it only describes what to look for.",
+      "additionalProperties": false,
+      "required": ["kind", "message"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["regex", "yaml-path", "heuristic"],
+          "description": "regex: match against raw YAML text. yaml-path: a path/key expression into parsed YAML. heuristic: natural-language rule for an LLM or custom check."
+        },
+        "pattern": {
+          "type": "string",
+          "description": "The regular expression, YAML path, or natural-language description, depending on 'kind'."
+        },
+        "appliesTo": {
+          "type": "array",
+          "description": "Scopes where this hint is relevant. Subset of the guideline's applies_to.",
+          "items": { "$ref": "#/$defs/scope" }
+        },
+        "message": {
+          "type": "string",
+          "description": "Human-readable diagnostic message shown when the hint matches."
+        }
+      }
+    },
+    "fix": {
+      "type": "object",
+      "description": "Remediation guidance for a detected violation.",
+      "additionalProperties": false,
+      "required": ["summary"],
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "One-sentence description of the remediation."
+        },
+        "autofixable": {
+          "type": "boolean",
+          "description": "Whether a deterministic automated fix is realistic. If false, remediation needs human or LLM judgement."
+        },
+        "steps": {
+          "type": "array",
+          "description": "Ordered remediation steps.",
+          "items": { "type": "string" }
+        },
+        "exampleRef": {
+          "type": "string",
+          "description": "Section of the guideline markdown that holds the canonical good pattern, usually 'Example'."
+        }
+      }
+    },
+    "guideline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category",
+        "severity",
+        "title",
+        "summary",
+        "path",
+        "url",
+        "appliesTo",
+        "tags"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stable unique identifier. Never reused after a guideline is renamed or removed.",
+          "pattern": "^ADOG-(GENERAL|JOBS|PARAMETERS|PIPELINES|STAGES|STEPS|VARIABLES)-[0-9]{3}$"
+        },
+        "category": { "$ref": "#/$defs/category" },
+        "severity": { "$ref": "#/$defs/severity" },
+        "title": {
+          "type": "string",
+          "description": "Title without the emoji, e.g. 'CONSIDER: Configuring retries in tasks'. Mirrors the markdown H1 minus the emoji."
+        },
+        "summary": {
+          "type": "string",
+          "description": "The one-line summary sentence from directly under the markdown H1."
+        },
+        "path": {
+          "type": "string",
+          "description": "Repository-root-relative path to the guideline markdown file.",
+          "pattern": "^/guidelines/[a-z]+/[a-z0-9-]+\\.md$"
+        },
+        "url": {
+          "type": "string",
+          "description": "Canonical GitHub URL taken from the guideline's reference block.",
+          "format": "uri"
+        },
+        "appliesTo": {
+          "type": "array",
+          "description": "YAML elements the guideline governs. Hand-authored enrichment.",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/scope" }
+        },
+        "tags": {
+          "type": "array",
+          "description": "Controlled-vocabulary keywords for grouping and semantic search.",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }
+        },
+        "related": {
+          "type": "array",
+          "description": "IDs or relative paths of related guidelines, derived from the markdown 'Related guidelines' section.",
+          "items": { "type": "string" }
+        },
+        "detection": {
+          "type": "array",
+          "description": "Detection hints for the downstream linter. Hand-authored enrichment.",
+          "items": { "$ref": "#/$defs/detectionHint" }
+        },
+        "fix": { "$ref": "#/$defs/fix" },
+        "usefulSources": {
+          "type": "array",
+          "description": "External references from the guideline's optional 'Useful sources' section.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["title", "url"],
+            "properties": {
+              "title": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

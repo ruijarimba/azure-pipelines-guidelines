@@ -11,7 +11,7 @@ When building reusable templates, add these control parameters:
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Create configurable and extensible steps](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-extensible-steps.md)
+[ADOG-STEPS-007 — DO: Create configurable and extensible steps](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/do-extensible-steps.md)
 ```
 
 ## Reason

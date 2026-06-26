@@ -7,7 +7,7 @@ Provide reasonable default values based on the job's purpose and expected averag
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Set job timeouts](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-job-timeouts.md)
+[ADOG-JOBS-006 — DO: Set job timeouts](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-job-timeouts.md)
 ```
 
 ## Reason

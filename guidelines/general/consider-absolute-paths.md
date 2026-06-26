@@ -5,7 +5,7 @@ Use absolute paths to reference stages, jobs, steps and variables templates.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Use absolute paths to reference templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/consider-absolute-paths.md)
+[ADOG-GENERAL-001 — CONSIDER: Use absolute paths to reference templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/consider-absolute-paths.md)
 ```
 
 ## Reason

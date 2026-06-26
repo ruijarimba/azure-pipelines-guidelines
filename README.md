@@ -30,21 +30,28 @@ The type of recommendation indicates how strongly it should be followed:
 
 The guidelines can be found in the `/guidelines` folder and are organized into the following categories:
 
-- `/general`: General recommendations that apply to more than one category.
-- `/jobs`: Jobs-related recommendations.
-- `/parameters`: Parameters-related recommendations.
-- `/pipelines`: Pipelines-related recommendations.
-- `/stages`: Stages-related recommendations.
-- `/steps`: Steps-related recommendations.
-- `/variables`: Variables-related recommendations.
+- `/data`: Machine-readable structured data for downstream tools and processes (e.g., linters, MCP servers, and LLM/RAG pipelines).
+- `/docs`: Documentation for contributors and downstream tool authors.
+- `/guidelines`: Guideline markdown files, organized by category:
+  - `/general`: General recommendations that apply to more than one category.
+  - `/jobs`: Jobs-related recommendations.
+  - `/parameters`: Parameters-related recommendations.
+  - `/pipelines`: Pipelines-related recommendations.
+  - `/stages`: Stages-related recommendations.
+  - `/steps`: Steps-related recommendations.
+  - `/variables`: Variables-related recommendations.
 
 ## Using the guidelines
 
-The guidelines can be used in different ways:
+Originally written for human readers, these guidelines are now intended for both people and tools: as of `v1.0.0` the repository publishes stable rule IDs and a machine-readable index to support linters, analyzers, and AI/MCP integrations while preserving human-readable guidance.
 
-- As a learning resource to understand good practices for YAML pipelines.
-- As a reference when creating new pipelines, helping to standardize the structure and ensure consistency across different pipelines and templates.
-- As a reference during code reviews and pull requests to ensure consistency and quality (copy/paste the markdown code in each guideline when reviewing pull requests!).
+Potential usage examples:
+
+- **Learning:** people can use the guidelines to understand good practices for Azure YAML pipelines and templates.
+- **PR review (human):** Quote the human-readable recommendation in a review and cite its stable rule ID (for example, `ADOG-STEPS-001`) when requesting changes.
+- **Linter / CI:** A linter maps rule IDs from the machine index to diagnostics so CI can fail builds on violations (example: run the [manifest validator script](./.github/scripts/build-manifest.mjs)).
+- **Automated fixer:** A fixer looks up a rule ID, applies the transform from the rule metadata, and opens a suggested patch or pull request.
+- **AI / MCP integration:** An AI or MCP server retrieves guidance by rule ID from the index to generate suggestions, explain rationale, or author automated fixes for users.
 
 ## Contributing
 
@@ -67,6 +74,11 @@ I couldn't find anything similar, so I decided to put these together, hoping the
 VS Code extensions:
 
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint): Markdown/CommonMark linting and style checking for Visual Studio Code.
+- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml): YAML language support, schema validation, and IntelliSense for pipeline files.
+
+Tools:
+
+- Node.js/npm: used for manifest validation and index regeneration (see [Machine-Readable Guidelines](/docs/machine-readable-guidelines.md)).
 
 ## Disclaimer
 

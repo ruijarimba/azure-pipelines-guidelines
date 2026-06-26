@@ -13,7 +13,7 @@ When creating job templates for reuse by different teams, stages, or pipelines, 
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Create configurable and extensible jobs](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-extensible-jobs.md)
+[ADOG-JOBS-005 — DO: Create configurable and extensible jobs](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-extensible-jobs.md)
 ```
 
 ## Reason

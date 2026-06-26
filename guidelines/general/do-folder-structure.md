@@ -5,7 +5,7 @@ Organize pipelines and templates logically and consistently across different pro
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Use a consistent folder structure](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-folder-structure.md)
+[ADOG-GENERAL-005 — DO: Use a consistent folder structure](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/general/do-folder-structure.md)
 ```
 
 ## Reason

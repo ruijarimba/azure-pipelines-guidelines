@@ -5,7 +5,7 @@ Restrict the scope of variables as much as possible.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Reduce variable scope](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-variable-scope.md)
+[ADOG-VARIABLES-005 — DO: Reduce variable scope](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-variable-scope.md)
 ```
 
 ## Reason

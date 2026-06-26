@@ -5,7 +5,7 @@ Do not embed pipeline expressions (`$(...)` or `${{ ... }}`) throughout the body
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Mix pipelines syntax in script tasks](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/donot-mix-syntax.md)
+[ADOG-STEPS-010 — DO NOT: Mix pipelines syntax in script tasks](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/donot-mix-syntax.md)
 ```
 
 ## Reason

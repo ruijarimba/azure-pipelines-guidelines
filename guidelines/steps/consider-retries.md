@@ -5,7 +5,7 @@ Configure the number of retries if a task faces transient failures.
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Configuring retries in tasks](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-retries.md)
+[ADOG-STEPS-005 — CONSIDER: Configuring retries in tasks](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/consider-retries.md)
 ```
 
 ## Reason

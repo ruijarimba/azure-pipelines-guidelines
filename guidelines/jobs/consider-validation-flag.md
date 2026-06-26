@@ -5,7 +5,7 @@ Add a `boolean` parameter to your job to run it in _validation mode_, without de
 ## Markdown to reference this guideline
 
 ```plaintext
-[CONSIDER: Adding a validation flag to your job](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-validation-flag.md)
+[ADOG-JOBS-004 — CONSIDER: Adding a validation flag to your job](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/consider-validation-flag.md)
 ```
 
 ## Reason

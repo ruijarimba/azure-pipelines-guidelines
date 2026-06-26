@@ -5,7 +5,7 @@ Store passwords, tokens, and keys inside [variable groups](https://learn.microso
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Store sensitive information in variable groups](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-sensitive-information.md)
+[ADOG-VARIABLES-003 — DO: Store sensitive information in variable groups](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-sensitive-information.md)
 ```
 
 ## Reason

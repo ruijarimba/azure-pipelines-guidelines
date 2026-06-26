@@ -7,7 +7,7 @@ Use independent variable templates to store configuration profiles instead.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Separate configuration from logic](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-separate-configuration.md)
+[ADOG-VARIABLES-004 — DO: Separate configuration from logic](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/variables/do-separate-configuration.md)
 ```
 
 ## Reason

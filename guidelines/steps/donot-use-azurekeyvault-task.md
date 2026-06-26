@@ -5,7 +5,7 @@ Do not run the `AzureKeyVault` task to pull secrets into pipeline variables.
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO NOT: Use AzureKeyVault task](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/donot-use-azurekeyvault-task.md)
+[ADOG-STEPS-011 — DO NOT: Use AzureKeyVault task](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/steps/donot-use-azurekeyvault-task.md)
 ```
 
 ## Reason

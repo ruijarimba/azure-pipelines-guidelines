@@ -11,7 +11,7 @@ Environment-related parameters might include, but are not limited to:
 ## Markdown to reference this guideline
 
 ```plaintext
-[DO: Minimize the number of parameters in job templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-parameters-short.md)
+[ADOG-JOBS-007 — DO: Minimize the number of parameters in job templates](https://github.com/ruijarimba/azure-pipelines-guidelines/blob/main/guidelines/jobs/do-parameters-short.md)
 ```
 
 ## Reason
