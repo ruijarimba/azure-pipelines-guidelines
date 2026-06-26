@@ -12,14 +12,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [1.0.0] - 2026-06-25
 
-This release marks the guidelines as **stable**. Each guideline now has a **[permanent ID](docs/ai-integration.md#id-scheme)** such as `ADOG-STEPS-005` so it can be easily referenced in reviews, documentation, and automated checks.
+This release marks the guidelines as **stable**. Each guideline now has a **[permanent ID](docs/machine-readable-guidelines.md#id-scheme)** such as `ADOG-STEPS-005` so it can be easily referenced in reviews, documentation, and automated checks.
 
 The guidelines were originally intended for humans, and they still are. This release adds structured index files and machine‑readable metadata to support future integration with tools such as linters, analyzers, and AI systems (including MCP servers) that can review pipeline code and help identify or correct problems in an automated manner.
 
 ### Added
 
 - Each guideline now shows a short, stable rule code in its "Markdown to reference this guideline" section, making it easy to cite the exact rule when reviewing pull requests.
-- Added a [structured data file](/data/guidelines.json) that records every guideline with its rule code, severity, scope, and hints for detecting and fixing violations. This is the foundation for tools that can automatically check pipelines against the guidelines. See the [AI integration guide](/docs/ai-integration.md) for technical details.
+- Added a [structured data file](/data/guidelines.json) that records every guideline with its rule code, severity, scope, and hints for detecting and fixing violations. This is the foundation for tools that can automatically check pipelines against the guidelines. See the [Machine-Readable Guidelines](/docs/machine-readable-guidelines.md) for technical details.
 
 ## [0.3.0] - 2026-06-25
 

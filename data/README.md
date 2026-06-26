@@ -21,4 +21,4 @@ node .github/scripts/build-manifest.mjs sync      # refresh derived fields and r
 node .github/scripts/build-manifest.mjs validate  # check manifest and Markdown are in sync
 ```
 
-For the full design, ID scheme, and regeneration runbook, see [docs/ai-integration.md](/docs/ai-integration.md).
+For the full design, ID scheme, and regeneration runbook, see [docs/machine-readable-guidelines.md](/docs/machine-readable-guidelines.md).

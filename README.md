@@ -78,7 +78,7 @@ VS Code extensions:
 
 Tools:
 
-- Node.js/npm: used for manifest validation and index regeneration (see [AI integration guide](/docs/ai-integration.md)).
+- Node.js/npm: used for manifest validation and index regeneration (see [Machine-Readable Guidelines](/docs/machine-readable-guidelines.md)).
 
 ## Disclaimer
 

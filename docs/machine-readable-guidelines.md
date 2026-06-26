@@ -1,4 +1,4 @@
-# AI integration guide
+# Machine-Readable Guidelines
 
 This guide explains how the guidelines in this repository are made machine-readable so that downstream tools (an MCP server, a linter, an automated fixer, or an LLM/RAG pipeline) can consume them. It also documents how to regenerate or extend the structured data, so this work does not need to be redone from scratch.
 

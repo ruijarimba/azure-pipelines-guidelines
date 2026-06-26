@@ -22,7 +22,7 @@ This repository is the structured source for downstream tools and processes (e.g
 - `data/guidelines.jsonl` — line-delimited export for RAG and fine-tuning.
 - `data/guideline-manifest.schema.json` — JSON Schema for the manifest.
 - `.github/scripts/build-manifest.mjs` — generate, validate, and sync the manifest and the index.
-- `docs/ai-integration.md` — design, ID scheme, and regeneration guide.
+- `docs/machine-readable-guidelines.md` — design, ID scheme, and regeneration guide.
 
 ## Usage
 
